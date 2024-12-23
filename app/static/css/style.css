@@ -1,0 +1,144 @@
+:root {
+    --background-color: #121212;
+    --card-background-color: #1e1e1e;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac5;
+    --primary-text-color: #e1e1e1;
+    --secundary-text-color: #a4a4a4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 12px;
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+/* Style of the image upload form */
+
+.upload-container {
+    background-color: var(--card-background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.upload-container h1 {
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    display: block;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-button {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.preview {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.preview img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Floting button style */
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.camera-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding-top: 5px;
+}
+
+/* Style of the sign information div */
+
+.sign-information {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.sign-information h2 {
+    margin: 0;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.sign-info p {
+    margin: 10px 0;
+    color: var(--primary-text-color);
+}
+
+.sign-info span {
+    font-weight: bold;
+    color: var(--secundary-text-color);
+}
