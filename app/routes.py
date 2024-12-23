@@ -10,6 +10,7 @@ def index():
         'shape' : 'Octagon',
         'meaning' : 'Stop and make sure the intersection is safe before proceeding.'
     }
+    
     return render_template('main.html', sign_info=sign_info)
 
 if __name__ == '__main__':
