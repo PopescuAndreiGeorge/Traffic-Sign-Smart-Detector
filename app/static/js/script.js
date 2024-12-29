@@ -1,11 +1,13 @@
-document.getElementById('fileInput').addEventListener('change', function(event) {
+import { serverIp } from './utils.js';
+
+document.getElementById('fileInput').addEventListener('change', function (event) {
     var preview = document.getElementById('preview');
     preview.innerHTML = ''; // Clear any existing preview
 
     var file = event.target.files[0];
     var reader = new FileReader();
 
-    reader.onload = function(e) {
+    reader.onload = function (e) {
         var img = document.createElement('img');
         img.src = e.target.result;
         preview.appendChild(img);
@@ -14,16 +16,16 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
     reader.readAsDataURL(file);
 });
 
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
+document.getElementById('uploadForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     var xhr = new XMLHttpRequest();
     var formData = new FormData();
 
-    xhr.open('POST', 'https://192.168.113.100:5000/sign', true);
+    xhr.open('POST', `https://${serverIp}:5000/sign`, true);
     formData.append('image', document.getElementById('fileInput').files[0]);
 
-    xhr.onload = function() {
+    xhr.onload = function () {
         if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
             document.getElementById('signName').textContent = response.name;
@@ -43,7 +45,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     xhr.send(formData);
 });
 
-document.getElementById('reuploadBtn').addEventListener('click', function() {
+document.getElementById('reuploadBtn').addEventListener('click', function () {
     document.getElementById('fileInput').click(); // Trigger click on file input
     document.getElementById('uploadContainer').style.display = 'block';
     document.getElementById('preview').innerHTML = '';
@@ -51,12 +53,12 @@ document.getElementById('reuploadBtn').addEventListener('click', function() {
     document.getElementById('signInformation').style.display = 'none';
 });
 
-document.getElementById('cameraBtn').addEventListener('click', function() {
-    
+document.getElementById('cameraBtn').addEventListener('click', function () {
+
     document.getElementById('uploadContainer').style.display = 'none';
     document.getElementById('preview').innerHTML = '';
     document.getElementById('reuploadBtn').style.display = 'none';
-    
+
     window.location.href = '/camera';
 });
 

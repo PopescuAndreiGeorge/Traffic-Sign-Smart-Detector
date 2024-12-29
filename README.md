@@ -20,7 +20,12 @@
 1. Have `openssl` installed:
    * Linux: `sudo apt-get install openssl`
    * Windows: [Download](https://slproweb.com/download/Win64OpenSSL-3_4_0.exe)
-2. Run the following command: `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`
+2. Go to the root folder
+3. Run the following command: `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes`
+
+### Configuration
+
+    Change the IP fom the *static/js/utils.js* to your local IP Address.
 
 ## How to run?
 

@@ -1,9 +1,19 @@
 from flask import render_template, request, jsonify 
+from flask_cors import CORS
 from app import app
 from http import HTTPStatus
 from PIL import Image, UnidentifiedImageError
 import numpy as np
 from datetime import datetime
+import socket
+
+CORS(app) 
+
+@app.route('/api/ip', methods=['GET'])
+def get_ip():
+    hostname = socket.gethostname()
+    ip_address = socket.gethostbyname(hostname)
+    return jsonify({'ip': ip_address}), HTTPStatus.OK
 
 @app.route('/')
 def index():
