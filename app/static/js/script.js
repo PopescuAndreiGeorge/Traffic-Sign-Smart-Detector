@@ -9,9 +9,6 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
         var img = document.createElement('img');
         img.src = e.target.result;
         preview.appendChild(img);
-        document.getElementById('uploadContainer').style.display = 'none';
-        document.getElementById('reopenButton').style.display = 'block';
-        document.getElementById('signInformation').style.display = 'block';
     }
 
     reader.readAsDataURL(file);
@@ -19,8 +16,31 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
 
 document.getElementById('uploadForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    // TODO: Upload the image to the server
-    alert('Image uploaded!');
+
+    var xhr = new XMLHttpRequest();
+    var formData = new FormData();
+
+    xhr.open('POST', 'http://192.168.113.100:5000/sign', true);
+    formData.append('image', document.getElementById('fileInput').files[0]);
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            document.getElementById('signName').textContent = response.name;
+            document.getElementById('signDescription').textContent = response.meaning;
+
+            document.getElementById('uploadContainer').style.display = 'none';
+            document.getElementById('signInformation').style.display = 'block';
+            document.getElementById('reopenButton').style.display = 'block';
+        } else if (xhr.status === 400) {
+        showAlert('Oops! That doesn\'t look like a valid image file. Please try again with a different file.');
+        }
+        else {
+            console.error('Error:', xhr.statusText);
+        }
+    };
+
+    xhr.send(formData);
 });
 
 document.getElementById('reopenButton').addEventListener('click', function() {
@@ -30,3 +50,12 @@ document.getElementById('reopenButton').addEventListener('click', function() {
     document.getElementById('reopenButton').style.display = 'none';
     document.getElementById('signInformation').style.display = 'none';
 });
+
+function showAlert(message) {
+    document.getElementById('alertMessage').textContent = message;
+    document.getElementById('customAlert').style.display = 'block';
+}
+
+function closeAlert() {
+    document.getElementById('customAlert').style.display = 'none';
+}

@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <title> Tras </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">    <title> Tras </title>
 </head>
 
 <body>
@@ -15,9 +14,19 @@
         <h1>Traffic Sign Smart Detector</h1>
     </header>
 
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>    
+
+    <!-- Image Preview Container -->
+    <div id="preview" class="preview"> </div>
+
     <!-- Image Upload Form -->
     <div class="upload-container" id="uploadContainer">
-        <form id="uploadForm"> 
+        <form id="uploadForm" action="{{ url_for('sign') }}" method="POST" enctype="multipart/form-data"> 
             <label for="fileInput" class="upload-label"> 
                 Choose an image 
                 <input type="file" id="fileInput" class="upload-input" accept="image/*"> 
@@ -28,9 +37,6 @@
         </form>
     </div>
 
-    <!-- Image Preview Container -->
-    <div id="preview" class="preview"> </div>
-
     <!-- Sign Information Container. Will be populated in future -->
     <div class="sign-information" id="signInformation" style="display:none;">
         <h2>Sign Information</h2>
@@ -40,14 +46,13 @@
         </div>
     </div>
 
-    
     <!-- Floating Camera Button -->
     <button class="floating-button" id="reopenButton" style="display:none;">
         <img src="../static/assets/camera_icon.png" alt="Camera" class="camera-icon">
     </button>
 
     <!-- Camera JS Script -->
-    <script src="../static/js/camera.js"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 
 </html>
