@@ -3,22 +3,23 @@ from app import app
 from http import HTTPStatus
 from PIL import Image, UnidentifiedImageError
 import numpy as np
+from datetime import datetime
 
 @app.route('/')
 def index():
+    """ Main route to display the main page.
+    """
+    return render_template('main.html')
 
-    sign_info = {
-        'name' : 'Stop Sign',
-        'color' : 'Red',
-        'shape' : 'Octagon',
-        'meaning' : 'Stop and make sure the intersection is safe before proceeding.'
-    }
-    
-    return render_template('main.html', sign_info=sign_info)
+@app.route('/camera')
+def camera():
+    """ Camera route to display the camera page.
+    """	
+    return render_template('camera.html')
 
 @app.route('/sign', methods=['POST'])
 def sign():
-    """ Get a sign image via POST request and log the image file infos
+    """ Get a sign image and identify the sign. After identifying the sign, return the sign information.
     """
 
     if 'image' not in request.files:
@@ -27,12 +28,14 @@ def sign():
     try:
         image = np.array(Image.open(request.files['image']))
 
-        sign_info = {
+
+        stub_sign_info = {
             'name' : request.files['image'].filename,
-            'meaning' : 'And image with shape: ' + str(image.shape)
+            'meaning' : 'And image with shape: ' + str(image.shape),
+            'date' : datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         }
 
-        return jsonify(sign_info), HTTPStatus.OK
+        return jsonify(stub_sign_info), HTTPStatus.OK
 
     except UnidentifiedImageError as e:
         return jsonify({'error': 'Image processing error: ' + str(e)}), HTTPStatus.BAD_REQUEST

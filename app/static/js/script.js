@@ -20,7 +20,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     var xhr = new XMLHttpRequest();
     var formData = new FormData();
 
-    xhr.open('POST', 'http://192.168.113.100:5000/sign', true);
+    xhr.open('POST', 'https://192.168.113.100:5000/sign', true);
     formData.append('image', document.getElementById('fileInput').files[0]);
 
     xhr.onload = function() {
@@ -31,9 +31,9 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
 
             document.getElementById('uploadContainer').style.display = 'none';
             document.getElementById('signInformation').style.display = 'block';
-            document.getElementById('reopenButton').style.display = 'block';
+            document.getElementById('reuploadBtn').style.display = 'block';
         } else if (xhr.status === 400) {
-        showAlert('Oops! That doesn\'t look like a valid image file. Please try again with a different file.');
+            showAlert('Oops! That doesn\'t look like a valid image file. Please try again with a different file.');
         }
         else {
             console.error('Error:', xhr.statusText);
@@ -43,12 +43,21 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     xhr.send(formData);
 });
 
-document.getElementById('reopenButton').addEventListener('click', function() {
+document.getElementById('reuploadBtn').addEventListener('click', function() {
     document.getElementById('fileInput').click(); // Trigger click on file input
     document.getElementById('uploadContainer').style.display = 'block';
     document.getElementById('preview').innerHTML = '';
-    document.getElementById('reopenButton').style.display = 'none';
+    document.getElementById('reuploadBtn').style.display = 'none';
     document.getElementById('signInformation').style.display = 'none';
+});
+
+document.getElementById('cameraBtn').addEventListener('click', function() {
+    
+    document.getElementById('uploadContainer').style.display = 'none';
+    document.getElementById('preview').innerHTML = '';
+    document.getElementById('reuploadBtn').style.display = 'none';
+    
+    window.location.href = '/camera';
 });
 
 function showAlert(message) {

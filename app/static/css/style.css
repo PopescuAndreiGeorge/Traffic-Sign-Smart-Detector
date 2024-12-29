@@ -85,7 +85,26 @@ body {
 
 /* Floting button style */
 
-.floating-button {
+.btn-reupload {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-camera {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -104,11 +123,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.camera-icon {
+.btn-icon {
     width: 30px;
     height: 30px;
     margin: 0;
-    padding-top: 5px;
 }
 
 /* Style of the sign information div */
@@ -182,4 +200,24 @@ body {
 
 .alert-content button:hover {
     background-color: #e0e0e0;
+}
+
+/* Style of camera recording div */
+
+.video-container {
+    margin-left: 5%;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
