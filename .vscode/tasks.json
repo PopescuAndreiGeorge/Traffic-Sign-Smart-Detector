@@ -14,6 +14,43 @@
             },
             "problemMatcher": [],
             "detail": "Runs the Flask application from run.py"
+        },
+        {
+            "label": "Run Flask App (Debug)",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/run.py",
+                "--debug"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Runs the Flask application from run.py in debug mode"
+        },
+        {
+            "label": "Install Python Requirements",
+            "type": "shell",
+            "command": "pip",
+            "args": [
+                "install",
+                "-r",
+                "${workspaceFolder}/requirements.txt"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Installs the Python requirements from requirements.txt"
+        },
+        {
+            "label": "Run Fuseki Server",
+            "type": "shell",
+            "command": "./tools/apache-jena-fuseki-5.2.0/fuseki-server",
+            "detail": "Runs the Apache Jena Fuseki server"
         }
     ]
 }

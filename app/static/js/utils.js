@@ -1,5 +1,5 @@
 
-export var serverIp = '192.168.113.100';
+export var serverIp = '192.168.1.135';
 
 export async function getServerIp() {
     try {
