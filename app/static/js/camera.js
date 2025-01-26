@@ -54,4 +54,4 @@ setInterval(() => {
             });
         }, 'image/png');
     }
-}, 1000);  // 2 frames per second
+}, 1000);  // 1 frames per second

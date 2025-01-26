@@ -1,3 +1,5 @@
+import re
+
 _traffic_signs = {
     0: 'Speed Limit 20 km/h',
     1: 'Speed Limit 30 km/h',
@@ -49,3 +51,11 @@ def get_traffic_sign_name(predicted_class: int) -> str:
         return 'Unknown'
     
     return _traffic_signs[predicted_class]
+
+
+def get_image_path(image_name: str) -> str:
+    return f'assets/signs/{image_name[:-4]}.png'
+
+
+def parse_Sparql_name(name: str) -> str:
+    return re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', name)[:-4]

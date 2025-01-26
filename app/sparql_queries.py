@@ -1,4 +1,4 @@
-from SPARQLWrapper import SPARQLWrapper, JSON  # pip install SPARQLWrapper
+from SPARQLWrapper import SPARQLWrapper, JSON 
 
 def test_query():
     sparql = SPARQLWrapper("http://localhost:3030/TraS_Dataset/sparql")
@@ -14,6 +14,7 @@ def test_query():
     results = sparql.query().convert()
     return results
 
+# localhost:5050/info/stop_at_sign -> StopAtSign
 def get_sign_info(sign_name: str):
     
     sign_name = sign_name[0].upper() + sign_name[1:]

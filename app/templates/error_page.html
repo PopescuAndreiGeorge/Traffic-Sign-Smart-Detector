@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Missing Sign Argument</title>
+</head>
+
+<body>
+    <div class="custom-alert" id="missingSignAlert">
+        <div class="alert-content">
+            <img src="{{ url_for('static', filename='assets/sign_not_found.png') }}" alt="Sign Not Found" class="sign-image">
+            <h2> {{ title }} </h2>
+            <p> {{ info }} </p>
+            <button onclick="window.location.href='.'"> Go to Home </button>
+        </div>
+    </div>
+
+    <!-- JavaScript to Display Alert -->
+    <script>
+        document.getElementById('missingSignAlert').style.display = 'block';
+    </script>
+</body>
+
+</html>

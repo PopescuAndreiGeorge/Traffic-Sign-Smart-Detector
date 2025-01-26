@@ -16,3 +16,4 @@ flask_cors
 python-dotenv
 config
 SPARQLWrapper
+pillow
