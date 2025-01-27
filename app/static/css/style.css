@@ -1,8 +1,8 @@
 :root {
     --background-color: #121212;
-    --card-background-color: #1e1e1e;
-    --primary-color: #bb86fc;
-    --secondary-color: #03dac5;
+    --card-background-color: #252836;
+    --primary-color: #FAFAFC;
+    --secondary-color: #08A0F7;
     --primary-text-color: #e1e1e1;
     --secundary-text-color: #a4a4a4;
     --error-color: #d81e5b;
@@ -19,7 +19,7 @@ body {
     background-color: var(--card-background-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: left;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -73,6 +73,7 @@ body {
     display: flex; 
     justify-content: center;
     margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .preview img {
@@ -134,9 +135,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
     text-align: left;
     color: #ffffff;
+    margin-top: 20px;
 }
 
 .sign-information h2 {

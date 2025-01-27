@@ -8,16 +8,10 @@ from datetime import datetime
 import socket
 import cv2
 from .tools.sign_recognition import predict_sign
-from .tools.utils import get_image_path, parse_Sparql_name
+from .tools.utils import get_image_path, parse_Sparql_name, parse_Sparql_name_to_link
 from .sparql_queries import *
 
-CORS(app) 
-
-@app.route('/api/ip', methods=['GET'])
-def get_ip():
-    hostname = socket.gethostname()
-    ip_address = socket.gethostbyname(hostname)
-    return jsonify({'ip': ip_address}), HTTPStatus.OK
+CORS(app)  # Enable CORS for all routes
 
 
 @app.route('/')
@@ -56,14 +50,21 @@ def sign():
         prediction = predict_sign(image)
 
         # no_passing -> NoPassing
+        sign_name = ' '.join(word.capitalize() for word in prediction.split('_'))
+        
+        # Parse the name to get the sign name in the ontology: no_overtaking -> NoOvertakingSign
+        sign_name_in_ontology = ''.join(word.capitalize() for word in prediction.split('_'))
+        sign_name_in_ontology += 'Sign'
 
-        # Get from an ontology the meaning of the sign.
+        # TODO: call the sparql query to get the sign information....
 
         return_json = {
-            'name' : prediction,
-            'meaning' : 'And image with shape: ' + str(image.shape),
-            'date' : datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'url': 'https://localhost:5050/traffic_sign/no_passing'
+            'name' : sign_name,
+            'category' : 'Traffic Control',
+            'type' : 'Regulatory',
+            'meaning' : 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.',
+            'rules' : 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.',
+            'url': 'https://localhost:5050/about?sign=' + prediction
         }
 
         return jsonify(return_json), HTTPStatus.OK
@@ -72,44 +73,51 @@ def sign():
         return jsonify({'error': 'Image processing error: ' + str(e)}), HTTPStatus.BAD_REQUEST
 
 
-@app.route('/traffic_sign/api_test', methods=['GET'])
-def traffic_sign():
-    results = test_query()
-    return results
-
-
 @app.route('/about', methods=['GET'])
 def about():
     sign_name = request.args.get('sign')
 
-    if sign_name is None:
+    # If the sign argument is missing or invalid, return an error page.
+    if sign_name is None or sign_name == '':
        return render_template (
            'error_page.html', 
-           title = 'Error - Missing Sign Argument',
+           title = 'Error - Missing or invalid Sign Argument',
            info = 'Sorry, the required sign argument is missing for the /about page.'
         ), HTTPStatus.BAD_REQUEST
+    
 
-    sign_name = sign_name[0].upper() + sign_name[1:]
+    # Parse the sign name: no_overtaking -> NoOvertaking
+    sign_name_text = ' '.join(word.capitalize() for word in sign_name.split('_'))
 
-    # Stupid example
+    # Parse the name to get the sign name in the ontology: no_overtaking -> NoOvertakingSign
+    sign_name_in_ontology = ''.join(word.capitalize() for word in sign_name.split('_'))
+    sign_name_in_ontology += 'Sign'
 
-    sign_meaning = 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.'
+    # TODO: Get the sign information from the ontology....
+
     sign_type = 'Regulatory'
+    sign_category = 'Traffic Control'
+    sign_rules = 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.'
+    sign_meaning = 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.'
+    sign_image = url_for('static', filename = get_image_path(sign_name_in_ontology))
     precede_signs = []
     precede_by = []
 
     signs = ["PaharSign", "FootpathSign", "OtherDangerSign", "PedestrianCrossingSign", "PriorityRoadSign", "RoundaboutSign", "StopSign", "TrafficSignalsSign", "YieldSign"]
 
     for sign in signs:
-        precede_signs.append({'name': parse_Sparql_name(sign), 'image_url': url_for('static', filename = get_image_path(sign))})
-
-    sign_image = url_for('static', filename = get_image_path(sign_name + 'Sign'))
-
+        precede_signs.append ( { 
+            'name': parse_Sparql_name(sign), 
+            'about_url': url_for('about', sign = parse_Sparql_name_to_link(sign)), 
+            'image_url': url_for('static', filename = get_image_path(sign))
+        } )
 
     return render_template (
         template_name_or_list = 'about_sign.html', 
-        sign_name = sign_name,
+        sign_name = sign_name_text,
         sign_meaning = sign_meaning,
+        sign_rules = sign_rules,
+        sign_category = sign_category,
         sign_type = sign_type,
         sign_image = sign_image,
         precede_signs = precede_signs,

@@ -26,16 +26,18 @@
     <div id="preview" class="preview"> </div>
 
     <!-- Image Upload Form -->
-    <div class="upload-container" id="uploadContainer">
-        <form id="uploadForm" action="{{ url_for('sign') }}" method="POST" enctype="multipart/form-data"> 
-            <label for="fileInput" class="upload-label"> 
-                Choose an image 
-                <input type="file" id="fileInput" class="upload-input" accept="image/*"> 
-            </label> 
-            <button id="submit-btn" type="submit" class="upload-button">
-                Upload
-            </button> 
-        </form>
+     <div class="upload-container-wrapper" id="uploadContainerWrapper">
+        <div class="upload-container" id="uploadContainer">
+            <form id="uploadForm" action="{{ url_for('sign') }}" method="POST" enctype="multipart/form-data"> 
+                <label for="fileInput" class="upload-label"> 
+                    Choose an image 
+                    <input type="file" id="fileInput" class="upload-input" accept="image/*"> 
+                </label> 
+                <button id="submit-btn" type="submit" class="upload-button">
+                    Upload
+                </button> 
+            </form>
+        </div>
     </div>
 
     <!-- Sign Information Container. Will be populated in future -->
@@ -49,11 +51,11 @@
 
     <!-- Floating Camera Button -->
     <button class="btn-reupload" id="reuploadBtn" style="display:none;">
-        <img src="../static/assets/upload.png" alt="Camera" class="btn-icon">
+        <img src="{{ url_for('static', filename='assets/upload.png') }}" alt="Camera" class="btn-icon">
     </button>
 
     <button class="btn-camera" id="cameraBtn">
-        <img src="../static/assets/camera.png" alt="Camera" class="btn-icon">
+        <img src="{{ url_for('static', filename='assets/camera.png') }}" alt="Camera" class="btn-icon">
     </button>
 
     <!-- Camera JS Script -->

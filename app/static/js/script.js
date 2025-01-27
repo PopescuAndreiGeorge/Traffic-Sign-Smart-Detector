@@ -27,13 +27,19 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
 
     xhr.onload = function () {
         if (xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            document.getElementById('signName').textContent = response.name;
-            document.getElementById('signDescription').textContent = response.meaning;
 
-            document.getElementById('uploadContainer').style.display = 'none';
-            document.getElementById('signInformation').style.display = 'block';
-            document.getElementById('reuploadBtn').style.display = 'block';
+            // redirect to the about?sign=signName page
+            var response = JSON.parse(xhr.responseText);
+
+            window.location.href = `/about?sign=${response.name}`;
+
+            // var response = JSON.parse(xhr.responseText);
+            // document.getElementById('signName').textContent = response.name;
+            // document.getElementById('signDescription').textContent = response.meaning;
+
+            // document.getElementById('uploadContainer').style.display = 'none';
+            // document.getElementById('signInformation').style.display = 'block';
+            // document.getElementById('reuploadBtn').style.display = 'block';
         } else if (xhr.status === 400) {
             showAlert('Oops! That doesn\'t look like a valid image file. Please try again with a different file.');
         }
@@ -48,6 +54,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
 document.getElementById('reuploadBtn').addEventListener('click', function () {
     document.getElementById('fileInput').click(); // Trigger click on file input
     document.getElementById('uploadContainer').style.display = 'block';
+    document.getElementById('preview').style.display = 'block';
     document.getElementById('preview').innerHTML = '';
     document.getElementById('reuploadBtn').style.display = 'none';
     document.getElementById('signInformation').style.display = 'none';

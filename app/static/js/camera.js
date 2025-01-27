@@ -43,14 +43,15 @@ setInterval(() => {
                 body: formData
             })
             .then(response => response.json())
-            .then(data => { 
-                // console.log('Success:', data); 
-                document.getElementById('signName').textContent = data.name;
-                document.getElementById('signDate').textContent = data.date;
-                document.getElementById('signDescription').textContent = data.meaning;
+            .then(sign => { 
+                document.getElementById('signName').textContent     = sign.name;
+                document.getElementById('signCategory').textContent = sign.category;
+                document.getElementById('signType').textContent     = sign.type;
+                document.getElementById('signMeaning').textContent  = sign.meaning;
+                document.getElementById('signRules').textContent    = sign.rules;
             })
             .catch((error) => { 
-                // console.error('Error:', error); 
+                console.error('Error:', error); 
             });
         }, 'image/png');
     }
