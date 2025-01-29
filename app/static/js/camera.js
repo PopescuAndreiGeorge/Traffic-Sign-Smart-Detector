@@ -44,11 +44,22 @@ setInterval(() => {
             })
             .then(response => response.json())
             .then(sign => { 
+                
                 document.getElementById('signName').textContent     = sign.name;
-                document.getElementById('signCategory').textContent = sign.category;
-                document.getElementById('signType').textContent     = sign.type;
-                document.getElementById('signMeaning').textContent  = sign.meaning;
-                document.getElementById('signRules').textContent    = sign.rules;
+
+                if (sign.meaning === '') {
+                    document.getElementById('signMeaning').style.display = 'none';
+                } else {
+                    document.getElementById('signMeaning').style.display = 'block';
+                    document.getElementById('signMeaning').textContent = sign.meaning;
+                }
+
+                if (sign.legal_regulation === '') {
+                    document.getElementById('signRules').style.display = 'none';
+                } else {
+                    document.getElementById('signRules').style.display = 'block';
+                    document.getElementById('signRules').textContent = sign.legal_regulation;
+                }
             })
             .catch((error) => { 
                 console.error('Error:', error); 

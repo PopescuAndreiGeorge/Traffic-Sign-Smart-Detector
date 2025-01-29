@@ -2,14 +2,14 @@ from flask import render_template, request, jsonify, url_for
 from flask_cors import CORS
 from app import app
 from http import HTTPStatus
-from PIL import Image, UnidentifiedImageError
+from PIL import UnidentifiedImageError
 import numpy as np
 from datetime import datetime
-import socket
 import cv2
+
 from .tools.sign_recognition import predict_sign
-from .tools.utils import get_image_path, parse_Sparql_name, parse_Sparql_name_to_link
-from .sparql_queries import *
+from .tools.utils import get_image_path, sparql_name_to_label, sparql_name_to_link, url_name_to_label, link_name_to_sparql
+from .tools.sparql_queries import get_sign_category, get_sign_type, get_sign_meaning, get_sign_legal_regulation, get_sign_precede_by, get_sign_precede_signs, get_sign_removes_restriction
 
 CORS(app)  # Enable CORS for all routes
 
@@ -49,21 +49,17 @@ def sign():
         image = cv2.imdecode(np.frombuffer(request.files['image'].read(), np.uint8), cv2.IMREAD_COLOR)
         prediction = predict_sign(image)
 
-        # no_passing -> NoPassing
-        sign_name = ' '.join(word.capitalize() for word in prediction.split('_'))
-        
-        # Parse the name to get the sign name in the ontology: no_overtaking -> NoOvertakingSign
-        sign_name_in_ontology = ''.join(word.capitalize() for word in prediction.split('_'))
-        sign_name_in_ontology += 'Sign'
+        sign_name_label = url_name_to_label(prediction)
+        sign_name_in_ontology = link_name_to_sparql(prediction)
 
-        # TODO: call the sparql query to get the sign information....
+        category = get_sign_category(sign_name_in_ontology)
+        meaning = get_sign_meaning(sign_name_in_ontology)
+        legal_regulation = get_sign_legal_regulation(sign_name_in_ontology)
 
         return_json = {
-            'name' : sign_name,
-            'category' : 'Traffic Control',
-            'type' : 'Regulatory',
-            'meaning' : 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.',
-            'rules' : 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.',
+            'name' : sign_name_label,
+            'meaning' : meaning,
+            'legal_regulation' : legal_regulation,
             'url': 'https://localhost:5050/about?sign=' + prediction
         }
 
@@ -85,43 +81,56 @@ def about():
            info = 'Sorry, the required sign argument is missing for the /about page.'
         ), HTTPStatus.BAD_REQUEST
     
+    sign_name_label = url_name_to_label(sign_name)
+    sign_name_in_ontology = link_name_to_sparql(sign_name)
 
-    # Parse the sign name: no_overtaking -> NoOvertaking
-    sign_name_text = ' '.join(word.capitalize() for word in sign_name.split('_'))
-
-    # Parse the name to get the sign name in the ontology: no_overtaking -> NoOvertakingSign
-    sign_name_in_ontology = ''.join(word.capitalize() for word in sign_name.split('_'))
-    sign_name_in_ontology += 'Sign'
-
-    # TODO: Get the sign information from the ontology....
-
-    sign_type = 'Regulatory'
-    sign_category = 'Traffic Control'
-    sign_rules = 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.'
-    sign_meaning = 'A stop sign is a regulatory sign that indicates that a driver must stop before proceeding. It is usually found at intersections, where drivers are required to stop and yield the right-of-way to other vehicles and pedestrians.'
+    sign_type = get_sign_type(sign_name_in_ontology)
+    sign_category = get_sign_category(sign_name_in_ontology)
+    legal_regulation = get_sign_legal_regulation(sign_name_in_ontology)
+    sign_meaning = get_sign_meaning(sign_name_in_ontology)
     sign_image = url_for('static', filename = get_image_path(sign_name_in_ontology))
+
+    print(f'Sign Image: {sign_image}')
+
     precede_signs = []
     precede_by = []
+    removes_restrictions = []
 
-    signs = ["PaharSign", "FootpathSign", "OtherDangerSign", "PedestrianCrossingSign", "PriorityRoadSign", "RoundaboutSign", "StopSign", "TrafficSignalsSign", "YieldSign"]
-
+    signs = get_sign_precede_signs(sign_name_in_ontology)
     for sign in signs:
         precede_signs.append ( { 
-            'name': parse_Sparql_name(sign), 
-            'about_url': url_for('about', sign = parse_Sparql_name_to_link(sign)), 
+            'name': sparql_name_to_label(sign), 
+            'about_url': url_for('about', sign = sparql_name_to_link(sign)), 
+            'image_url': url_for('static', filename = get_image_path(sign))
+        } )
+
+    signs = get_sign_precede_by(sign_name_in_ontology)
+    for sign in signs:
+        precede_by.append ( { 
+            'name': sparql_name_to_label(sign), 
+            'about_url': url_for('about', sign = sparql_name_to_link(sign)), 
+            'image_url': url_for('static', filename = get_image_path(sign))
+        } )
+
+    signs = get_sign_removes_restriction(sign_name_in_ontology)
+    for sign in signs:
+        removes_restrictions.append ( { 
+            'name': sparql_name_to_label(sign), 
+            'about_url': url_for('about', sign = sparql_name_to_link(sign)), 
             'image_url': url_for('static', filename = get_image_path(sign))
         } )
 
     return render_template (
         template_name_or_list = 'about_sign.html', 
-        sign_name = sign_name_text,
+        sign_name = sign_name_label,
         sign_meaning = sign_meaning,
-        sign_rules = sign_rules,
+        legal_regulation = legal_regulation,
         sign_category = sign_category,
         sign_type = sign_type,
         sign_image = sign_image,
         precede_signs = precede_signs,
         precede_by = precede_by,
+        removes_restrictions = removes_restrictions,
     )
     
     

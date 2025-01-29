@@ -1,15 +1,15 @@
 import re
 
 _traffic_signs = {
-    0:  'speed_limit_20',
-    1:  'speed_limit_30',
-    2:  'speed_limit_50',
-    3:  'speed_limit_60',
-    4:  'speed_limit_70',
-    5:  'speed_limit_80',
-    6:  'end_of_speed_limit_80',
-    7:  'speed_Limit_100',
-    8:  'speed_limit_120',
+    0:  'speed_limit20',
+    1:  'speed_limit30',
+    2:  'speed_limit50',
+    3:  'speed_limit60',
+    4:  'speed_limit70',
+    5:  'speed_limit80',
+    6:  'end_of_speed_limit80',
+    7:  'speed_Limit100',
+    8:  'speed_limit120',
     9:  'no_overtaking',
     10: 'no_overtaking_by_heavy_goods_vehicles',
     11: 'crossroads_with_a_minor_road',
@@ -59,14 +59,56 @@ def get_image_path(image_name: str) -> str:
     return f'assets/signs/{image_name[:-4]}.png'
 
 
-def parse_Sparql_name(name: str) -> str:
-    """ Parse the name to get the sign name: NoOvertakingSign -> No Overtaking
+def sparql_name_to_label(name: str) -> str:
+    """ Parse the name to get the sign name: EndSpeedLimit50 -> End Speed Limit 50
     """
-    return re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', name)[:-4]
+    # result = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', name)[:-4]
+
+    idx = 0
+    result = ''
+
+    while idx < len(name):
+        if (name[idx].isupper() and idx != 0) or (name[idx - 1].isalpha() and name[idx].isdigit()):
+            result += ' '
+        result += name[idx]
+        idx += 1 
+
+    return result[:-5]
 
 
-def parse_Sparql_name_to_link(name: str) -> str:
+def url_name_to_label(name: str) -> str:
+    """ Parse the name to get the sign name in the url: end_speed_limit50 -> End Speed Limit 50
+    """
+    
+    idx = 0
+    result = ''
+
+    name = ' '.join(word.capitalize() for word in name.split('_'))
+
+    while idx < len(name):
+        if name[idx - 1].isalpha() and name[idx].isdigit():
+            result += ' ' + name[idx]
+        else:
+            result += name[idx]
+       
+        idx += 1 
+
+    return result
+
+
+def sparql_name_to_link(name: str) -> str:
     """ Parse the name to get the sign name in the ontology: NoOvertakingSign -> no_overtaking
     """
     result = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', name)[:-4].lower().replace(' ', '_')
-    return result[:-1]
+    result = result[:-1] if result[-1] == '_' else result
+
+    return result
+
+
+def link_name_to_sparql(name: str) -> str:
+    """ Parse the name to get the sign name in the ontology: no_overtaking -> NoOvertakingSign
+    """
+    result = ''.join(word.capitalize() for word in name.split('_'))
+    result += 'Sign'
+
+    return result

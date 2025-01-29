@@ -24,48 +24,58 @@
             <p>Name: <span id="signName"> {{ sign_name }}  </span> </p>
             <p>Category: <span id="signCategory"> {{ sign_category }} </span> </p>
             <p>Type: <span id="signType"> {{ sign_type }} </span> </p>
-            <p>Meaning: <span id="signDescription"> {{ sign_meaning }} </span> </p>
-            {% if sign_rules %}
-                <p>Rules: <span id="signRules"> {{ sign_rules }} </span> </p>
+            
+            {% if sign_meaning %}
+                <p>Meaning: <span id="signDescription"> {{ sign_meaning }} </span> </p>
+            {% endif %}
+
+            {% if legal_regulation %}
+                <p>Rules: <span id="signRules"> {{ legal_regulation }} </span> </p>
             {% endif %}
         </div>
     </div>
 
+    {% if removes_restrictions %}  
     <div class="sign-information" id="signInformation">
-        <h2>Precede the signs:</h2>
+        <h2>Removes Restrictions:</h2>
         <div class="signs_list" id="signPrecedeSigns">
-            {% if precede_signs %}  
+            {% for sign in removes_restrictions %}
+                <div class="sign-item" onclick="window.location.href='{{ sign.about_url }}'">
+                    <img src="{{ sign.image_url }}" alt="Traffic Sign Image" onerror="this.onerror=null; this.src='../static/assets/sign_not_found.png';">
+                    <p>{{ sign.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}  
+
+    {% if precede_signs %}  
+        <div class="sign-information" id="signInformation">
+            <h2>Precede the signs:</h2>
+            <div class="signs_list" id="signPrecedeSigns">
                 {% for sign in precede_signs %}
                     <div class="sign-item" onclick="window.location.href='{{ sign.about_url }}'">
                         <img src="{{ sign.image_url }}" alt="Traffic Sign Image" onerror="this.onerror=null; this.src='../static/assets/sign_not_found.png';">
                         <p>{{ sign.name }}</p>
                     </div>
                 {% endfor %}
-            {% else %}
-                <div class="sign-item empty">
-                    <p>No signs available</p>
-                </div>
-            {% endif %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 
-    <div class="sign-information" id="signInformation">
-        <h2>Precede by:</h2>
-        <div class="signs_list" id="signPrecedeBy">
-            {% if precede_by %}  
+    {% if precede_by %}
+        <div class="sign-information" id="signInformation">
+            <h2>Precede by:</h2>
+            <div class="signs_list" id="signPrecedeBy">
                 {% for sign in precede_by %}
-                    <div class="sign-item">
+                    <div class="sign-item" onclick="window.location.href='{{ sign.about_url }}'">
                         <img src="{{ sign.image_url }}" alt="Traffic Sign Image" onerror="this.onerror=null; this.src='../static/assets/sign_not_found.png';">
                         <p>{{ sign.name }}</p>
                     </div>
                 {% endfor %}
-            {% else %}
-                <div class="sign-item empty">
-                    <p>No signs available</p>
-                </div>
-            {% endif %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 
     <!-- Camera JS Script -->
     <!-- <script type="module" src="../static/js/camera.js"></script> -->

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from .sparql_queries import *
+from .tools.sparql_queries import *
 
 main_bp = Blueprint('main', __name__)
 

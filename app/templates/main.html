@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-    <title> Tras </title>
+    <title>Traffic Sign Detector</title>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Traffic Sign Detector",
+      "url": "{{ url_for('index', _external=True) }}",
+      "author": {
+        "@type": "Organization",
+        "name": "Traffic Sign Detection Company",
+        "url": "{{ url_for('index', _external=True) }}",
+        "logo": "{{ url_for('static', filename='assets/logo.png', _external=True) }}"
+      },
+      "description": "A web application for detecting traffic signs from uploaded images or live camera feed.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ url_for('about') }}?sign={sign_name}",
+        "query-input": "required name=sign"
+      }
+    }
+    </script>
 </head>
-
 <body>
     <!-- Page Header Title -->
-    <header class="header">
-        <h1>Traffic Sign Detector</h1>
+    <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <h1 itemprop="headline">Traffic Sign Detector</h1>
     </header>
-
-    <div id="customAlert" class="custom-alert">
+    <div id="customAlert" class="custom-alert" itemscope itemtype="https://schema.org/Alert">
         <div class="alert-content">
-            <span id="alertMessage"></span>
+            <span id="alertMessage" itemprop="description"></span>
             <button onclick="closeAlert()">OK</button>
         </div>
     </div>    
-
     <!-- Image Preview Container -->
-    <div id="preview" class="preview"> </div>
-
+    <div id="preview" class="preview" itemscope itemtype="https://schema.org/ImageObject"> </div>
     <!-- Image Upload Form -->
-     <div class="upload-container-wrapper" id="uploadContainerWrapper">
-        <div class="upload-container" id="uploadContainer">
+    <div class="upload-container-wrapper">
+        <div class="upload-container" id="uploadContainer" itemscope itemtype="https://schema.org/Action">
             <form id="uploadForm" action="{{ url_for('sign') }}" method="POST" enctype="multipart/form-data"> 
-                <label for="fileInput" class="upload-label"> 
+                <label for="fileInput" class="upload-label" itemprop="name"> 
                     Choose an image 
-                    <input type="file" id="fileInput" class="upload-input" accept="image/*"> 
+                    <input type="file" id="fileInput" class="upload-input" accept="image/*" itemprop="fileFormat"> 
                 </label> 
-                <button id="submit-btn" type="submit" class="upload-button">
+                <button id="submit-btn" type="submit" class="upload-button" itemprop="url">
                     Upload
                 </button> 
             </form>
         </div>
     </div>
-
     <!-- Sign Information Container. Will be populated in future -->
     <div class="sign-information" id="signInformation" style="display:none;">
         <h2>Sign Information</h2>
         <div class="sign-info" id="signInfo">
-            <p>Name: <span id="signName"> </span> </p>
-            <p>Meaning: <span id="signDescription"> </span> </p>
+            <p>Name: <span id="signName" itemprop="name"> </span> </p>
+            <p>Meaning: <span id="signDescription" itemprop="description"> </span> </p>
         </div>
     </div>
-
     <!-- Floating Camera Button -->
     <button class="btn-reupload" id="reuploadBtn" style="display:none;">
         <img src="{{ url_for('static', filename='assets/upload.png') }}" alt="Camera" class="btn-icon">
     </button>
-
     <button class="btn-camera" id="cameraBtn">
         <img src="{{ url_for('static', filename='assets/camera.png') }}" alt="Camera" class="btn-icon">
     </button>
-
     <!-- Camera JS Script -->
     <!-- <script src="{{ url_for('static', filename='js/script.css') }}"></script> -->
     <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-
 </html>
