@@ -1,0 +1,2736 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign/"
+     xml:base="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:TrafficSign="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#"
+	 xmlns:wd="http://www.wikidata.org/entity/"
+	 xmlns:dbo="http://dbpedia.org/property/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#isPrecededBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#isPrecededBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#precedes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#precedes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#removesRestriction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#removesRestriction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasHeightLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasHeightLimit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasLengthLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasLengthLimit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasSpeedLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasSpeedLimit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasWeightLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasWeightLimit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasWeightLimitPerAxle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasWeightLimitPerAxle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasWidthLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#hasWidthLimit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#legalRegulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#legalRegulation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#removesSpeedLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#removesSpeedLimit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BridlePathSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BridlePathSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusLaneSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusLaneSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrosswindsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrosswindsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CycleCrossingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CycleCrossingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CycleStreetSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CycleStreetSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DipSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DipSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EmergencyLay-bySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EmergencyLay-bySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndCyclePathSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndCyclePathSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMinimumSpeedLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMinimumSpeedLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoHonkingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoHonkingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EscapeLaneSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EscapeLaneSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EuropeanMotorwayNumbersSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EuropeanMotorwayNumbersSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FogSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FogSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LooseSurfaceMaterialSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LooseSurfaceMaterialSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Low-flyingAircraftSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Low-flyingAircraftSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalBorderSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalBorderSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalMotorwayNumbersSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalMotorwayNumbersSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHonkingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHonkingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesExceptMotorcyclesWithoutSidecarSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesExceptMotorcyclesWithoutSidecarSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#OpeningBridgeSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#OpeningBridgeSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Other_dangerSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Other_dangerSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingGarageSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingGarageSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingWarnSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingWarnSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianZoneSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianZoneSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestriansSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestriansSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RestrictedParkingZoneSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RestrictedParkingZoneSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadworksSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadworksSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutWarnSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutWarnSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RouteForVehiclesCarryingDangerousGoodsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RouteForVehiclesCarryingDangerousGoodsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SegregatedPedestrianAndCyclePathSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SegregatedPedestrianAndCyclePathSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SeriesOfCurvesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SeriesOfCurvesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SharedPedestrianAndCyclePathSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SharedPedestrianAndCyclePathSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SlipperySurfaceSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SlipperySurfaceSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SoftOrLowVergesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SoftOrLowVergesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfExpresswaySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfExpresswaySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfMotorwaySign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfMotorwaySign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepAscentSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepAscentSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepDescentSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepDescentSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TaxiStandSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TaxiStandSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficQueuesSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficQueuesSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSignalsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSignalsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TramsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TramsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelWarnSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelWarnSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnLeftOrRightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnLeftOrRightSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnRightSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnRightSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Two-wayTrafficSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Two-wayTrafficSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnevenSurfaceSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnevenSurfaceSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnprotectedBodyOfWaterSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnprotectedBodyOfWaterSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSign"/>
+		<rdfs:subClassOf rdf:resource="wd:Q170285"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WildAnimalsSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WildAnimalsSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator is placed on public roads where the speed indicated on the indicator is considered optimal for traffic in safe conditions.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Drivers are required to drive at a maximum speed of 30 km/h in built-up areas or 50 km/h outside built-up areas.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign marks a bus stop. Stopping, parking, turning around and reversing are prohibited within 25 meters before and after public transport stops.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign obliges drivers to drive at a maximum speed of 30km/h in built-up areas or 50km/h outside built-up areas between 7:00 and 22:00.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Drivers are not required to reduce speed or yield the right-of-way.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of a vehicle passing through an unmanned intersection is obliged to drive at a speed not exceeding 30 km/h in settlements or 50 km/h outside settlements and to yield to vehicles coming from the right.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">If visibility in the curve is less than 50 meters, the driver is required to drive at a speed not exceeding 30 km/h in built-up areas or 50 km/h outside built-up areas.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator is installed at the intersection of a public road with a track, on which only bicycles and electric scooters are allowed to circulate.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle must drive with increased caution and is obliged to give priority to passing when making a left or right turn and intersecting with bicycles or electric scooters that are traveling on the bicycle path signaled as such.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to drive at a speed not exceeding 30 km/h when passing animals that are being driven on the side of the road or on the shoulder.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles100Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles70Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit100Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit120Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit20Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit30Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit50Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit60Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit70Sign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit80Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator in the image is mounted in the area where a restriction ends (when there is no specific indicator for it) or when the area of ​​action of two or more restriction indicators ends.</TrafficSign:legalRegulation>
+		<dbo:label>EndAllPreviouslySignedRestrictionsSign</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is erected to signal the end of all previous restrictions.</dbo:abstract>
+	</owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator in the image is mounted at the exit from roads on which only motor vehicle traffic is allowed.</TrafficSign:legalRegulation>
+    	<dbo:label>EndExpresswaySign</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is erected to signal leaving roads on which only motor vehicle traffic is allowed.</dbo:abstract>
+	</owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">When leaving residential or pedestrian areas, vehicle drivers are required to give way to all vehicles they intersect with.</TrafficSign:legalRegulation>
+    	<dbo:label>EndLivingStreetSign</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is erected to signal leaving residential areas.</dbo:abstract>
+	</owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign is intended to mark the exit from a highway.</TrafficSign:legalRegulation>
+		<dbo:label>EndMotorwaySign</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is installed at the exit of a highway.</dbo:abstract>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator announces the end of the road sector on which goods vehicle drivers are not allowed to overtake.</TrafficSign:legalRegulation>
+    	<dbo:label>EndNoOvertakingByHeavyVehiclesSign</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator announces the end of the overtaking ban for goods vehicles.</dbo:abstract>
+	</owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign announces the end of the road sector on which overtaking has been prohibited by one of the signs &quot;Overtaking of motor vehicles, except motorcycles without sidecar, prohibited&quot; or &quot;Overtaking prohibited for motor vehicles intended for the transport of goods&quot;.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator forces the driver of vehicles to give way to the right and to comply with other priority rules existing on that road.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit100Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit100Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit100Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 100 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">100</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit120Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit120Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit120Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 120 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">120</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit20Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit20Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit20Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 20 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit30Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit30Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit30Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 30 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">30</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit50Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit50Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit50Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 50 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">50</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit60Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit60Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit60Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 60 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">60</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit70Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit70Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit70Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 70 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">70</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit80Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit80Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit80Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 80 km per hour.</TrafficSign:legalRegulation>
+        <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">80</TrafficSign:removesSpeedLimit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone20Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone20Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone20Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 20 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone30Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone30Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone30Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 30 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone50Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone50Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone50Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 50 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone60Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone60Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone60Sign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 60 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone70Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone70Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
+        <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone70Sign"/>
+        <TrafficSign:legalRegulation>This indicator is located at the end of the area where the speed limit was 70 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is not obliged to reduce speed when encountering this sign, but is advised to drive with increased caution.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This marked road is intended exclusively for pedestrians, on which their circulation is obligatory.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign is intended to warn the driver that he is approaching an intersection where he is required to reduce speed and give way.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign forces the driver driving in the direction of the red arrow to give priority to vehicles coming from the opposite direction on the narrow road section that follows.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">At intersections where this indicator is installed, turning maneuvers are prohibited, as left turns are prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator is placed no more than 15 meters before the intersection. At intersections, turning is prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimit2point5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimit2point5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
+        <TrafficSign:hasHeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</TrafficSign:hasHeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their height, including the load, exceeds 2.5 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimit3Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimit3Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
+        <TrafficSign:hasHeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</TrafficSign:hasHeightLimit>
+        <TrafficSign:legalRegulation>The sign prohibits access to vehicles if their height, including the load, exceeds 3 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimit3point5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimit3point5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
+        <TrafficSign:hasHeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</TrafficSign:hasHeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their height, including the load, exceeds 3.5 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">If the road is covered with ice, snow, slush or wet cobblestones, the driver is obliged to reduce the speed to a maximum of 30 km/h in the settlement and 50 km/h outside the settlement.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to avoid the obstacle by keeping to the left.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to avoid the obstacle by keeping to the right.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator obliges drivers to respect the rules marked on the sign in the lane they are in.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimit10Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimit10Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign"/>
+        <TrafficSign:hasLengthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</TrafficSign:hasLengthLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles whose length, including the load, exceeds 10 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimit20Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimit20Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign"/>
+        <TrafficSign:hasLengthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</TrafficSign:hasLengthLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles whose length, including the load, exceeds 20 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to stop to ensure that no railway vehicle is circulating at that moment.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to stop to ensure that no railway vehicle is circulating at that moment.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to reduce speed when encountering this indicator.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to show increased caution and stop at the railway stop marking.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Drivers are required to drive at a maximum speed of 20 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator informs drivers that they can bypass the obstacle on either side.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles100Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles100Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits vehicles from driving without maintaining a distance of at least 100 meters between them.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles70Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles70Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits vehicles from driving without maintaining a distance of at least 70 meters between them.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver is required to drive at a speed higher than that indicated on the indicator (but lower than the maximum legal speed allowed on the respective road section).</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalBorderSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalBorderSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalBorderSign"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalMotorwayNumbersSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalMotorwayNumbersSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalMotorwayNumbersSign"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator is intended to inform vehicle drivers of the general speed limits applied in the state indicated on the indicator.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to public roads for agricultural vehicles.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access on public roads for vehicles drawn by animals.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to public roads for buses.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to all vehicles on the road section at the end of which it is installed.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to the public road of vehicles intended for the transport of goods.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits left turns.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to public roads for mopeds.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to the public road by motor vehicles.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to the public road for motorcycles.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The end of the sector with prohibited overtaking is signaled by the sign End of no overtaking or End of all previously signed restrictions. If the prohibited overtaking sign is installed together with the sign announcing the entry into a settlement, their meaning is valid on the respective road until the exit from the settlement.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The end of the sector with prohibited overtaking is signaled by the sign End of no overtaking or End of all previously signed restrictions. If the prohibited overtaking sign is installed together with the sign announcing the entry into a settlement, their meaning is valid on the respective road until the exit from the settlement.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The parking prohibition begins at the sign. When the sign is not accompanied by additional panels, its area of ​​application ends at the nearest intersection. If the sign is accompanied by a marking consisting of a continuous longitudinal line that runs along the edge of the carriageway, parking is prohibited along the entire length of that continuous line.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to public roads for bicycles and electric scooters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits pedestrian access to the road section at the intersection where it was installed.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits right turns.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The stopping prohibition begins at the sign. When the sign is not accompanied by additional panels, its area of ​​application ends at the nearest intersection. If the sign is accompanied by a marking consisting of a continuous longitudinal line that runs along the edge of the carriageway, parking is prohibited along the entire length of that continuous line.
+In the area of ​​action of this sign, turning and reversing maneuvers are prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator informs the vehicle driver that the road ahead is dead-end.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">In the area of ​​action of this sign, reversing is also prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign prohibits access to vehicles carrying dangerous goods.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign prohibits access to vehicles carrying substances likely to pollute the water.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign prohibits the entry of vehicles with trailers, except those with semi-trailers or single-axle trailers.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign may be accompanied by an additional sign indicating the categories of vehicles that are exempt from the prohibition imposed by the sign.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Two-wayTrafficSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">On one-way roads, turning is prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Other_dangerSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Other_dangerSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Other_dangerSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">It is recommended to reduce speed and drive with increased caution.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign marking the parking space may contain certain rules established by the responsible administrator regarding how parking will be carried out.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingWarnSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">When encountering this indicator, stopping, parking, turning and reversing maneuvers are prohibited less than 25 meters before and after the pedestrian crossing. And the overtaking maneuver is prohibited only on the pedestrian crossing.
+The vehicle driver is obliged to drive at a maximum of 30 km/h in settlements or 50 km/h outside settlements when there are pedestrians near the crossing.
+The vehicle driver is obliged to give priority to crossing to the pedestrian crossing, when he is in the direction of travel of the vehicle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingWarnSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingWarnSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingWarnSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Drive with extra caution in order to reduce speed and possibly stop at the pedestrian crossing.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianZoneSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianZoneSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianZoneSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign obliges drivers to drive at a maximum speed of 5 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Driving in the direction of the white arrow, the driver will have priority over vehicles driving from the opposite direction.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of informing the driver that he has priority at the intersections he will enter.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">When encountering this indicator, stopping, parking, reversing and turning maneuvers are prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadworksSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadworksSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadworksSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator is sometimes placed on the same panel with signs such as narrow road or speed limit and traffic cones are found.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutWarnSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign forces drivers to proceed in the direction of the arrows as they approach the center of the intersection. Stopping and parking are prohibited at this type of intersection.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutWarnSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutWarnSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutWarnSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Vehicle traffic will be carried out according to the rules established for this type of intersection. Vehicles entering a roundabout lose priority over vehicles driving inside the intersection.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SegregatedPedestrianAndCyclePathSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SegregatedPedestrianAndCyclePathSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SegregatedPedestrianAndCyclePathSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">When encountering this sign, pedestrians and drivers of bicycles or electric scooters are required to circulate only on the path specific to their category.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SeriesOfCurvesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SeriesOfCurvesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SeriesOfCurvesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">If the curve is signaled as being a particularly dangerous curve or if the visibility in the curve is less than 50 meters, the driver is required to drive at a speed lower than 30 km/h in the settlement or 50 km/h outside the settlement.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SlipperySurfaceSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SlipperySurfaceSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SlipperySurfaceSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">If the road is covered with ice, snow, slush or wet cobblestones, the driver is obliged to reduce the speed to a maximum of 30 km/h in the settlement and 50 km/h outside the settlement.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SoftOrLowVergesSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SoftOrLowVergesSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SoftOrLowVergesSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">When encountering this sign, turning is prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit100Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit100Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit100Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">100</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 100 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit120Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit120Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit120Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">120</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 120 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit20Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit20Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit20Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 20 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit30Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit30Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit30Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">30</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 30 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit50Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit50Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit50Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">50</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 50 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit60Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit60Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit60Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">60</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 60 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit70Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit70Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit70Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">70</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 70 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit80Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit80Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit80Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">80</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 80 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone20Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone20Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone20Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 20 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone30Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone30Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone30Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">30</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 30 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone50Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone50Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone50Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">50</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 50 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone60Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone60Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit60Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">60</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 60 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone70Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone70Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone70Sign"/>
+        <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">70</TrafficSign:hasSpeedLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 70 km/h.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfExpresswaySign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfExpresswaySign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfExpresswaySign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign marks the entrance to a public road on which only motor vehicles are allowed.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfMotorwaySign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfMotorwaySign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfMotorwaySign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign obliges drivers to drive at a minimum speed of 50 km/h. U-turns, stopping, parking, reversing and driving on the emergency lane are prohibited on the motorway.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepAscentSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepAscentSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepAscentSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Parking is prohibited along the entire length of the road. When visibility is below 50 meters, all maneuvers are prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepDescentSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepDescentSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SteepDescentSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Parking is prohibited along the entire length of the road. When visibility is below 50 meters, all maneuvers are prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign is intended to warn the driver that he is approaching an intersection where he is required to stop.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign forces the driver to stop, regardless of whether other vehicles are driving on the priority road or not. The driver can pass the sign, to reach the place with maximum visibility, but without entering the intersection.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSignalsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSignalsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TrafficSignalsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator is found 200 meters before the electric traffic light, where it is considered that its presence could surprise drivers.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TramsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TramsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TramsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">If the next intersection is unguided, moving trams have priority and lose it only when they make a left turn.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelWarnSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">Inside the tunnel, the driver of the vehicle is obliged to use the dipped headlights. In the tunnel, all maneuvers are prohibited.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelWarnSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelWarnSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelWarnSign"/>
+        <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">In the tunnel, all maneuvers are prohibited and driving with dipped headlights is mandatory.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnRightSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnRightSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnRightSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This indicator forces the driver to turn right at the first intersection, the turning maneuver being performed after passing the indicator.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Two-wayTrafficSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Two-wayTrafficSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Two-wayTrafficSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The sign is intended to warn the driver that the following road sector will be used for both directions.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnevenSurfaceSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnevenSurfaceSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#UnevenSurfaceSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver is obliged to reduce the speed to 30 km/h in settlements and 50 km/h outside settlements.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit3Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit3Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
+        <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</TrafficSign:hasWeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 3 tons.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit3point5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit3point5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
+        <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</TrafficSign:hasWeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 3.5 tons.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
+        <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</TrafficSign:hasWeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 5 tons.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit6Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit6Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
+        <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</TrafficSign:hasWeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 6 tons.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit7Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimit7Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
+        <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</TrafficSign:hasWeightLimit>
+        <TrafficSign:legalRegulation xml:lang="en">WeightLimit7Sign</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle2Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle2Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+        <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</TrafficSign:hasWeightLimitPerAxle>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 2 tons per axle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle3Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle3Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+        <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</TrafficSign:hasWeightLimitPerAxle>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 3 tons per axle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle4Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle4Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+        <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</TrafficSign:hasWeightLimitPerAxle>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 4 tons per axle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+        <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</TrafficSign:hasWeightLimitPerAxle>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 5 tons per axle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle6Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle6Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+        <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</TrafficSign:hasWeightLimitPerAxle>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 6 tons per axle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle6point5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxle6point5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+        <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</TrafficSign:hasWeightLimitPerAxle>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 6.5 tons per axle.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
+        <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</TrafficSign:hasWidthLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2point2Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2point2Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
+        <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.2</TrafficSign:hasWidthLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2.2 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2point3Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2point3Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
+        <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.3</TrafficSign:hasWidthLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2.3 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2point5Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimit2point5Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
+        <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</TrafficSign:hasWidthLimit>
+        <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2.5 meters.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WildAnimalsSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WildAnimalsSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WildAnimalsSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">The driver is obliged to reduce speed to 50 km/h when passing animals that are being driven on the side of the road or verge.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign"/>
+        <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign"/>
+        <TrafficSign:legalRegulation xml:lang="en">This sign forces the driver to reduce speed and ensure that there are no other vehicles on the priority road. If there are other vehicles on the priority road, the driver is obliged to stop to give them priority.</TrafficSign:legalRegulation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EmergencyLay-bySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EscapeLaneSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EuropeanMotorwayNumbersSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalBorderSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalMotorwayNumbersSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingGarageSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TaxiStandSign"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#De-restrictionSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IndicationSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MandatorySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PrioritySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ProhibitorySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpecialRegulationSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WarningSign"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndCyclePathSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMinimumSpeedLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoHonkingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHonkingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesExceptMotorcyclesWithoutSidecarSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RestrictedParkingZoneSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZoneSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
