@@ -6,9 +6,10 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:direct="http://www.wikidata.org/prop/direct/"
-     xmlns:property="http://dbpedia.org/property/"
-     xmlns:TrafficSign="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#">
+     xmlns:TrafficSign="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#"
+	 xmlns:wdt="http://www.wikidata.org/prop/direct/"
+	 xmlns:wd="http://www.wikidata.org/entity/"
+     xmlns:dbo="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign"/>
     
 
@@ -1307,7 +1308,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator is placed on public roads where the speed indicated on the indicator is considered optimal for traffic in safe conditions.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Advisory Speed</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is intended to show the optimal speed for vehicle traffic.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1316,7 +1321,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign"/>
         <TrafficSign:legalRegulation xml:lang="en">Drivers are required to drive at a maximum speed of 30 km/h in built-up areas or 50 km/h outside built-up areas.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Bump</dbo:label>
+		<dbo:abstract xml:lang="en">This sign warns that there is a bump in the road ahead, placed on the road with the intention of imposing a speed reduction.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1325,7 +1334,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This sign marks a bus stop. Stopping, parking, turning around and reversing are prohibited within 25 meters before and after public transport stops.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Bus Stop</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is found near bus stops.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1334,7 +1347,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The sign obliges drivers to drive at a maximum speed of 30km/h in built-up areas or 50km/h outside built-up areas between 7:00 and 22:00.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Children</dbo:label>
+		<dbo:abstract xml:lang="en">This sign warns that you are about to encounter a place frequented by children, such as schools, kindergartens, playgrounds, etc.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1343,7 +1360,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign"/>
         <TrafficSign:legalRegulation xml:lang="en">Drivers are not required to reduce speed or yield the right-of-way.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Crossroads With Minor Road</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed outside of settlements, 90-200 meters from an intersection with a non-priority road.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1352,7 +1373,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of a vehicle passing through an unmanned intersection is obliged to drive at a speed not exceeding 30 km/h in settlements or 50 km/h outside settlements and to yield to vehicles coming from the right.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Crossroads With Priority To The Right</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed outside of settlements, 100-250 meters from an unmanned intersection.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1361,7 +1386,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign"/>
         <TrafficSign:legalRegulation xml:lang="en">If visibility in the curve is less than 50 meters, the driver is required to drive at a speed not exceeding 30 km/h in built-up areas or 50 km/h outside built-up areas.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>CurveSign</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator warns that a curve is coming.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1370,7 +1399,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator is installed at the intersection of a public road with a track, on which only bicycles and electric scooters are allowed to circulate.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Cycle Path</dbo:label>
+		<dbo:abstract xml:lang="en">This sign marks the beginning of a bike path.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1379,7 +1412,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle must drive with increased caution and is obliged to give priority to passing when making a left or right turn and intersecting with bicycles or electric scooters that are traveling on the bicycle path signaled as such.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Cyclists</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed 100-200 meters from the place where the public road intersects with a bicycle path.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1388,7 +1425,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to drive at a speed not exceeding 30 km/h when passing animals that are being driven on the side of the road or on the shoulder.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Domesticated Animals</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is found in localities.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1409,7 +1450,11 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit70Sign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit80Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator in the image is mounted in the area where a restriction ends (when there is no specific indicator for it) or when the area of ​​action of two or more restriction indicators ends.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>End Of All Previously Signed Restrictions</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is erected to signal the end of all previous restrictions.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q23445"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1418,7 +1463,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator in the image is mounted at the exit from roads on which only motor vehicle traffic is allowed.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>End Of Expressway</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is erected to signal leaving roads on which only motor vehicle traffic is allowed.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1427,7 +1476,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign"/>
         <TrafficSign:legalRegulation xml:lang="en">When leaving residential or pedestrian areas, vehicle drivers are required to give way to all vehicles they intersect with.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>End Of Living Street</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is erected to signal leaving residential areas.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1436,6 +1489,10 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign"/>
         <TrafficSign:legalRegulation xml:lang="en">This sign is intended to mark the exit from a highway.</TrafficSign:legalRegulation>
+		<dbo:label>End Of Motorway</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is installed at the exit of a highway.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q3133"/>
     </owl:NamedIndividual>
     
 
@@ -1445,7 +1502,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator announces the end of the road sector on which goods vehicle drivers are not allowed to overtake.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>End Of No Overtaking By Heavy Vehicles</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator announces the end of the overtaking ban for goods vehicles.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q23445"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1456,7 +1517,11 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This sign announces the end of the road sector on which overtaking has been prohibited by one of the signs &quot;Overtaking of motor vehicles, except motorcycles without sidecar, prohibited&quot; or &quot;Overtaking prohibited for motor vehicles intended for the transport of goods&quot;.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>End Of No Overtaking</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator announces the end of the overtaking ban for vehicles.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q23445"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1468,7 +1533,11 @@
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign"/>
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator forces the driver of vehicles to give way to the right and to comply with other priority rules existing on that road.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>End Of Priority Road</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed 50-200 meters from the place where the priority on the road ends.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q23445"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1479,10 +1548,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit100Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 100 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">100</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 100 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit100Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 100 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 100 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1494,10 +1563,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit120Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 120 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">120</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 120 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit120Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 120 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 120 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1509,10 +1578,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit20Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 20 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 20 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit20Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 20 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 20 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1524,10 +1593,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit30Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 30 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">30</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 30 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit30Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 30 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 30 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1539,10 +1608,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit50Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 50 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">50</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 50 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit50Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 50 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 50 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1554,10 +1623,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimit60Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 60 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">60</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 60 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit60Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 60 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 60 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1569,10 +1638,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit70Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 70 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">70</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 70 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit70Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 70 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 70 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1584,10 +1653,10 @@
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit80Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of indicating the end of the road sector on which the speed limit is imposed at 80 km per hour.</TrafficSign:legalRegulation>
         <TrafficSign:removesSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">80</TrafficSign:removesSpeedLimit>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 80 km/h speed limit.</property:abstract>
-        <property:label>EndSpeedLimit80Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 80 km/h speed limit.</dbo:abstract>
+        <bdo:label>End Of Speed Limit 80 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1598,10 +1667,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone20Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 20 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 20 km/h speed limit in a zone.</property:abstract>
-        <property:label>EndSpeedLimit120Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 20 km/h speed limit in a zone.</dbo:abstract>
+        <bdo:label>End Of Speed Limit Zone 20 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1612,10 +1681,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SpeedLimitZone30Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 30 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 30 km/h speed limit in a zone.</property:abstract>
-        <property:label>EndSpeedLimitZone30Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 30 km/h speed limit in a zone.</dbo:abstract>
+        <bdo:label>End Of Speed Limit Zone 30 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1626,10 +1695,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone50Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 50 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 50 km/h speed limit in a zone.</property:abstract>
-        <property:label>EndSpeedLimitZone50Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 50 km/h speed limit in a zone.</dbo:abstract>
+        <bdo:label>End Of Speed Limit Zone 50 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1640,10 +1709,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone60Sign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator is located at the end of the area where the speed limit was 60 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 60 km/h speed limit in a zone.</property:abstract>
-        <property:label>EndSpeedLimitZone60Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 60 km/h speed limit in a zone.</dbo:abstract>
+        <bdo:label>End Of Speed Limit Zone 60 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1654,10 +1723,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZoneSign"/>
         <TrafficSign:removesRestriction rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone70Sign"/>
         <TrafficSign:legalRegulation>This indicator is located at the end of the area where the speed limit was 70 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This indicator is intended to cancel the 70 km/h speed limit in a zone.</property:abstract>
-        <property:label>EndSpeedLimitZone70Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <bdo:abstract xml:lang="en">This indicator is intended to cancel the 70 km/h speed limit in a zone.</dbo:abstract>
+        <bdo:label>End Of Speed Limit Zone 70 km/h</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </owl:NamedIndividual>
     
 
@@ -1667,7 +1736,12 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is not obliged to reduce speed when encountering this sign, but is advised to drive with increased caution.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Falling Rocks</dbo:label>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	<dbo:abstract xml:lang="en">This sign is usually found in mountainous areas and warns that you are approaching a section of road where there is a possibility of falling rocks or rocks from the slopes.</dbo:abstract>
+
+	</owl:NamedIndividual>
     
 
 
@@ -1675,6 +1749,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign"/>
+		<dbo:label>First Aid</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is found next to a first aid station.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
     </owl:NamedIndividual>
     
 
@@ -1684,7 +1762,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This marked road is intended exclusively for pedestrians, on which their circulation is obligatory.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Footpath</dbo:label>
+		<dbo:abstract xml:lang="en">The indicator is mounted at the ends of the tracks or road sectors delimited by the carriageway.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1694,7 +1776,11 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign"/>
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This sign is intended to warn the driver that he is approaching an intersection where he is required to reduce speed and give way.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Give Way Ahead</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is placed before an intersection on a road without priority.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1704,7 +1790,11 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign"/>
         <TrafficSign:isPrecededBy rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoadNarrowsSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This sign forces the driver driving in the direction of the red arrow to give priority to vehicles coming from the opposite direction on the narrow road section that follows.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Give Way To Oncoming Traffic</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is placed 10-20 meters before the narrow road section where there is no room for two vehicles to drive side by side.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1713,7 +1803,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign"/>
         <TrafficSign:legalRegulation xml:lang="en">At intersections where this indicator is installed, turning maneuvers are prohibited, as left turns are prohibited.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Go Straight Or Turn Right</dbo:label>
+		<dbo:abstract xml:lang="en">The indicator is installed before an intersection where the directions indicated by the arrows are mandatory.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1722,7 +1816,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator is placed no more than 15 meters before the intersection. At intersections, turning is prohibited.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Go Straight</dbo:label>
+		<dbo:abstract xml:lang="en">The indicator forces drivers to drive only in the forward direction at the intersection before which it is installed.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1732,10 +1830,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
         <TrafficSign:hasHeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</TrafficSign:hasHeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their height, including the load, exceeds 2.5 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain height.</property:abstract>
-        <property:label>HeightLimit2point5Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain height.</dbo:abstract>
+        <bdo:label>HeightLimit2point5Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1746,10 +1844,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
         <TrafficSign:hasHeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</TrafficSign:hasHeightLimit>
         <TrafficSign:legalRegulation>The sign prohibits access to vehicles if their height, including the load, exceeds 3 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain height.</property:abstract>
-        <property:label>HeightLimit3Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain height.</dbo:abstract>
+        <bdo:label>HeightLimit3Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1760,10 +1858,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HeightLimitSign"/>
         <TrafficSign:hasHeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</TrafficSign:hasHeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their height, including the load, exceeds 3.5 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain height.</property:abstract>
-        <property:label>HeightLimit3point5Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain height.</dbo:abstract>
+        <bdo:label>HeightLimit3point5Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1772,7 +1870,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign"/>
-    </owl:NamedIndividual>
+		<dbo:label>Hospital</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is found near hospitals to inform about the existence of a medical facility.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1781,7 +1883,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign"/>
         <TrafficSign:legalRegulation xml:lang="en">If the road is covered with ice, snow, slush or wet cobblestones, the driver is obliged to reduce the speed to a maximum of 30 km/h in the settlement and 50 km/h outside the settlement.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Ice Or Snow</dbo:label>
+		<dbo:abstract xml:lang="en">This sign is placed 100-200 meters from the dangerous place. The road may become slippery due to atmospheric conditions.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1790,7 +1896,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to avoid the obstacle by keeping to the left.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Keep Left</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1799,7 +1909,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to avoid the obstacle by keeping to the right.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Keep Right</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1808,7 +1922,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator obliges drivers to respect the rules marked on the sign in the lane they are in.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Lane Configuration</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator marks the differences between lanes on a public road.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1818,10 +1936,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign"/>
         <TrafficSign:hasLengthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</TrafficSign:hasLengthLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles whose length, including the load, exceeds 10 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles whose length, including the load, exceeds a certain dimension.</property:abstract>
-        <property:label>LengthLimit10Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign means that access is prohibited for vehicles whose length, including the load, exceeds a certain dimension.</dbo:abstract>
+        <bdo:label>LengthLimit10Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1832,10 +1950,10 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LengthLimitSign"/>
         <TrafficSign:hasLengthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</TrafficSign:hasLengthLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles whose length, including the load, exceeds 20 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles whose length, including the load, exceeds a certain dimension.</property:abstract>
-        <property:label>LengthLimit20Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign means that access is prohibited for vehicles whose length, including the load, exceeds a certain dimension.</dbo:abstract>
+        <bdo:label>LengthLimit20Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1845,7 +1963,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to stop to ensure that no railway vehicle is circulating at that moment.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Level Crossing With Multiple Tracks</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed 6-10 meters from a double railway level crossing, without a barrier.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q40843"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1854,7 +1976,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to stop to ensure that no railway vehicle is circulating at that moment.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Level Crossing With Single Track</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed 6-10 meters from a railway level crossing, without a barrier.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q40843"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1863,7 +1989,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to reduce speed when encountering this indicator.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Level Crossing With Barriers Ahead</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed 50/150 meters before the level crossing with a railway with a barrier or semi-barrier.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1872,7 +2002,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver of the vehicle is obliged to show increased caution and stop at the railway stop marking.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Level Crossing Without Barriers Ahead</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed 50/150 meters before the level crossing with a railway without a barrier.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q19821"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1881,7 +2015,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign"/>
         <TrafficSign:legalRegulation xml:lang="en">Drivers are required to drive at a maximum speed of 20 km/h.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Living Street</dbo:label>
+		<dbo:abstract xml:lang="en">The indicator is installed at the entrance to residential areas.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1890,7 +2028,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The indicator informs drivers that they can bypass the obstacle on either side.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>May Pass On Either Side</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1899,10 +2041,10 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles100Sign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits vehicles from driving without maintaining a distance of at least 100 meters between them.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign shows the minimum distance that must be maintained between vehicles.</property:abstract>
-        <property:label>MinimumFollowingDistanceBetweenVehicles70Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign shows the minimum distance that must be maintained between vehicles.</dbo:abstract>
+        <bdo:label>MinimumFollowingDistanceBetweenVehicles70Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1912,10 +2054,10 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehicles70Sign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumFollowingDistanceBetweenVehiclesSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits vehicles from driving without maintaining a distance of at least 70 meters between them.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign shows the minimum distance that must be maintained between vehicles.</property:abstract>
-        <property:label>MinimumFollowingDistanceBetweenVehicles70Sign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign shows the minimum distance that must be maintained between vehicles.</dbo:abstract>
+        <bdo:label>MinimumFollowingDistanceBetweenVehicles70Sign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -1925,7 +2067,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The driver is required to drive at a speed higher than that indicated on the indicator (but lower than the maximum legal speed allowed on the respective road section).</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>Minimum Speed Limit</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is installed in the area where a minimum speed limit is imposed.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1950,7 +2096,11 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator is intended to inform vehicle drivers of the general speed limits applied in the state indicated on the indicator.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>National Speed Limits</dbo:label>
+		<dbo:abstract xml:lang="en">This indicator is placed after crossing a state border.</dbo:abstract>
+		<wdt:P1419 rdf:resource="wd:Q164"/>
+		<wdt:P462 rdf:resource="wd:Q1088"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1959,7 +2109,10 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to public roads for agricultural vehicles.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>No Agricultural Vehicles</dbo:label>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -1968,7 +2121,10 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign"/>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access on public roads for vehicles drawn by animals.</TrafficSign:legalRegulation>
-    </owl:NamedIndividual>
+		<dbo:label>No Animal-drawn Vehicles</dbo:label>
+		<wdt:P1419 rdf:resource="wd:Q17278"/>
+		<wdt:P462 rdf:resource="wd:Q3142"/>
+	</owl:NamedIndividual>
     
 
 
@@ -2454,10 +2610,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit100Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">100</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 100 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 100</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 100</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2469,10 +2625,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit120Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">120</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 120 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 120</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 120</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2484,10 +2640,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit20Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 20 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 20</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 20</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2499,10 +2655,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit30Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">30</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 30 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 30</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 30</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2514,10 +2670,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit50Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">50</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 50 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 50</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 50</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2529,10 +2685,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit60Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">60</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 60 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 60</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 60</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2544,10 +2700,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit70Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">70</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 70 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 70</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 70</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2559,10 +2715,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit80Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">80</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces drivers to drive at a maximum speed of 80 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit 80</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed on the road section where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit 80</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2574,10 +2730,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone20Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">20</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 20 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit Zone 20</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit Zone 20</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2589,10 +2745,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone30Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">30</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 30 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit Zone 30</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit Zone 30</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2604,10 +2760,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone50Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">50</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 50 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit Zone 50</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit Zone 50</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2619,10 +2775,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimit60Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">60</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 60 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit Zone 60</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit Zone 60</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2634,10 +2790,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndSpeedLimitZone70Sign"/>
         <TrafficSign:hasSpeedLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">70</TrafficSign:hasSpeedLimit>
         <TrafficSign:legalRegulation xml:lang="en">The indicator forces vehicle drivers to drive at a maximum speed of 70 km/h.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</property:abstract>
-        <property:label>Speed Limit Zone 70</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">The indicator is installed in areas where the speed of traffic must be limited.</dbo:abstract>
+        <dbo:label>Speed Limit Zone 70</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2818,10 +2974,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
         <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</TrafficSign:hasWeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 3 tons.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</property:abstract>
-        <property:label>Weight Limit of 3 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</dbo:abstract>
+        <dbo:label>Weight Limit of 3 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2832,10 +2988,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
         <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</TrafficSign:hasWeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 3.5 tons.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</property:abstract>
-        <property:label>Weight Limit of 3.5 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</dbo:abstract>
+        <dbo:label>Weight Limit of 3.5 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2846,10 +3002,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
         <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</TrafficSign:hasWeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 5 tons.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</property:abstract>
-        <property:label>Weight Limit of 5 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</dbo:abstract>
+        <dbo:label>Weight Limit of 5 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2860,10 +3016,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
         <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</TrafficSign:hasWeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 6 tons.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</property:abstract>
-        <property:label>Weight Limit of 6 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</dbo:abstract>
+        <dbo:label>Weight Limit of 6 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2874,10 +3030,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitSign"/>
         <TrafficSign:hasWeightLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</TrafficSign:hasWeightLimit>
         <TrafficSign:legalRegulation xml:lang="en">WeightLimit7Sign</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</property:abstract>
-        <property:label>Weight Limit of 7 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight.</dbo:abstract>
+        <dbo:label>Weight Limit of 7 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2888,10 +3044,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
         <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</TrafficSign:hasWeightLimitPerAxle>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 2 tons per axle.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</property:abstract>
-        <property:label>Weight Limit Per Axle Of 2 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</dbo:abstract>
+        <dbo:label>Weight Limit Per Axle Of 2 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2902,10 +3058,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
         <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</TrafficSign:hasWeightLimitPerAxle>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 3 tons per axle.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</property:abstract>
-        <property:label>Weight Limit Per Axle of 3 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</dbo:abstract>
+        <dbo:label>Weight Limit Per Axle of 3 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2916,10 +3072,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
         <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</TrafficSign:hasWeightLimitPerAxle>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 4 tons per axle.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</property:abstract>
-        <property:label>Weight Limit Per Axle of 4 Tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</dbo:abstract>
+        <dbo:label>Weight Limit Per Axle of 4 Tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2930,10 +3086,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
         <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</TrafficSign:hasWeightLimitPerAxle>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 5 tons per axle.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</property:abstract>
-        <property:label>Weight Limit Per Axle of 5 tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</dbo:abstract>
+        <dbo:label>Weight Limit Per Axle of 5 tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2944,10 +3100,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
         <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</TrafficSign:hasWeightLimitPerAxle>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 6 tons per axle.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</property:abstract>
-        <property:label>Weight Limit Per Axle of 6 tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</dbo:abstract>
+        <dbo:label>Weight Limit Per Axle of 6 tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2958,10 +3114,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WeightLimitPerAxleSign"/>
         <TrafficSign:hasWeightLimitPerAxle rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</TrafficSign:hasWeightLimitPerAxle>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their mass exceeds the size of 6.5 tons per axle.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</property:abstract>
-        <property:label>Weight Limit Per Axle of 6.5 tons</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles exceeding a certain weight per axle.</dbo:abstract>
+        <dbo:label>Weight Limit Per Axle of 6.5 tons</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2972,10 +3128,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
         <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</TrafficSign:hasWidthLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</property:abstract>
-        <property:label>Width Limit of 2m</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</dbo:abstract>
+        <dbo:label>Width Limit of 2m</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -2986,10 +3142,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
         <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.2</TrafficSign:hasWidthLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2.2 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</property:abstract>
-        <property:label>Width Limit 2.2m</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</dbo:abstract>
+        <dbo:label>Width Limit 2.2m</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -3000,10 +3156,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
         <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.3</TrafficSign:hasWidthLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2.3 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</property:abstract>
-        <property:label>Width Limit of 2.3m</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</dbo:abstract>
+        <dbo:label>Width Limit of 2.3m</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -3014,10 +3170,10 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#WidthLimitSign"/>
         <TrafficSign:hasWidthLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</TrafficSign:hasWidthLimit>
         <TrafficSign:legalRegulation xml:lang="en">The sign prohibits access to vehicles if their width, including the load, exceeds 2.5 meters.</TrafficSign:legalRegulation>
-        <property:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</property:abstract>
-        <property:label>Width Limit of 2.5m</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign means that access is prohibited for vehicles that exceed a certain width.</dbo:abstract>
+        <dbo:label>Width Limit of 2.5m</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </owl:NamedIndividual>
     
 
@@ -3058,439 +3214,439 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
      -->
 
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#AdvisorySpeedSign">
-        <property:abstract xml:lang="en">This indicator is intended to show the optimal speed for vehicle traffic.</property:abstract>
-        <property:label>AdvisorySpeedSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator is intended to show the optimal speed for vehicle traffic.</dbo:abstract>
+        <dbo:label>AdvisorySpeedSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BumpSign">
-        <property:abstract xml:lang="en">This sign warns that there is a bump in the road ahead, placed on the road with the intention of imposing a speed reduction.</property:abstract>
-        <property:label>Bump</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign warns that there is a bump in the road ahead, placed on the road with the intention of imposing a speed reduction.</dbo:abstract>
+        <dbo:label>Bump</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#BusStopSign">
-        <property:abstract xml:lang="en">This indicator is found near bus stops.</property:abstract>
-        <property:label>BusStopSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator is found near bus stops.</dbo:abstract>
+        <dbo:label>BusStopSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ChildrenSign">
-        <property:abstract xml:lang="en">This sign warns that you are about to encounter a place frequented by children, such as schools, kindergartens, playgrounds, etc.</property:abstract>
-        <property:label>Children</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign warns that you are about to encounter a place frequented by children, such as schools, kindergartens, playgrounds, etc.</dbo:abstract>
+        <dbo:label>Children</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithMinorRoadSign">
-        <property:abstract xml:lang="en">This indicator is placed outside of settlements, 90-200 meters from an intersection with a non-priority road.</property:abstract>
-        <property:label>Crossroads With Minor Road</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is placed outside of settlements, 90-200 meters from an intersection with a non-priority road.</dbo:abstract>
+        <dbo:label>Crossroads With Minor Road</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CrossroadsWithPriorityToTheRightSign">
-        <property:abstract xml:lang="en">This indicator is placed outside of settlements, 100-250 meters from an unmanned intersection.</property:abstract>
-        <property:label>Crossroads With Priority To The Right</property:label>
+        <dbo:abstract xml:lang="en">This indicator is placed outside of settlements, 100-250 meters from an unmanned intersection.</dbo:abstract>
+        <dbo:label>Crossroads With Priority To The Right</dbo:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CurveSign">
-        <property:abstract xml:lang="en">This indicator warns that a curve is coming.</property:abstract>
-        <property:label>Curve</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator warns that a curve is coming.</dbo:abstract>
+        <dbo:label>Curve</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclePathSign">
-        <property:abstract xml:lang="en">This sign marks the beginning of a bike path.</property:abstract>
-        <property:label>Cycle Path</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This sign marks the beginning of a bike path.</dbo:abstract>
+        <dbo:label>Cycle Path</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#CyclistsSign">
-        <property:abstract xml:lang="en">This indicator is placed 100-200 meters from the place where the public road intersects with a bicycle path.</property:abstract>
-        <property:label>Cyclists</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is placed 100-200 meters from the place where the public road intersects with a bicycle path.</dbo:abstract>
+        <dbo:label>Cyclists</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#DomesticatedAnimalsSign">
-        <property:abstract xml:lang="en">This indicator is found in localities.</property:abstract>
-        <property:label>Domesticated Animals</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is found in localities.</dbo:abstract>
+        <dbo:label>Domesticated Animals</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndAllPreviouslySignedRestrictionsSign">
-        <property:abstract xml:lang="en">This sign is erected to signal the end of all previous restrictions.</property:abstract>
-        <property:label>EndAllPreviouslySignedRestrictionsSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <dbo:abstract xml:lang="en">This sign is erected to signal the end of all previous restrictions.</dbo:abstract>
+        <dbo:label>EndAllPreviouslySignedRestrictionsSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndExpresswaySign">
-        <property:abstract xml:lang="en">This sign is erected to signal leaving roads on which only motor vehicle traffic is allowed.</property:abstract>
-        <property:label>EndExpresswaySign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This sign is erected to signal leaving roads on which only motor vehicle traffic is allowed.</dbo:abstract>
+        <dbo:label>EndExpresswaySign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndLivingStreetSign">
-        <property:abstract xml:lang="en">This sign is erected to signal leaving residential areas.</property:abstract>
-        <property:label>EndLivingStreetSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This sign is erected to signal leaving residential areas.</dbo:abstract>
+        <dbo:label>EndLivingStreetSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndMotorwaySign">
-        <property:abstract xml:lang="en">This indicator is installed at the exit of a highway.</property:abstract>
-        <property:label>EndMotorwaySign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3133"/>
+        <dbo:abstract xml:lang="en">This indicator is installed at the exit of a highway.</dbo:abstract>
+        <dbo:label>EndMotorwaySign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3133"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingByHeavyVehiclesSign">
-        <property:abstract xml:lang="en">This indicator announces the end of the overtaking ban for goods vehicles.</property:abstract>
-        <property:label>EndNoOvertakingByHeavyVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <dbo:abstract xml:lang="en">This indicator announces the end of the overtaking ban for goods vehicles.</dbo:abstract>
+        <dbo:label>EndNoOvertakingByHeavyVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndNoOvertakingSign">
-        <property:abstract xml:lang="en">This indicator announces the end of the overtaking ban for vehicles.</property:abstract>
-        <property:label>EndNoOvertakingSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q23445"/>
+        <dbo:abstract xml:lang="en">This indicator announces the end of the overtaking ban for vehicles.</dbo:abstract>
+        <dbo:label>EndNoOvertakingSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q23445"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign">
-        <property:abstract xml:lang="en">This indicator is placed 50-200 meters from the place where the priority on the road ends.</property:abstract>
-        <property:label>EndOfPriorityRoadSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q943"/>
+        <dbo:abstract xml:lang="en">This indicator is placed 50-200 meters from the place where the priority on the road ends.</dbo:abstract>
+        <dbo:label>EndOfPriorityRoadSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q943"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FallingRocksSign">
-        <property:abstract xml:lang="en">This sign is usually found in mountainous areas and warns that you are approaching a section of road where there is a possibility of falling rocks or rocks from the slopes.</property:abstract>
-        <property:label>Falling Rocks</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is usually found in mountainous areas and warns that you are approaching a section of road where there is a possibility of falling rocks or rocks from the slopes.</dbo:abstract>
+        <dbo:label>Falling Rocks</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FirstAidSign">
-        <property:abstract xml:lang="en">This indicator is found next to a first aid station.</property:abstract>
-        <property:label>FirstAidSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator is found next to a first aid station.</dbo:abstract>
+        <dbo:label>FirstAidSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#FootpathSign">
-        <property:abstract xml:lang="en">The indicator is mounted at the ends of the tracks or road sectors delimited by the carriageway.</property:abstract>
-        <property:label>FootpathSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">The indicator is mounted at the ends of the tracks or road sectors delimited by the carriageway.</dbo:abstract>
+        <dbo:label>FootpathSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayAheadSign">
-        <property:abstract xml:lang="en">This sign is placed before an intersection on a road without priority.</property:abstract>
-        <property:label>GiveWayAheadSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed before an intersection on a road without priority.</dbo:abstract>
+        <dbo:label>GiveWayAheadSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GiveWayToOncomingTrafficSign">
-        <property:abstract xml:lang="en">This sign is placed 10-20 meters before the narrow road section where there is no room for two vehicles to drive side by side.</property:abstract>
-        <property:label>GiveWayToOncomingTrafficSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed 10-20 meters before the narrow road section where there is no room for two vehicles to drive side by side.</dbo:abstract>
+        <dbo:label>GiveWayToOncomingTrafficSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightOrTurnRightSign">
-        <property:abstract xml:lang="en">The indicator is installed before an intersection where the directions indicated by the arrows are mandatory.</property:abstract>
-        <property:label>GoStraightOrTurnRightSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">The indicator is installed before an intersection where the directions indicated by the arrows are mandatory.</dbo:abstract>
+        <dbo:label>GoStraightOrTurnRightSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#GoStraightSign">
-        <property:abstract xml:lang="en">The indicator forces drivers to drive only in the forward direction at the intersection before which it is installed.</property:abstract>
-        <property:label>GoStraightSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">The indicator forces drivers to drive only in the forward direction at the intersection before which it is installed.</dbo:abstract>
+        <dbo:label>GoStraightSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#HospitalSign">
-        <property:abstract xml:lang="en">This indicator is found near hospitals to inform about the existence of a medical facility.</property:abstract>
-        <property:label>HospitalSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator is found near hospitals to inform about the existence of a medical facility.</dbo:abstract>
+        <dbo:label>HospitalSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#IceOrSnowSign">
-        <property:abstract xml:lang="en">This sign is placed 100-200 meters from the dangerous place. The road may become slippery due to atmospheric conditions.</property:abstract>
-        <property:label>Ice Or Snow</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed 100-200 meters from the dangerous place. The road may become slippery due to atmospheric conditions.</dbo:abstract>
+        <dbo:label>Ice Or Snow</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepLeftSign">
-        <property:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</property:abstract>
-        <property:label>KeepLeftSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</dbo:abstract>
+        <dbo:label>KeepLeftSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#KeepRightSign">
-        <property:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</property:abstract>
-        <property:label>KeepRightSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</dbo:abstract>
+        <dbo:label>KeepRightSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LaneConfigurationSign">
-        <property:abstract xml:lang="en">This indicator marks the differences between lanes on a public road.</property:abstract>
-        <property:label>LaneConfigurationSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator marks the differences between lanes on a public road.</dbo:abstract>
+        <dbo:label>LaneConfigurationSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingMultipleTracksSign">
-        <property:abstract xml:lang="en">This indicator is placed 6-10 meters from a double railway level crossing, without a barrier.</property:abstract>
-        <property:label>Level Crossing With Multiple Tracks</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is placed 6-10 meters from a double railway level crossing, without a barrier.</dbo:abstract>
+        <dbo:label>Level Crossing With Multiple Tracks</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingSingleTrackSign">
-        <property:abstract xml:lang="en">This indicator is placed 6-10 meters from a railway level crossing, without a barrier.</property:abstract>
-        <property:label>Level Crossing With Single Track</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is placed 6-10 meters from a railway level crossing, without a barrier.</dbo:abstract>
+        <dbo:label>Level Crossing With Single Track</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithBarriersAheadSign">
-        <property:abstract xml:lang="en">This indicator is placed 50/150 meters before the level crossing with a railway with a barrier or semi-barrier.</property:abstract>
-        <property:label>Level Crossing With Barriers Ahead</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is placed 50/150 meters before the level crossing with a railway with a barrier or semi-barrier.</dbo:abstract>
+        <dbo:label>Level Crossing With Barriers Ahead</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LevelCrossingWithoutBarriersAheadSign">
-        <property:abstract xml:lang="en">This indicator is placed 50/150 meters before the level crossing with a railway without a barrier.</property:abstract>
-        <property:label>Level Crossing Without Barriers Ahead</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This indicator is placed 50/150 meters before the level crossing with a railway without a barrier.</dbo:abstract>
+        <dbo:label>Level Crossing Without Barriers Ahead</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#LivingStreetSign">
-        <property:abstract xml:lang="en">The indicator is installed at the entrance to residential areas.</property:abstract>
-        <property:label>Living Street</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">The indicator is installed at the entrance to residential areas.</dbo:abstract>
+        <dbo:label>Living Street</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MayPassOnRitherSideSign">
-        <property:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</property:abstract>
-        <property:label>MayPassOnRitherSideSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator marks the presence of an obstacle on the roadway.</dbo:abstract>
+        <dbo:label>MayPassOnRitherSideSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#MinimumSpeedLimitSign">
-        <property:abstract xml:lang="en">This indicator is installed in the area where a minimum speed limit is imposed.</property:abstract>
-        <property:label>MinimumSpeedLimitSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator is installed in the area where a minimum speed limit is imposed.</dbo:abstract>
+        <dbo:label>MinimumSpeedLimitSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NationalSpeedLimitsSign">
-        <property:abstract xml:lang="en">This indicator is placed after crossing a state border.</property:abstract>
-        <property:label>NationalSpeedLimitsSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This indicator is placed after crossing a state border.</dbo:abstract>
+        <dbo:label>NationalSpeedLimitsSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAgriculturalVehiclesSign">
-        <property:label>NoAgriculturalVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoAgriculturalVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoAnimal-drawnVehiclesSign">
-        <property:label>NoAnimal-drawnVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoAnimal-drawnVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoBusesSign">
-        <property:label>NoBusesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoBusesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoEntrySign">
-        <property:abstract xml:lang="en">This sign is placed on one-way roads, in the direction in which traffic is not allowed.</property:abstract>
-        <property:label>NoEntrySign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed on one-way roads, in the direction in which traffic is not allowed.</dbo:abstract>
+        <dbo:label>NoEntrySign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoHeavyGoodsVehiclesSign">
-        <property:label>NoHeavyGoodsVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoHeavyGoodsVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoLeftTurnSign">
-        <property:label>NoLeftTurnSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoLeftTurnSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMopedsSign">
-        <property:label>NoMopedsSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoMopedsSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorVehiclesSign">
-        <property:label>NoMotorVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoMotorVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoMotorcyclesSign">
-        <property:label>NoMotorcyclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoMotorcyclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingByHeavyGoodsVehiclesSign">
-        <property:abstract xml:lang="en">This sign is placed on roads where goods vehicles are prohibited from overtaking.</property:abstract>
-        <property:label>NoOvertakingByHeavyGoodsVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed on roads where goods vehicles are prohibited from overtaking.</dbo:abstract>
+        <dbo:label>NoOvertakingByHeavyGoodsVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoOvertakingSign">
-        <property:abstract xml:lang="en">This sign is placed on roads where vehicles are prohibited from overtaking other vehicles, with the exception of motorcycles without sidecars and mopeds.</property:abstract>
-        <property:label>NoOvertakingSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed on roads where vehicles are prohibited from overtaking other vehicles, with the exception of motorcycles without sidecars and mopeds.</dbo:abstract>
+        <dbo:label>NoOvertakingSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoParkingSign">
-        <property:abstract xml:lang="en">This sign prohibits parking of vehicles.</property:abstract>
-        <property:label>NoParkingSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign prohibits parking of vehicles.</dbo:abstract>
+        <dbo:label>NoParkingSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedalCyclesSign">
-        <property:label>NoPedalCyclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoPedalCyclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoPedestriansSign">
-        <property:label>NoPedestriansSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoPedestriansSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoRightTurnSign">
-        <property:label>NoRightTurnSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:label>NoRightTurnSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoStoppingSign">
-        <property:abstract xml:lang="en">This sign prohibits stopping of vehicles.</property:abstract>
-        <property:label>NoStoppingSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign prohibits stopping of vehicles.</dbo:abstract>
+        <dbo:label>NoStoppingSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoThroughRoadSign">
-        <property:abstract xml:lang="en">This sign is found at the intersection of a public road with a dead-end road.</property:abstract>
-        <property:label>NoThroughRoadSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This sign is found at the intersection of a public road with a dead-end road.</dbo:abstract>
+        <dbo:label>NoThroughRoadSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoU-turnSign">
-        <property:abstract xml:lang="en">This sign prohibits turning on the road section on which it is installed.</property:abstract>
-        <property:label>NoU-turnSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">This sign prohibits turning on the road section on which it is installed.</dbo:abstract>
+        <dbo:label>NoU-turnSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingDangerousGoodsSign">
-        <property:label>NoVehiclesCarryingDangerousGoodsSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:label>NoVehiclesCarryingDangerousGoodsSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesCarryingWaterPollutantsSign">
-        <property:label>NoVehiclesCarryingWaterPollutantsSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:label>NoVehiclesCarryingWaterPollutantsSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesPullingATrailerSign">
-        <property:label>NoVehiclesPullingATrailerSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:label>NoVehiclesPullingATrailerSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#NoVehiclesSign">
-        <property:abstract xml:lang="en">This sign is placed on roads where vehicle traffic is prohibited in both directions.</property:abstract>
-        <property:label>NoVehiclesSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <dbo:abstract xml:lang="en">This sign is placed on roads where vehicle traffic is prohibited in both directions.</dbo:abstract>
+        <dbo:label>NoVehiclesSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#One-wayTrafficSign">
-        <property:abstract xml:lang="en">The sign informs vehicle drivers that the road marked with this sign is a one-way road.</property:abstract>
-        <property:label>One-way Traffic</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <dbo:abstract xml:lang="en">The sign informs vehicle drivers that the road marked with this sign is a one-way road.</dbo:abstract>
+        <dbo:label>One-way Traffic</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#OtherDangerSign">
-        <property:abstract xml:lang="en">This indicator is placed 50-200 meters before the dangerous place.</property:abstract>
-        <property:label>Other Danger</property:label>
+        <bdo:abstract xml:lang="en">This indicator is placed 50-200 meters before the dangerous place.</dbo:abstract>
+        <bdo:label>Other Danger</dbo:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#Other_dangerSign">
-        <property:abstract xml:lang="en">This indicator is placed 50-200 meters before the dangerous place.</property:abstract>
-        <property:label>Other Danger</property:label>
+        <bdo:abstract xml:lang="en">This indicator is placed 50-200 meters before the dangerous place.</dbo:abstract>
+        <bdo:label>Other Danger</dbo:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#ParkingSign">
-        <property:abstract xml:lang="en">This indicator informs the vehicle driver that there is a parking space nearby.</property:abstract>
-        <property:label>ParkingSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">This indicator informs the vehicle driver that there is a parking space nearby.</dbo:abstract>
+        <bdo:label>ParkingSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianCrossingSign">
-        <property:abstract xml:lang="en">The indicator is installed near a pedestrian crossing.</property:abstract>
-        <property:label>Pedestrian Crossing</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">The indicator is installed near a pedestrian crossing.</dbo:abstract>
+        <bdo:label>Pedestrian Crossing</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PedestrianZoneSign">
-        <property:abstract xml:lang="en">The sign is installed at the beginning of the pedestrian zone.</property:abstract>
-        <property:label>PedestrianZoneSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">The sign is installed at the beginning of the pedestrian zone.</dbo:abstract>
+        <bdo:label>PedestrianZoneSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityOverOncomingTrafficSign">
-        <property:abstract xml:lang="en">This indicator is placed on narrow road sections where there is no room for two vehicles to drive side by side.</property:abstract>
-        <property:label>PriorityOverOncomingTrafficSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">This indicator is placed on narrow road sections where there is no room for two vehicles to drive side by side.</dbo:abstract>
+        <bdo:label>PriorityOverOncomingTrafficSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign">
-        <property:abstract xml:lang="en">This indicator is installed at the beginning of the road with priority or before intersections with a road without priority.</property:abstract>
-        <property:label>PriorityRoadSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q943"/>
+        <bdo:abstract xml:lang="en">This indicator is installed at the beginning of the road with priority or before intersections with a road without priority.</dbo:abstract>
+        <bdo:label>PriorityRoadSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q943"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#RoundaboutSign">
-        <property:abstract xml:lang="en">This sign is installed before entering a roundabout.</property:abstract>
-        <property:label>RoundaboutSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">This sign is installed before entering a roundabout.</dbo:abstract>
+        <bdo:label>RoundaboutSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#SegregatedPedestrianAndCyclePathSign">
-        <property:abstract xml:lang="en">This sign is installed before entering a roundabout.</property:abstract>
-        <property:label>RoundaboutSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">This sign is installed before entering a roundabout.</dbo:abstract>
+        <bdo:label>RoundaboutSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfExpresswaySign">
-        <property:label>Start Of Expressway</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:label>Start Of Expressway</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StartOfMotorwaySign">
-        <property:abstract xml:lang="en">The sign marks the entrance to the motorway.</property:abstract>
-        <property:label>Start Of Motorway</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q3133"/>
+        <bdo:abstract xml:lang="en">The sign marks the entrance to the motorway.</dbo:abstract>
+        <bdo:label>Start Of Motorway</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q3133"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopAheadSign">
-        <property:abstract xml:lang="en">This sign is placed before an intersection on a road without priority, where the entry position has no visibility.</property:abstract>
-        <property:label>StopAheadSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q166080"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign is placed before an intersection on a road without priority, where the entry position has no visibility.</dbo:abstract>
+        <bdo:label>StopAheadSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q166080"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#StopSign">
-        <property:abstract xml:lang="en">This sign is placed on a non-priority road, where the entry position has no visibility.</property:abstract>
-        <property:label>StopSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q166080"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign is placed on a non-priority road, where the entry position has no visibility.</dbo:abstract>
+        <bdo:label>StopSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q166080"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TunnelSign">
-        <property:abstract xml:lang="en">The sign marks the entrance to a tunnel.</property:abstract>
-        <property:label>Tunnel</property:label>
-        <direct:P1419 rdf:resource="wd:Q164"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">The sign marks the entrance to a tunnel.</dbo:abstract>
+        <bdo:label>Tunnel</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q164"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#TurnRightSign">
-        <property:abstract xml:lang="en">This indicator is placed in the pre-selection area, before entering the intersection.</property:abstract>
-        <property:label>TurnRightSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q17278"/>
-        <direct:P462 rdf:resource="wd:Q1088"/>
+        <bdo:abstract xml:lang="en">This indicator is placed in the pre-selection area, before entering the intersection.</dbo:abstract>
+        <bdo:label>TurnRightSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q17278"/>
+        <wdt:P462 rdf:resource="wd:Q1088"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#YieldSign">
-        <property:abstract xml:lang="en">This sign is placed on a non-priority road at its intersection with a priority public road.</property:abstract>
-        <property:label>YieldSign</property:label>
-        <direct:P1419 rdf:resource="wd:Q19821"/>
-        <direct:P462 rdf:resource="wd:Q3142"/>
+        <bdo:abstract xml:lang="en">This sign is placed on a non-priority road at its intersection with a priority public road.</dbo:abstract>
+        <bdo:label>YieldSign</dbo:label>
+        <wdt:P1419 rdf:resource="wd:Q19821"/>
+        <wdt:P462 rdf:resource="wd:Q3142"/>
     </rdf:Description>
     
 
