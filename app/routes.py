@@ -8,8 +8,8 @@ from datetime import datetime
 import cv2
 
 from .tools.sign_recognition import predict_sign
-from .tools.utils import get_image_path, sparql_name_to_label, sparql_name_to_link, url_name_to_label, link_name_to_sparql
-from .tools.sparql_queries import get_sign_category, get_sign_type, get_sign_meaning, get_sign_legal_regulation, get_sign_precede_by, get_sign_precede_signs, get_sign_removes_restriction
+from .tools.utils import *
+from .tools.sparql_queries import *
 
 CORS(app)  # Enable CORS for all routes
 
@@ -18,7 +18,7 @@ CORS(app)  # Enable CORS for all routes
 def index():
     """ Main route to display the main page.
     """
-    return render_template('main.html')
+    return render_template('main_page.html')
 
 
 @app.errorhandler(404)
@@ -34,7 +34,7 @@ def page_not_found(e):
 def camera():
     """ Camera route to display the camera page.
     """	
-    return render_template('camera.html')
+    return render_template('camera_page.html')
 
 
 @app.route('/sign', methods=['POST'])
@@ -60,8 +60,10 @@ def sign():
             'name' : sign_name_label,
             'meaning' : meaning,
             'legal_regulation' : legal_regulation,
-            'url': 'https://localhost:5050/about?sign=' + prediction
+            'redirect_url': '/about?sign=' + prediction
         }
+
+        print(return_json)
 
         return jsonify(return_json), HTTPStatus.OK
 
@@ -89,6 +91,9 @@ def about():
     legal_regulation = get_sign_legal_regulation(sign_name_in_ontology)
     sign_meaning = get_sign_meaning(sign_name_in_ontology)
     sign_image = url_for('static', filename = get_image_path(sign_name_in_ontology))
+    sign_color = get_sign_color(sign_name_in_ontology)
+    sign_shape = get_sign_shape(sign_name_in_ontology)
+    sign_speed_limit = get_sign_speed_limit(sign_name_in_ontology)
 
     print(f'Sign Image: {sign_image}')
 
@@ -121,12 +126,15 @@ def about():
         } )
 
     return render_template (
-        template_name_or_list = 'about_sign.html', 
+        template_name_or_list = 'about_sign_page.html', 
         sign_name = sign_name_label,
         sign_meaning = sign_meaning,
         legal_regulation = legal_regulation,
         sign_category = sign_category,
         sign_type = sign_type,
+        sign_color = sign_color,
+        sign_shape = sign_shape,
+        sign_speed_limit = sign_speed_limit,
         sign_image = sign_image,
         precede_signs = precede_signs,
         precede_by = precede_by,

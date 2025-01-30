@@ -33,7 +33,7 @@ _traffic_signs = {
     29: 'cyclists',
     30: 'ice_or_snow',
     31: 'wild_animals',
-    32: 'end_of_all_previously_signed_restrictions',
+    32: 'end_all_previously_signed_restrictions',
     33: 'keep_right_ahead',
     34: 'keep_left_ahead',
     35: 'go_straight',
@@ -42,8 +42,8 @@ _traffic_signs = {
     38: 'keep_right',
     39: 'keep_left',
     40: 'roundabout',
-    41: 'end_of_no_overtaking',
-    42: 'end_of_no_overtaking_by_heavy_goods_vehicles'
+    41: 'end_no_overtaking',
+    42: 'end_no_overtaking_by_heavy_goods_vehicles'
 }
 
 def get_traffic_sign_name(predicted_class: int) -> str:

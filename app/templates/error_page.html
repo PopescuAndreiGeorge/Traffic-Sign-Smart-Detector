@@ -23,6 +23,17 @@
     <script>
         document.getElementById('missingSignAlert').style.display = 'block';
     </script>
+
+    <!-- Footer -->
+    <footer>
+        <span property="description" content="A web application for detecting traffic signs from uploaded images or live camera feed."></span>
+        <span property="url" content="{{ url_for('index', _external=True) }}"></span>
+        <span id="author" property="author" typeof="Organization">
+            <span id="name" property="name">TraS © 2025</span>
+            <span id="logo" property="logo" content="{{ url_for('static', filename='assets/logo.png', _external=True) }}"></span>
+        </span>
+    </footer>
+
 </body>
 
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Traffic Sign Detector</title>
+</head>
+
+<body vocab="https://schema.org/" typeof="WebPage">
+    
+    <!-- Page Header Title -->
+    <header class="header">
+        <h1 property="name">Traffic Sign Detector</h1>
+    </header>
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <span id="alertMessage" ></span>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>    
+
+    <!-- Image Preview Container -->
+    <div id="preview" class="preview"> </div>
+
+    <!-- Image Upload Form -->
+    <div class="upload-container-wrapper">
+        <div class="upload-container" id="uploadContainer" property="potentialAction" typeof="SearchAction">
+            <form id="uploadForm" action="{{ url_for('sign') }}" method="POST" enctype="multipart/form-data"> 
+                <label for="fileInput" class="upload-label" property="name">
+                    Choose an image 
+                    <input type="file" id="fileInput" class="upload-input" accept="image/*" >
+                </label> 
+                <button id="submit-btn" type="submit" class="upload-button" property="result" typeof="ImageObject" >
+                    Upload
+                </button> 
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Camera Button -->
+    <button class="btn-camera" id="cameraBtn">
+        <img src="{{ url_for('static', filename='assets/camera.png') }}" alt="Camera" class="btn-icon">
+    </button>
+
+    <!-- Camera JS Script -->
+    <script type="module" src="{{ url_for('static', filename='js/main_page.js') }}"></script>
+    
+    <!-- Footer -->
+    <footer>
+        <span property="description" content="A web application for detecting traffic signs from uploaded images or live camera feed."></span>
+        <span property="url" content="{{ url_for('index', _external=True) }}"></span>
+        <span id="author" property="author" typeof="Organization">
+            <span id="name" property="name">TraS © 2025</span>
+            <span id="logo" property="logo" content="{{ url_for('static', filename='assets/logo.png', _external=True) }}"></span>
+        </span>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title> Tras </title>
+</head>
+
+<body>
+    <!-- Page Header Title -->
+    <header class="header" onclick="window.location.href='.'">
+        <h1>Traffic Sign Detector</h1>
+    </header>
+
+    <div class="video-container">
+        <video id="video" autoplay playsinline></video>
+    </div>
+
+    <canvas id="canvas" width="640" height="480" style="display: none;"> </canvas>
+
+    <div class="sign-information" id="signInformation">
+        <h2>Sign Information</h2>
+        <div class="sign-info" id="signInfo">
+            <p id="signNameLabel">Name: <span id="signName"> </span> </p>
+            <p id="signMeaningLabel">Meaning: <span id="signMeaning"> </span> </p>
+            <p id="signRulesLabel">Rules: <span id="signRules"> </span> </p>
+        </div>
+        <button id="showMore" class="show-more">
+            Show More
+        </button>
+    </div>
+
+    <!-- Camera JS Script -->
+    <script type="module" src="{{ url_for('static', filename='js/camera_page.js') }}"></script>
+
+    <!-- Footer -->
+    <footer>
+        <span property="description" content="A web application for detecting traffic signs from uploaded images or live camera feed."></span>
+        <span property="url" content="{{ url_for('index', _external=True) }}"></span>
+        <span id="author" property="author" typeof="Organization">
+            <span id="name" property="name">TraS © 2025</span>
+            <span id="logo" property="logo" content="{{ url_for('static', filename='assets/logo.png', _external=True) }}"></span>
+        </span>
+    </footer>
+
+</body>
+
+</html>
