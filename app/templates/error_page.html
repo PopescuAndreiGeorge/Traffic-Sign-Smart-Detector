@@ -9,12 +9,12 @@
     <title>Missing Sign Argument</title>
 </head>
 
-<body>
+<body vocab="https://schema.org/" typeof="SearchResultsPage">
     <div class="custom-alert" id="missingSignAlert">
-        <div class="alert-content">
-            <img src="{{ url_for('static', filename='assets/sign_not_found.png') }}" alt="Sign Not Found" class="sign-image">
-            <h2> {{ title }} </h2>
-            <p> {{ info }} </p>
+        <div class="alert-content" property="primaryImageOfPage" typeof="ImageObject">
+            <img src="{{ url_for('static', filename='assets/sign_not_found.png') }}" alt="Sign Not Found" property="contentUrl" class="sign-image" />
+            <h2 property="name"> {{ title }} </h2>
+            <p property="description"> {{ info }} </p>
             <button onclick="window.location.href='.'"> Go to Home </button>
         </div>
     </div>

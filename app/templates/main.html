@@ -7,60 +7,52 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Traffic Sign Detector</title>
     <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Traffic Sign Detector",
-      "url": "{{ url_for('index', _external=True) }}",
-      "author": {
-        "@type": "Organization",
-        "name": "Traffic Sign Detection Company",
-        "url": "{{ url_for('index', _external=True) }}",
-        "logo": "{{ url_for('static', filename='assets/logo.png', _external=True) }}"
-      },
-      "description": "A web application for detecting traffic signs from uploaded images or live camera feed.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "{{ url_for('about') }}?sign={sign_name}",
-        "query-input": "required name=sign"
-      }
-    }
-    </script>
+<!--    <script type="application/ld+json">-->
+<!--    {-->
+<!--      "@context": "https://schema.org",-->
+<!--      "@type": "WebSite",-->
+<!--      "name": "Traffic Sign Detector",-->
+<!--      "url": "{{ url_for('index', _external=True) }}",-->
+<!--      "author": {-->
+<!--        "@type": "Organization",-->
+<!--        "name": "Traffic Sign Detection Company",-->
+<!--        "url": "{{ url_for('index', _external=True) }}",-->
+<!--        "logo": "{{ url_for('static', filename='assets/logo.png', _external=True) }}"-->
+<!--      },-->
+<!--      "description": "A web application for detecting traffic signs from uploaded images or live camera feed.",-->
+<!--      "potentialAction": {-->
+<!--        "@type": "SearchAction",-->
+<!--        "target": "{{ url_for('about') }}?sign={sign_name}",-->
+<!--        "query-input": "required name=sign"-->
+<!--      }-->
+<!--    }-->
+<!--    </script>-->
 </head>
-<body>
+<body vocab="https://schema.org/" typeof="WebPage">
     <!-- Page Header Title -->
-    <header class="header" itemscope itemtype="https://schema.org/WPHeader">
-        <h1 itemprop="headline">Traffic Sign Detector</h1>
+    <header class="header">
+        <h1 property="name">Traffic Sign Detector</h1>
     </header>
-    <div id="customAlert" class="custom-alert" itemscope itemtype="https://schema.org/Alert">
+    <div id="customAlert" class="custom-alert">
         <div class="alert-content">
-            <span id="alertMessage" itemprop="description"></span>
+            <span id="alertMessage" ></span>
             <button onclick="closeAlert()">OK</button>
         </div>
     </div>    
     <!-- Image Preview Container -->
-    <div id="preview" class="preview" itemscope itemtype="https://schema.org/ImageObject"> </div>
+    <div id="preview" class="preview"> </div>
     <!-- Image Upload Form -->
     <div class="upload-container-wrapper">
-        <div class="upload-container" id="uploadContainer" itemscope itemtype="https://schema.org/Action">
+        <div class="upload-container" id="uploadContainer" property="potentialAction" typeof="SearchAction">
             <form id="uploadForm" action="{{ url_for('sign') }}" method="POST" enctype="multipart/form-data"> 
-                <label for="fileInput" class="upload-label" itemprop="name"> 
+                <label for="fileInput" class="upload-label" property="name">
                     Choose an image 
-                    <input type="file" id="fileInput" class="upload-input" accept="image/*" itemprop="fileFormat"> 
+                    <input type="file" id="fileInput" class="upload-input" accept="image/*" >
                 </label> 
-                <button id="submit-btn" type="submit" class="upload-button" itemprop="url">
+                <button id="submit-btn" type="submit" class="upload-button" property="result" typeof="ImageObject" >
                     Upload
                 </button> 
             </form>
-        </div>
-    </div>
-    <!-- Sign Information Container. Will be populated in future -->
-    <div class="sign-information" id="signInformation" style="display:none;">
-        <h2>Sign Information</h2>
-        <div class="sign-info" id="signInfo">
-            <p>Name: <span id="signName" itemprop="name"> </span> </p>
-            <p>Meaning: <span id="signDescription" itemprop="description"> </span> </p>
         </div>
     </div>
     <!-- Floating Camera Button -->
@@ -73,5 +65,13 @@
     <!-- Camera JS Script -->
     <!-- <script src="{{ url_for('static', filename='js/script.css') }}"></script> -->
     <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <footer>
+        <span property="description" content="A web application for detecting traffic signs from uploaded images or live camera feed."></span>
+        <span property="url" content="{{ url_for('index', _external=True) }}"></span>
+        <span id="author" property="author" typeof="Organization">
+            <span id="name" property="name">Traffic Detectors</span>
+            <span id="logo" property="logo" content="{{ url_for('static', filename='assets/logo.png', _external=True) }}"></span>
+        </span>
+    </footer>
 </body>
 </html>
