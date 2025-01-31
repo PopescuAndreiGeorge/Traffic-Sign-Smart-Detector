@@ -1,3 +1,4 @@
+from flask import url_for
 import re
 
 _traffic_signs = {
@@ -99,6 +100,7 @@ def url_name_to_label(name: str) -> str:
 def sparql_name_to_link(name: str) -> str:
     """ Parse the name to get the sign name in the ontology: NoOvertakingSign -> no_overtaking
     """
+    print(name)
     result = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', name)[:-4].lower().replace(' ', '_')
     result = result[:-1] if result[-1] == '_' else result
 
@@ -112,3 +114,18 @@ def link_name_to_sparql(name: str) -> str:
     result += 'Sign'
 
     return result
+
+def get_signs_list(signs: list) -> list:
+    """ Parse the list of sign names from ontology to a list of dictionaries with the sign name, about url and image url
+    """
+
+    signs_list = []
+
+    for sign in signs:
+        signs_list.append ( { 
+            'name': sparql_name_to_label(sign), 
+            'about_url': url_for('about', sign = sparql_name_to_link(sign)), 
+            'image_url': url_for('static', filename = get_image_path(sign))
+        } )
+
+    return signs_list

@@ -1,0 +1,181 @@
+# https://editor.swagger.io/
+
+openapi: 3.0.0
+info:
+  title: Traffic Sign Smart Detector API
+  version: 1.0.0
+  description: This API allows for the detection of traffic signs through image uploads and provides detailed information about each sign.
+
+servers:
+  - url: http://localhost:5000
+
+paths:
+  /:
+    get:
+      summary: Main Page
+      description: Displays the main page where users can upload images or access the camera page.
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /camera:
+    get:
+      summary: Camera Page
+      description: Displays the camera page where users can identify traffic signs in real-time.
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /sign:
+    post:
+      summary: Upload Sign Image
+      description: Upload an image of a traffic sign to identify it and get minimal information about the sign.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: A successful response with sign details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  meaning:
+                    type: string
+                  legal_regulation:
+                    type: string
+                  redirect_url:
+                    type: string
+        '400':
+          description: A bad request response due to missing image file.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /info:
+    get:
+      summary: Sign Information
+      description: Provides detailed information about a specific traffic sign in JSON format.
+      parameters:
+        - name: sign
+          in: query
+          required: true
+          description: The name of the traffic sign.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A successful response with detailed sign information.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignDetails'
+        '400':
+          description: A bad request response due to missing or invalid sign argument.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '404':
+          description: A not found response when the sign is not found in the ontology.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+
+  /about:
+    get:
+      summary: About Sign
+      description: Provides detailed information about a specific traffic sign.
+      parameters:
+        - name: sign
+          in: query
+          required: true
+          description: The name of the traffic sign.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A successful response with sign details.
+          content:
+            text/html:
+              schema:
+                type: string
+        '400':
+          description: A bad request response due to missing or invalid sign argument.
+          content:
+            text/html:
+              schema:
+                type: string
+        '404':
+          description: A not found response when the sign is not found in the ontology.
+          content:
+            text/html:
+              schema:
+                type: string
+
+components:
+  schemas:
+    SignDetails:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        category:
+          type: string
+        meaning:
+          type: string
+        legal_regulation:
+          type: string
+        color:
+          type: string
+        shape:
+          type: string
+        remove_speed_limit:
+          type: integer
+        has_speed_limit:
+          type: integer
+        image:
+          type: string
+        precede_signs:
+          type: array
+          items:
+            type: string
+        precede_by:
+          type: array
+          items:
+            type: string
+        removes_restrictions:
+          type: array
+          items:
+            type: string

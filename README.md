@@ -17,8 +17,14 @@ Having several (snapshots of) video recordings – captured via a Webcam or uplo
     - [Python](#python)
     - [SSL Certificates](#ssl-certificates)
     - [Configuration](#configuration)
-3. [How to Run](#how-to-run)
-4. [Pages](#pages)
+3. [Model Training](#model-training)
+    - [Libraries Used](#libraries-used)
+    - [Dataset](#dataset)
+    - [Methods](#methods)
+4. [How to Run](#how-to-run)
+5. [Pages](#pages)
+6. [API Documentation](#api-documentation)
+7. [Screenshots](#screenshots)
 
 ## Requirements
 
@@ -44,6 +50,20 @@ You need an HTTPS connection in order to view the camera and use the real-time c
 
 Change the IP from the *static/js/utils.js* to your local IP Address.
 
+## Model Training
+
+### Libraries Used
+
+The traffic sign recognition model was developed using powerful libraries such as NumPy and Pandas for numerical and data manipulation, OpenCV for image processing, Matplotlib for visualization, Scikit-Learn for data splitting and evaluation, and TensorFlow and Keras for building and training the neural network model. These libraries collectively provided the robust tools necessary for effective model development and training.
+
+### Dataset
+
+The model was trained on the German Traffic Sign Recognition Benchmark (GTSRB) dataset, which is publicly available on [Kaggle](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign?resource=download) This dataset comprises images of various German traffic signs categorized into 42 classes. The extensive and well-annotated nature of this dataset ensured that the model could learn to recognize a wide range of traffic signs accurately.
+
+### Methods
+
+Key methods in the model training process included data loading and preprocessing, data augmentation using techniques like rotation and zoom to enhance robustness, and building a convolutional neural network (CNN) with multiple layers. The model was trained on augmented data, and its performance was evaluated on a validation set. Training and validation metrics were visualized to monitor progress and refine the model. The trained model, achieving high accuracy, was saved for integration into the web application.
+
 ## How to Run
 
 1. **Via cmd:** in the root folder use `py ./run.py`
@@ -54,6 +74,10 @@ Change the IP from the *static/js/utils.js* to your local IP Address.
 1. Home page: `<local_ip>:5000`
 2. Live camera page: `<local_ip>:5000/camera`
 3. About sign page: `<local_ip>:5000/about?sign=sign_name`
+
+## API Documentation
+
+For detailed API documentation, please refer to the [OpenAPI Specification](docs/openapi.yaml).
 
 ## Screenshots
 

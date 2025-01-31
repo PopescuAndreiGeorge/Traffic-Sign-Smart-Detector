@@ -26,12 +26,17 @@
             <p property="name">Name: <span id="signName"> {{ sign_name }}  </span> </p>
             <p property="about">Category: <span id="signCategory"> {{ sign_category }} </span> </p>
             <p property="description">Type: <span id="signType"> {{ sign_type }} </span> </p>
-            <p >Color: <span id="signType"> {{ sign_color }} </span> </p>
-            <p>Shape: <span id="signType"> {{ sign_shape }} </span> </p>
 
-            {% if sign_speed_limit %}
-                <p>Speed Limit: <span id="signSpeedLimit"> {{ sign_speed_limit }} </span> </p>
+            {% if sign_remove_speed_limit %}
+                <p>Remove Speed Limit: <span id="signSpeedLimit"> {{ sign_remove_speed_limit }} </span> </p>
             {% endif %}
+
+            {% if has_remove_speed_limit %}
+                <p>Speed Limit: <span id="signSpeedLimit"> {{ has_remove_speed_limit }} </span> </p>
+            {% endif %}
+
+            <p>Color: <span id="signType"> {{ sign_color }} </span> </p>
+            <p>Shape: <span id="signType"> {{ sign_shape }} </span> </p>
             
             {% if sign_meaning %}
                 <p>Meaning: <span id="signDescription"> {{ sign_meaning }} </span> </p>
