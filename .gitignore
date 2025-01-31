@@ -4,8 +4,8 @@ __pycache__/
 *.pem
 
 # Ignore the Sign Recognition train and test data
-traffic_sign_recognition/training/data/train
-traffic_sign_recognition/training/data/test
+tools/traffic_sign_recognition/model/data/train
+tools/traffic_sign_recognition/model/data/test
 
 # Ignore the python virtual environments
 ./venv

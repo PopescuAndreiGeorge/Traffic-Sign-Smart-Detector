@@ -49,6 +49,7 @@ setInterval(() => {
 
                 if (sign.meaning === '') {
                     document.getElementById('signMeaning').style.display = 'none';
+                    document.getElementById('signMeaningLabel').style.display = 'none';
                 } else {
                     document.getElementById('signMeaning').style.display = 'block';
                     document.getElementById('signMeaningLabel').style.display = 'block';
@@ -57,6 +58,7 @@ setInterval(() => {
 
                 if (sign.legal_regulation === '') {
                     document.getElementById('signRules').style.display = 'none';
+                    document.getElementById('signRulesLabel').style.display = 'none';
                 } else {
                     document.getElementById('signRules').style.display = 'block';
                     document.getElementById('signRulesLabel').style.display = 'block';

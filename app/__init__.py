@@ -5,7 +5,10 @@ from .views import main_bp
 import dotenv
 
 # Load the environment variables from the .env file
-dotenv.load_dotenv()
+if dotenv.load_dotenv('.env'):
+    print('The environment variables were loaded successfully.')
+else:
+    print('The environment variables were not loaded.')
 
 app = Flask(__name__)
 app.config.from_object(Config)
