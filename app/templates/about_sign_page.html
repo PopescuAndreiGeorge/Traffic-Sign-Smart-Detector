@@ -11,22 +11,22 @@
     <title> Tras - About Sign </title>
 </head>
 
-<body vocab="https://schema.org/" typeof="SearchResultsPage">
+<body vocab="https://schema.org/" typeof="AboutPage">
 
     <!-- Page Header Title -->
     <header class="header" onclick="window.location.href='.'">
-        <h1>Traffic Sign Information</h1>
+        <h1 property="name">Traffic Sign Information</h1>
     </header>
 
     <!-- Page Contet -->
-    <div class="sign-information" id="signInformation">
+    <div class="sign-information" id="signInformation" property="mainContentOfPage" typeof="WebPageElement">
         <h2>Sumary:</h2>
         <div class="sign-info" id="signInfo">
-            <img src="{{ sign_image }}" alt="Sign Image" class="sign-image" onerror="this.onerror=null; this.src='../static/assets/sign_not_found.png';">
-            <p>Name: <span id="signName"> {{ sign_name }}  </span> </p>
-            <p>Category: <span id="signCategory"> {{ sign_category }} </span> </p>
-            <p>Type: <span id="signType"> {{ sign_type }} </span> </p>
-            <p>Color: <span id="signType"> {{ sign_color }} </span> </p>
+            <img src="{{ sign_image }}" alt="Sign Image" class="sign-image" property="image" onerror="this.onerror=null; this.src='../static/assets/sign_not_found.png';">
+            <p property="name">Name: <span id="signName"> {{ sign_name }}  </span> </p>
+            <p property="about">Category: <span id="signCategory"> {{ sign_category }} </span> </p>
+            <p property="description">Type: <span id="signType"> {{ sign_type }} </span> </p>
+            <p >Color: <span id="signType"> {{ sign_color }} </span> </p>
             <p>Shape: <span id="signType"> {{ sign_shape }} </span> </p>
 
             {% if sign_speed_limit %}

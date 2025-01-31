@@ -9,24 +9,24 @@
     <title> Tras </title>
 </head>
 
-<body>
+<body vocab="https://schema.org/" typeof="SearchResultsPage">
     <!-- Page Header Title -->
     <header class="header" onclick="window.location.href='.'">
-        <h1>Traffic Sign Detector</h1>
+        <h1 property="name">Traffic Sign Detector</h1>
     </header>
 
-    <div class="video-container">
-        <video id="video" autoplay playsinline></video>
+    <div class="video-container" property="video" typeof="VideoObject">
+        <video id="video" property="videoQuality" content="1080P" autoplay playsinline></video>
     </div>
 
     <canvas id="canvas" width="640" height="480" style="display: none;"> </canvas>
 
-    <div class="sign-information" id="signInformation">
+    <div class="sign-information" id="signInformation" property="mainContentOfPage" typeof="WebPageElement">
         <h2>Sign Information</h2>
         <div class="sign-info" id="signInfo">
-            <p id="signNameLabel">Name: <span id="signName"> </span> </p>
+            <p id="signNameLabel" property="name">Name: <span id="signName"> </span> </p>
             <p id="signMeaningLabel">Meaning: <span id="signMeaning"> </span> </p>
-            <p id="signRulesLabel">Rules: <span id="signRules"> </span> </p>
+            <p id="signRulesLabel" property="about">Rules: <span id="signRules"> </span> </p>
         </div>
         <button id="showMore" class="show-more">
             Show More
