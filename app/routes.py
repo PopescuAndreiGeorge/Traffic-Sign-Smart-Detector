@@ -31,7 +31,7 @@ def page_not_found(e):
     ), HTTPStatus.NOT_FOUND
 
 
-@app.route('/camera')
+@app.route('/live')
 def camera():
     """ Camera page on which the user can use the camera to identify the traffic sign in real-time. 
         After identifying the sign, the user can access the sign about page.
@@ -39,7 +39,7 @@ def camera():
     return render_template('camera_page.html'), HTTPStatus.OK
 
 
-@app.route('/sign', methods=['POST'])
+@app.route('/recognize', methods=['POST'])
 def sign():
     """ /sign API route to predict the traffic sign from the image and return minimal information about the sign. 
     """
@@ -99,10 +99,9 @@ def info():
         'shape'                : sign_ontology_infos['shape'],
         'remove_speed_limit'   : sign_ontology_infos['remove_speed_limit'],
         'has_speed_limit'      : sign_ontology_infos['has_speed_limit'],
-        'image'                : url_for('static', filename = get_image_path(sign_name_in_ontology)),
-        'precede_signs'        : get_signs_list(sign_ontology_infos['precede_signs']),
-        'precede_by'           : get_signs_list(sign_ontology_infos['precede_by']),
-        'removes_restrictions' : get_signs_list(sign_ontology_infos['removes_restrictions']),
+        'precede_signs'        : sign_ontology_infos['precede_signs'],
+        'precede_by'           : sign_ontology_infos['precede_by'],
+        'removes_restrictions' : sign_ontology_infos['removes_restrictions'],
     }
 
     return jsonify(response), HTTPStatus.OK

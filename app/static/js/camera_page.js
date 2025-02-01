@@ -36,7 +36,7 @@ setInterval(() => {
             const formData = new FormData();
             formData.append('image', blob, 'frame.png');
 
-            const endpoint = `https://${serverIp}:5000/sign`;
+            const endpoint = `https://${serverIp}:5000/recognize`;
 
             fetch(endpoint, { 
                 method: 'POST', 

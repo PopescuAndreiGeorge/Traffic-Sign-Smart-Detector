@@ -43,7 +43,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
 
 
 document.getElementById('cameraBtn').addEventListener('click', function () {
-    window.location.href = '/camera';
+    window.location.href = '/live';
 });
 
 function showAlert(message) {

@@ -22,7 +22,7 @@ paths:
               schema:
                 type: string
 
-  /camera:
+  /live:
     get:
       summary: Camera Page
       description: Displays the camera page where users can identify traffic signs in real-time.
@@ -34,7 +34,7 @@ paths:
               schema:
                 type: string
 
-  /sign:
+  /recognize:
     post:
       summary: Upload Sign Image
       description: Upload an image of a traffic sign to identify it and get minimal information about the sign.
@@ -165,8 +165,6 @@ components:
           type: integer
         has_speed_limit:
           type: integer
-        image:
-          type: string
         precede_signs:
           type: array
           items:

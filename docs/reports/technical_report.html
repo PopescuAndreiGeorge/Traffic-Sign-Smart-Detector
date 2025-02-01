@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>Technical Report: TraS Application Architecture and Implementation</title>
+</head>
+<body>
+
+<header>
+    <h1>Technical Report: TraS Application Architecture and Implementation</h1>
+    <p><strong>Authors:</strong> Popescu George-Andrei & Rumeghea Leonard</p>
+    <p><strong>Date:</strong> February, 2025</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#internal-data-structures">Internal Data Structures</a></li>
+        <li><a href="#api-technical-aspects">API Technical Aspects</a></li>
+        <li><a href="#rdf-based-knowledge-models">RDF-Based Knowledge Models</a></li>
+        <li><a href="#external-data-sources">External Data Sources</a></li>
+        <li><a href="#user-guide">User Guide</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#acknowledgements">Acknowledgements</a></li>
+    </ul>
+</nav>
+
+<section id="abstract">
+    <h2>Abstract</h2>
+    <p>The Traffic Sign Smart Detector project aims to develop a web application capable of detecting and recognizing traffic signs in real-time. Leveraging machine learning, REST APIs, and RDF-based knowledge models, this project seeks to improve road safety by providing accurate traffic sign recognition. This technical report delves into the application's internal data structures, API implementation, and integration of external data sources. Additionally, it offers a user guide to facilitate effective use of the application. The report outlines the project's objectives, methods, and key results, demonstrating its potential impact on road safety and traffic management. With the integration of external knowledge bases and advanced machine learning models, the Traffic Sign Smart Detector represents a significant advancement in the field of intelligent transportation systems.</p>
+</section>
+
+<section id="introduction">
+    <h2>Introduction</h2>
+    <p>The Traffic Sign Smart Detector is a web application designed to enhance road safety by providing real-time detection and recognition of traffic signs. Accurate traffic sign recognition is crucial for developing intelligent transportation systems, improving driver assistance technologies, and ensuring road safety. This report offers a detailed analysis of the technical aspects of the application, covering internal data structures, API implementation, RDF-based knowledge models, and the integration of external data sources. The project employs cutting-edge machine learning techniques to accurately identify traffic signs from images captured via a camera or uploaded by the user. By leveraging established vocabularies, taxonomies, and ontologies, the application ensures consistent and accurate representation of traffic sign information. Moreover, the integration of external data sources, such as Wikidata and DBpedia, enriches the application's knowledge base, providing additional context and detailed information about each traffic sign. This report serves as a comprehensive guide to understanding the architecture, implementation, and usage of the Traffic Sign Smart Detector, highlighting its potential to significantly contribute to road safety and intelligent transportation systems.</p>
+</section>
+
+<section id="internal-data-structures">
+    <h2>Internal Data Structures</h2>
+    <p>Internal data structures are the backbone of any application, determining how data is stored, accessed, and managed. In the Traffic Sign Smart Detector, several key data structures play a crucial role in ensuring efficient data handling and retrieval. The primary data structures include image data, sign metadata, and user data.</p>
+
+    <h3>Image Data</h3>
+    <p>The application stores raw images captured by the camera or uploaded by the user. Each image is processed and resized to a standard dimension to facilitate efficient analysis. The image data structure includes attributes such as the image file path, timestamp, and associated metadata.</p>
+
+    <h3>Sign Metadata</h3>
+    <p>This data structure contains detailed information about each recognized traffic sign. The metadata includes attributes such as the sign category (e.g., regulatory, warning, informational), meaning, legal regulations, and relationships with other signs. The sign metadata is linked to the RDF-based knowledge model, ensuring consistent and accurate representation of traffic sign information.</p>
+
+    <h3>User Data</h3>
+    <p>To enhance the user experience, the application maintains user-specific information, such as preferences and interaction history. This data structure includes attributes such as user ID, preferences (e.g., preferred language, notification settings), and interaction history (e.g., previously recognized signs, user feedback). The user data is stored securely, ensuring privacy and confidentiality.</p>
+
+    <p>The internal data structures are designed to support seamless data exchange between different components of the application. The image data structure facilitates efficient image processing and analysis, while the sign metadata structure ensures accurate retrieval of traffic sign information. The user data structure enhances the user experience by providing personalized recommendations and notifications. Together, these data structures form the foundation of the Traffic Sign Smart Detector, enabling it to deliver accurate and efficient traffic sign recognition.</p>
+</section>
+
+<section id="api-technical-aspects">
+    <h2>API Technical Aspects</h2>
+    <p>The web application employs both REST and GraphQL APIs to facilitate data exchange. This section delves into the technical aspects of these APIs, including endpoint design, request and response formats, authentication mechanisms, and error handling. The APIs are designed following the proposed web system architecture to ensure scalability and reliability.</p>
+
+    <h3>Endpoint Design</h3>
+    <p>The API endpoints are designed to support various functionalities, including image upload, traffic sign recognition, and retrieval of traffic sign information. The endpoints follow standard RESTful principles, ensuring intuitive and consistent API design. Key endpoints include:</p>
+
+    <ul>
+
+        <li><strong>POST /recognize</strong>: Allows users to upload images for traffic sign recognition. The endpoint accepts multipart/form-data, with the image file included in the request body. Upon successful upload, the server processes the image and returns the recognized traffic sign information.</li>
+
+        <li><strong>GET /live</strong>: Enables real-time traffic sign recognition using the device's camera. The endpoint streams video frames to the server, which processes each frame and returns the recognized traffic sign information.</li>
+
+        <li><strong>GET /about?sign={sign_name}</strong>: Retrieves detailed information about a specific traffic sign as an HTML page. The information includes:</li>
+            <ul>
+                <li><strong>Category</strong>: Priority, Warning, Prohibitory, Mandatory, Special regulations, Indication, De-restriction
+                <li><strong>Type</strong>: (e.g., speed limit, stop, pedestrian crossing)</li>
+                <li><strong>Meaning</strong>
+                <li><strong>Legal Regulation</strong> (e.g., traffic rules, penalties, speed limits)</li>
+                <li><strong>Color</strong> & <strong>Shape</strong></li>
+                <li><strong>Relationships with other signs</strong></li>
+                 <ul>
+                    <li><strong>Precede Signs</strong>: The signs that should be placed after the current sign.</li>
+                    <li><strong>Precede By</strong>: The signs that should be placed before the current sign.</li>
+                    <li><strong>Remove restriction</strong>: The signs of which restrictions are removed by the current sign.</li>
+                 </ul>
+            </ul>
+
+        </li>
+        
+        <li><strong>GET /info?sign={sign_name}</strong>: Similar to '/about' endpoint, but without the visual representation. It will return the following information as a json object, so it can be used by other applications.</li>
+            <ul>
+                <li><strong>Category</strong>: Priority, Warning, Prohibitory, Mandatory, Special regulations, Indication, De-restriction
+                <li><strong>Type</strong>: (e.g., speed limit, stop, pedestrian crossing)</li>
+                <li><strong>Meaning</strong>
+                <li><strong>Legal Regulation</strong> (e.g., traffic rules, penalties, speed limits)</li>
+                <li><strong>Color</strong> & <strong>Shape</strong></li>
+                <li><strong>Relationships with other signs</strong></li>
+                <ul>
+                    <li><strong>Precede Signs</strong>: The signs that should be placed after the current sign.</li>
+                    <li><strong>Precede By</strong>: The signs that should be placed before the current sign.</li>
+                    <li><strong>Remove restriction</strong>: The signs of which restrictions are removed by the current sign.</li>
+                </ul>
+            </ul>
+    </ul>
+
+    <h3>Request and Response Formats</h3>
+    <p>The APIs support JSON data format for both requests and responses, ensuring consistency and interoperability. The request payloads include attributes such as image file, user ID, and query parameters. The response payloads include detailed traffic sign information, user preferences, and interaction history. The JSON format ensures compatibility with various client applications and facilitates easy parsing and manipulation of data.</p>
+
+    <h3>Error Handling</h3>
+    <p>The APIs implement robust error handling mechanisms to provide informative and user-friendly error messages. Error responses include standard HTTP status codes (e.g., 400 Bad Request, 404 Not Found) along with detailed error descriptions. By following RESTful error handling best practices, the APIs ensure clear communication of errors to the client application, enabling effective troubleshooting and issue resolution.</p>
+    <p>Custom error pages are also implemented for the following cases:</p>
+    <ul>
+        <li><strong>Unknown Page</strong>: When the user tries to access a page that does not exist, he will be redirected to a custom 404 page.</li>
+        <li><strong>Unknown Sign</strong>: When the user tries to access information about a sign that does not exist, he will be redirected to a custom 404 page.</li>
+
+</section>
+
+<section id="rdf-based-knowledge-models">
+    <h2>RDF-Based Knowledge Models</h2>
+    <p>The Traffic Sign Smart Detector employs REST APIs to facilitate data exchange between the client and server. The APIs are designed to ensure scalability, reliability, and security, supporting seamless integration with the web application. Key technical aspects of the APIs include endpoint design, request and response formats, authentication mechanisms, and error handling.</p>
+</section>
+
+<section id="external-data-sources">
+    <h2>External Data Sources</h2>
+    <p>The application integrates external data and knowledge sources, including Wikidata and DBpedia, through non-trivial SPARQL queries. This section explains how these sources are used pragmatically to enhance the application's functionality and how the solution conforms to linked data principles. Examples of SPARQL queries and their results are provided to illustrate the integration process.</p>
+</section>
+
+<section id="user-guide">
+    <h2>User Guide</h2>
+    <p>The user guide provides detailed instructions on how to use the Traffic Sign Smart Detector web application effectively. It covers the following key aspects:</p>
+    <ul>
+        <li><strong>Image Upload</strong>: Users can upload images containing traffic signs for recognition. The application processes the uploaded images and returns detailed information about the recognized traffic signs.</li>
+
+        <li><strong>Live Camera Recognition</strong>: Users can enable real-time traffic sign recognition using their device's camera. The application streams video frames to the server, which processes each frame and returns the recognized traffic sign information.</li>
+
+        <li><strong>Traffic Sign Information</strong>: Users can access detailed information about specific traffic signs, including category, type, meaning, legal regulations, color, shape, and relationships with other signs. The application provides visual representations and textual descriptions of each traffic sign.</li>
+    </ul>
+</section>
+
+<section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>The conclusion summarizes the key points discussed in the report, emphasizing the technical achievements and future directions for improvement. The developed web application demonstrates robust architecture, efficient data handling, and seamless integration of external knowledge sources.</p>
+</section>
+
+<section id="references">
+    <h2>References</h2>
+    <p>This section lists all the sources cited in the report, following the required citation style (e.g., APA, MLA, Chicago).</p>
+    <ul>
+        <li>Author, A. A. (Year). Title of the book. Publisher.</li>
+        <li>Author, B. B. (Year). Title of the article. Title of the Journal, volume number(issue number), pages.</li>
+    </ul>
+</section>
+
+<section id="acknowledgements">
+    <h2>Acknowledgements</h2>
+    <p>This section acknowledges the individuals and organizations that supported the research, including funding sources, mentors, and colleagues.</p>
+</section>
+
+</body>
+</html>

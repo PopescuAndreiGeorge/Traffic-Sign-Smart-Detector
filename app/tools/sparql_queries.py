@@ -369,18 +369,18 @@ def get_binding_value(binding: dict) -> str:
 
 def get_sign_ontology_infos(sign_name: str) -> dict:
   result_infos = {
-    label_mapper[TYPE]               : '',
-    label_mapper[LABEL]              : '',
-    label_mapper[CATEGORY]           : '',
-    label_mapper[SHAPE]              : '',
-    label_mapper[COLOR]              : '',
-    label_mapper[REMOVE_SPEED_LIMIT] : '',
-    label_mapper[HAS_SPEED_LIMIT]    : '',
-    label_mapper[MEANING]            : '',
-    label_mapper[LEGAL_REGULATION]   : '',
-    label_mapper[PRECEDE_BY]         : [],
-    label_mapper[PRECEDE_SIGNS]      : [],
-    label_mapper[REMOVES_RESTRICTION]: [],
+    label_mapper[TYPE]                : '',
+    label_mapper[LABEL]               : '',
+    label_mapper[CATEGORY]            : '',
+    label_mapper[SHAPE]               : '',
+    label_mapper[COLOR]               : '',
+    label_mapper[REMOVE_SPEED_LIMIT]  : '',
+    label_mapper[HAS_SPEED_LIMIT]     : '',
+    label_mapper[MEANING]             : '',
+    label_mapper[LEGAL_REGULATION]    : '',
+    label_mapper[PRECEDE_BY]          : [],
+    label_mapper[PRECEDE_SIGNS]       : [],
+    label_mapper[REMOVES_RESTRICTION] : [],
   }
 
   try:
