@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/report_style.css') }}">
+    <title>User Manual</title>
+</head>
+<body>
+
+<header>
+    <h1>User Manual: Traffic Sign Smart Detector</h1>
+    <div>
+        <p><strong>Authors:</strong> Popescu Andrei-George & Rumeghea Leonard</p>
+        <p><strong>Coordonator:</strong> <a href="https://profs.info.uaic.ro/sabin.buraga/"> Prof. Dr. habil. Sabin-Corneliu Buraga </a> </p>
+        <p><strong>Affiliation:</strong> <a href="https://edu.info.uaic.ro/"> Faculty of Computer Science, "Alexandru Ioan Cuza" University of Iasi </a></p>
+    </div>
+    <p><strong>Date:</strong> February, 2025</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#features">Application Features</a></li>
+        <!-- <li><a href="#image-uploade">Image Upload</a></li>
+        <li><a href="#real-time-detection">Real-Time Detection</a></li>
+        <li><a href="#sign-info">Traffic Sign Information</a></li> -->
+        <li><a href="#references">References</a></li>
+    </ul>
+</nav>
+
+<section id="overview">
+    <h2>Overview</h2>
+    <p>The Traffic Sign Smart Detector is a web application designed to significantly enhance road safety by providing real-time detection and recognition of traffic signs. Leveraging advanced machine learning techniques, the application is capable of identifying a wide range of traffic signs from images captured via a camera or uploaded by the user. This user manual provides comprehensive instructions on how to install, configure, and utilize the Traffic Sign Smart Detector, ensuring users can make the most of its capabilities.</p>
+</section>
+
+<section id="features">
+    <h2>Application Features</h2>
+    <p>The Traffic Sign Smart Detector boasts a range of powerful features designed to provide users with accurate and timely traffic sign information. These features are meticulously crafted to ensure a seamless user experience, making the application an invaluable tool for enhancing road safety and driver assistance.</p>
+
+    <h3>Image Upload</h3>
+    <p>The application allows users to upload images for traffic sign recognition. Once an image is uploaded, the application processes it using machine learning algorithms to identify and recognize traffic signs. After recognition, the user is redirected to a page displaying the detected traffic sign along with relevant information.</p>
+
+    <p>Also, from this page the user can access the real-time detection feature by clicking on the "Camera" button. This feature enables users to detect traffic signs in real-time using their device's camera.</p>
+
+    <strong>Buttons</strong>:
+    <ul>
+        <li><strong>Choose on image</strong>: Allows users to select an image from their device for sign recognition. After selecting an image, a preview of the image is displayed on the screen.</li>
+        <li><strong>Upload</strong>: Initiates the image upload process and triggers the sign recognition algorithm.</li>
+        <li><strong>Camera</strong>: Enables users to switch to real-time detection mode using their device's camera.</li>
+    </ul>
+
+    <h3>Real-Time Detection</h3>
+    <p>The real-time detection feature allows users to detect traffic signs using their device's camera. By simply pointing the camera at a traffic sign, the application can identify and display information about the detected sign in real-time. This feature is particularly useful for drivers who need immediate information about traffic signs while on the road.</p>
+
+    <p>When a traffic sign is detected in real-time, the application displays the sign's name, meaning, and relevant rules associated with the sign below the camera feed. Users can also access additional information about the sign by clicking on the "Show More" button.</p>
+
+    <h3>Traffic Sign Information</h3>
+    <p>For each detected traffic sign, the application provides detailed information including the sign's name, meaning, rules associated, and releated signs in a dedicated page for each sign. 
+</body>
+</html>

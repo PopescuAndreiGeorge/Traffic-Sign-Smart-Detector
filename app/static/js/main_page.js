@@ -22,7 +22,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     var xhr = new XMLHttpRequest();
     var formData = new FormData();
 
-    xhr.open('POST', `https://${serverIp}:5000/sign`, true);
+    xhr.open('POST', `https://${serverIp}:5000/recognize`, true);
     formData.append('image', document.getElementById('fileInput').files[0]);
 
     xhr.onload = function () {

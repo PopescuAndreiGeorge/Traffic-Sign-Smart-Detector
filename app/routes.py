@@ -20,6 +20,20 @@ def index():
     return render_template('main_page.html'), HTTPStatus.OK
 
 
+@app.route('/user_guide')
+def user_guide():
+    """ User guide page on which the user can find information about how to use the application. 
+    """
+    return render_template('user_guide_page.html'), HTTPStatus.OK
+
+
+@app.route('/technical_guide')
+def technical_guide():
+    """ Technical guide page on which the user can find information about the technical details of the application. 
+    """
+    return render_template('technical_guide_page.html'), HTTPStatus.OK
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     """ Error handler for 404 - Page Not Found. 
@@ -65,7 +79,7 @@ def sign():
         return jsonify(response), HTTPStatus.OK
 
     except UnidentifiedImageError as e:
-        return jsonify({'error': 'Image processing error: ' + str(e)}), HTTPStatus.BAD_REQUEST
+        return jsonify({'error': 'Image processing error: ' + str(e)}), HTTPStatus.INTERNAL_SERVER_ERROR
 
 @app.route('/info', methods=['GET'])
 def info():
@@ -79,33 +93,40 @@ def info():
        return render_template (
            'error_page.html', 
            title = 'Error - Missing or invalid Sign Argument',
-           info = 'Sorry, the required sign argument is missing for the /about page.'
+           info = 'Sorry, the required sign argument is missing for the /info page.'
         ), HTTPStatus.BAD_REQUEST
     
     # Parse the url type sign name to the ontology type and use it to get the sign information.
-    sign_name_in_ontology = link_name_to_sparql(sign_name)
-    sign_found , sign_ontology_infos = get_sign_ontology_infos(sign_name_in_ontology)
+    try:
+        sign_name_in_ontology = link_name_to_sparql(sign_name)
+        sign_found , sign_ontology_infos = get_sign_ontology_infos(sign_name_in_ontology)
 
-    if not sign_found:
-        return jsonify({'error': 'Sign not found'}), HTTPStatus.NOT_FOUND
-    
-    response = {
-        'name'                 : url_name_to_label(sign_name),
-        'type'                 : sign_ontology_infos['label'],
-        'category'             : sign_ontology_infos['category'],
-        'meaning'              : sign_ontology_infos['meaning'],
-        'legal_regulation'     : sign_ontology_infos['legal_regulation'],
-        'color'                : sign_ontology_infos['color'],
-        'shape'                : sign_ontology_infos['shape'],
-        'remove_speed_limit'   : sign_ontology_infos['remove_speed_limit'],
-        'has_speed_limit'      : sign_ontology_infos['has_speed_limit'],
-        'precede_signs'        : sign_ontology_infos['precede_signs'],
-        'precede_by'           : sign_ontology_infos['precede_by'],
-        'removes_restrictions' : sign_ontology_infos['removes_restrictions'],
-    }
+        if not sign_found:
+            return jsonify({'error': 'Sign not found'}), HTTPStatus.NOT_FOUND
+        
+        response = {
+            'name'                 : url_name_to_label(sign_name),
+            'type'                 : sign_ontology_infos['label'],
+            'category'             : sign_ontology_infos['category'],
+            'meaning'              : sign_ontology_infos['meaning'],
+            'legal_regulation'     : sign_ontology_infos['legal_regulation'],
+            'color'                : sign_ontology_infos['color'],
+            'shape'                : sign_ontology_infos['shape'],
+            'remove_speed_limit'   : sign_ontology_infos['remove_speed_limit'],
+            'has_speed_limit'      : sign_ontology_infos['has_speed_limit'],
+            'precede_signs'        : sign_ontology_infos['precede_signs'],
+            'precede_by'           : sign_ontology_infos['precede_by'],
+            'removes_restrictions' : sign_ontology_infos['removes_restrictions'],
+        }
 
-    return jsonify(response), HTTPStatus.OK
+        return jsonify(response), HTTPStatus.OK
 
+    except Exception as e:
+        return render_template (
+            'error_page.html', 
+            title = 'Error - Internal Server Error',
+            info = 'Sorry, an internal server error occurred: ' + str(e)
+        ), HTTPStatus.INTERNAL_SERVER_ERROR
 
 @app.route('/about', methods=['GET'])
 def about():
@@ -122,34 +143,53 @@ def about():
            info = 'Sorry, the required sign argument is missing for the /about page.'
         ), HTTPStatus.BAD_REQUEST
     
-    # Parse the url type sign name to the ontology type and use it to get the sign information.
-    sign_name_in_ontology   = link_name_to_sparql(sign_name)
-    sign_found , sign_ontology_infos = get_sign_ontology_infos(sign_name_in_ontology)
+    try:
+        # Parse the url type sign name to the ontology type and use it to get the sign information.
+        sign_name_in_ontology   = link_name_to_sparql(sign_name)
+        sign_found , sign_ontology_infos, dbpedia_links = get_sign_ontology_infos(sign_name_in_ontology)
 
-    if not sign_found:
+        if not sign_found:
+            return render_template (
+                'error_page.html', 
+                title = 'Error - Sign Not Found',
+                info = 'Sorry, the sign \'' + sign_name + '\' was not found in the ontology.'
+            ), HTTPStatus.NOT_FOUND
+        
+        print(sign_ontology_infos)
+
+        return render_template (
+            template_name_or_list   = 'about_sign_page.html', 
+            sign_name               = url_name_to_label(sign_name),
+            sign_type               = sign_ontology_infos['label'],
+            sign_category           = sign_ontology_infos['category'],
+            sign_meaning            = sign_ontology_infos['meaning'],
+            legal_regulation        = sign_ontology_infos['legal_regulation'],
+            sign_color              = sign_ontology_infos['color'],
+            sign_shape              = sign_ontology_infos['shape'],
+            sign_remove_speed_limit = sign_ontology_infos['remove_speed_limit'],
+            sign_has_speed_limit    = sign_ontology_infos['has_speed_limit'],
+            sign_image              = url_for('static', filename = get_image_path(sign_name_in_ontology)),
+            precede_signs           = get_signs_list(sign_ontology_infos['precede_signs']),
+            precede_by              = get_signs_list(sign_ontology_infos['precede_by']),
+            removes_restrictions    = get_signs_list(sign_ontology_infos['removes_restrictions']),
+
+            # TODO
+            ext_link_type      = dbpedia_links['ext_link_type'],
+            ext_link_abstract  = dbpedia_links['ext_link_abstract'],
+            ext_link_label     = dbpedia_links['ext_link_label'],
+            ext_link_P1419     = dbpedia_links['ext_link_P1419'],
+            ext_link_P462      = dbpedia_links['ext_link_P462'],
+            ext_link_color_ent = dbpedia_links['ext_link_color_ent'],
+            ext_link_shape_ent = dbpedia_links['ext_link_shape_ent'],
+            ext_link_subClassOf  = dbpedia_links['ext_link_subClassOf'],
+        ), HTTPStatus.OK
+    
+    except Exception as e:
         return render_template (
             'error_page.html', 
-            title = 'Error - Sign Not Found',
-            info = 'Sorry, the sign \'' + sign_name + '\' was not found in the ontology.'
-        ), HTTPStatus.NOT_FOUND
-
-    return render_template (
-        template_name_or_list   = 'about_sign_page.html', 
-        sign_name               = url_name_to_label(sign_name),
-        sign_type               = sign_ontology_infos['label'],
-        sign_category           = sign_ontology_infos['category'],
-        sign_meaning            = sign_ontology_infos['meaning'],
-        legal_regulation        = sign_ontology_infos['legal_regulation'],
-        sign_color              = sign_ontology_infos['color'],
-        sign_shape              = sign_ontology_infos['shape'],
-        sign_remove_speed_limit = sign_ontology_infos['remove_speed_limit'],
-        sign_has_speed_limit    = sign_ontology_infos['has_speed_limit'],
-        sign_image              = url_for('static', filename = get_image_path(sign_name_in_ontology)),
-        precede_signs           = get_signs_list(sign_ontology_infos['precede_signs']),
-        precede_by              = get_signs_list(sign_ontology_infos['precede_by']),
-        removes_restrictions    = get_signs_list(sign_ontology_infos['removes_restrictions']),
-    ), HTTPStatus.OK
-    
+            title = 'Error - Internal Server Error',
+            info = 'Sorry, an internal server error occurred: ' + str(e)
+        ), HTTPStatus.INTERNAL_SERVER_ERROR
     
 if __name__ == '__main__':
     app.run(debug=True)

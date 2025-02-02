@@ -383,6 +383,8 @@ def get_sign_ontology_infos(sign_name: str) -> dict:
     label_mapper[REMOVES_RESTRICTION] : [],
   }
 
+  dbpedia_links = {}
+
   try:
     sparql = SPARQLWrapper("http://localhost:3030/TraS_Ontology/sparql")
     query = f"""
@@ -427,13 +429,20 @@ def get_sign_ontology_infos(sign_name: str) -> dict:
       else:
         result_infos[key] = value
 
+      dbpedia_links['ext_link_' + label] = binding['property']['value']
+
     if result_infos[label_mapper[CATEGORY]] == '':
       result_infos[label_mapper[CATEGORY]] = get_sign_category(result_infos[TYPE])
+      dbpedia_links['ext_link_subClassOf'] = 'http://www.w3.org/2000/01/rdf-schema#subClassOf'
+
+    # TODO Cleanup
+    dbpedia_links['ext_link_color_ent'] = f'http://www.wikidata.org/entity/{result_infos['color'][3:]}'
+    dbpedia_links['ext_link_shape_ent'] = f'http://www.wikidata.org/entity/{result_infos['shape'][3:]}'
 
     result_infos['shape'] = get_sign_shape(sign_name)
     result_infos['color'] = get_sign_color(sign_name)
 
-    return sign_found, result_infos
+    return sign_found, result_infos, dbpedia_links
   
   except Exception as e:
     print(f'\n[ERROR] An error occurred: {e}\n')
@@ -443,7 +452,10 @@ def get_sign_ontology_infos(sign_name: str) -> dict:
 
 if __name__ == '__main__':
 
-  print(get_sign_ontology_infos("EndSpeedLimit100Sign"))
+  # print(get_sign_ontology_infos("EndSpeedLimit100Sign"))
 
   # print(f'Infos: {get_sign_ontology_infos("EndSpeedLimit100Sign")}')
+  # print(f'Infos: {get_sign_ontology_infos("StopSign")}')
+
+  get_sign_ontology_infos("EndSpeedLimit100Sign")
 

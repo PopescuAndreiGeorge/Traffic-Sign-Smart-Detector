@@ -18,6 +18,10 @@ header h1 {
     margin: 0;
 }
 
+header div p a {
+    color: white;
+}
+
 nav {
     margin: 20px 0;
     text-align: center;

@@ -162,6 +162,12 @@ body {
     color: var(--primary-text-color);
 }
 
+.sign-info .label {
+    margin: 10px 0px;
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
 .sign-info span {
     font-weight: normal;
     font-size: 15px;
@@ -317,4 +323,9 @@ footer {
     width: 100%;
     color: var(--primary-text-color);
     margin-bottom: 10%;
+}
+
+.link-like {
+    text-decoration: underline;
+    cursor: pointer;
 }

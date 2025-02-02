@@ -23,29 +23,39 @@
     <div class="sign-information" id="signInformation" property="mainContentOfPage" typeof="WebPageElement">
         <h2>Sumary:</h2>
         <div class="sign-info" id="signInfo">
+            
             <img src="{{ sign_image }}" alt="Sign Image" class="sign-image" property="image" onerror="this.onerror=null; this.src='../static/assets/sign_not_found.png';">
-            <p property="name">Name: <span id="signName"> {{ sign_name }}  </span> </p>
-            <p property="about">Category: <span id="signCategory"> {{ sign_category }} </span> </p>
-            <p property="description">Type: <span id="signType"> {{ sign_type }} </span> </p>
+            
+            <p property="name" style="cursor: pointer" onclick="window.location.href='{{ ext_link_label }}'">Name: <span id="signName" style="cursor: pointer"> {{ sign_name }}  </span> </p>
+            <p property="about" style="cursor: pointer" onclick="window.location.href='{{ ext_link_subClassOf }}'">Category: <span id="signCategory"> {{ sign_category }} </span> </p>
+            <p property="description" style="cursor: pointer" onclick="window.location.href='{{ ext_link_type }}'">Type: <span id="signType"> {{ sign_type }} </span> </p>
 
             {% if sign_remove_speed_limit %}
                 <p>Remove Speed Limit: <span id="signSpeedLimit"> {{ sign_remove_speed_limit }} </span> </p>
             {% endif %}
 
-            {% if has_remove_speed_limit %}
-                <p>Speed Limit: <span id="signSpeedLimit"> {{ has_remove_speed_limit }} </span> </p>
+            {% if sign_has_speed_limit %}
+                <p>Speed Limit: <span id="signSpeedLimit"> {{ sign_has_speed_limit }} </span> </p>
             {% endif %}
 
-            <p>Color: <span id="signType"> {{ sign_color }} </span> </p>
-            <p>Shape: <span id="signType"> {{ sign_shape }} </span> </p>
+            <p> 
+                <span class="label" style="cursor: pointer" onclick="window.location.href='{{ ext_link_P462 }}'">Color:</span> 
+                <span id="signType" style="cursor: pointer" onclick="window.location.href='{{ ext_link_color_ent }}'"> {{ sign_color }} </span> 
+            </p>
+
+            <p> 
+                <span class="label" style="cursor: pointer" onclick="window.location.href='{{ ext_link_P1419 }}'">Shape:</span> 
+                <span id="signType" style="cursor: pointer" onclick="window.location.href='{{ ext_link_shape_ent }}'"> {{ sign_shape }} </span> 
+            </p>
             
             {% if sign_meaning %}
-                <p>Meaning: <span id="signDescription"> {{ sign_meaning }} </span> </p>
+                <p style="cursor: pointer" onclick="window.location.href='{{ ext_link_abstract }}'">Meaning: <span id="signDescription"> {{ sign_meaning }} </span> </p>
             {% endif %}
 
             {% if legal_regulation %}
                 <p>Rules: <span id="signRules"> {{ legal_regulation }} </span> </p>
             {% endif %}
+
         </div>
     </div>
 

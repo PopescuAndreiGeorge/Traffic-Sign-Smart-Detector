@@ -1,6 +1,8 @@
 # Create python virtual environment and install dependencies
 #  1. python -m venv myenv
-#  2. .\myenv\Scripts\activate
+#  2. 
+#   - on Windowes: .\myenv\Scripts\activate
+#   - on Linux VM: source myenv/bin/activate
 #  3. pip install -r requirements.txt
 
 numpy
