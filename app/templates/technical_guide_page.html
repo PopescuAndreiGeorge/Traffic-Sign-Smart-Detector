@@ -22,11 +22,13 @@
     <ul>
         <li><a href="#abstract">Abstract</a></li>
         <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#architecture">Architecture of the Web Application</a></li>
         <li><a href="#internal-data-structures">Internal Data Structures</a></li>
         <li><a href="#api-technical-aspects">API Technical Aspects</a></li>
         <li><a href="#technologies">Technologies Used</a></li>
         <li><a href="#rdf-based-knowledge-models">RDF-Based Knowledge Models</a></li>
         <li><a href="#external-data-sources">External Data Sources</a></li>
+        <!-- <li><a href="#trained-model">Trained Model</a></li> -->
         <li><a href="#user-guide">User Guide</a></li>
         <li><a href="#conclusion">Conclusion</a></li>
         <li><a href="#references">References</a></li>
@@ -44,7 +46,7 @@
     <p>The Traffic Sign Smart Detector is a web application designed to enhance road safety by providing real-time detection and recognition of traffic signs. Accurate traffic sign recognition is crucial for developing intelligent transportation systems, improving driver assistance technologies, and ensuring road safety. This report offers a detailed analysis of the technical aspects of the application, covering internal data structures, API implementation, RDF-based knowledge models, and the integration of external data sources. The project employs cutting-edge machine learning techniques to accurately identify traffic signs from images captured via a camera or uploaded by the user. By leveraging established vocabularies, taxonomies, and ontologies, the application ensures consistent and accurate representation of traffic sign information. Moreover, the integration of external data sources, such as Wikidata and DBpedia, enriches the application's knowledge base, providing additional context and detailed information about each traffic sign. This report serves as a comprehensive guide to understanding the architecture, implementation, and usage of the Traffic Sign Smart Detector, highlighting its potential to significantly contribute to road safety and intelligent transportation systems.</p>
 </section>
 
-<section>
+<section id="architecture">
     <h2>Architecture of the Web Application</h2>
     <p>The Traffic Sign Smart Detector web application is built on a robust architecture that combines machine learning models, REST APIs, and RDF-based knowledge models. This section provides an overview of the application's architecture, highlighting the key components and their interactions.</p>
 
@@ -252,6 +254,12 @@
     <h2>External Data Sources</h2>
     <p>The application integrates external data and knowledge sources, including Wikidata and DBpedia, through non-trivial SPARQL queries. This section explains how these sources are used pragmatically to enhance the application's functionality and how the solution conforms to linked data principles. Examples of SPARQL queries and their results are provided to illustrate the integration process.</p>
 </section>
+
+<!-- <section id="trained-model">
+
+    <h2>Trained Model</h2>
+
+</section> -->
 
 <section id="user-guide">
     <h2>User Guide</h2>
