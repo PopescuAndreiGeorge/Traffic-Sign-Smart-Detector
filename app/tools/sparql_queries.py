@@ -383,7 +383,16 @@ def get_sign_ontology_infos(sign_name: str) -> dict:
     label_mapper[REMOVES_RESTRICTION] : [],
   }
 
-  dbpedia_links = {}
+  dbpedia_links = {
+    'ext_link_type'       : '',
+    'ext_link_abstract'   : '',
+    'ext_link_label'      : '',
+    'ext_link_P1419'      : '',
+    'ext_link_P462'       : '',
+    'ext_link_color_ent'  : '',
+    'ext_link_shape_ent'  : '',
+    'ext_link_subClassOf' : '',
+  }
 
   try:
     sparql = SPARQLWrapper("http://localhost:3030/TraS_Ontology/sparql")
@@ -436,8 +445,8 @@ def get_sign_ontology_infos(sign_name: str) -> dict:
       dbpedia_links['ext_link_subClassOf'] = 'http://www.w3.org/2000/01/rdf-schema#subClassOf'
 
     # TODO Cleanup
-    dbpedia_links['ext_link_color_ent'] = f'http://www.wikidata.org/entity/{result_infos['color'][3:]}'
-    dbpedia_links['ext_link_shape_ent'] = f'http://www.wikidata.org/entity/{result_infos['shape'][3:]}'
+    dbpedia_links['ext_link_color_ent'] = f"http://www.wikidata.org/entity/{result_infos['color'][3:]}"
+    dbpedia_links['ext_link_shape_ent'] = f"http://www.wikidata.org/entity/{result_infos['shape'][3:]}"
 
     result_infos['shape'] = get_sign_shape(sign_name)
     result_infos['color'] = get_sign_color(sign_name)

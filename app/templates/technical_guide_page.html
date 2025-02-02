@@ -24,6 +24,7 @@
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#internal-data-structures">Internal Data Structures</a></li>
         <li><a href="#api-technical-aspects">API Technical Aspects</a></li>
+        <li><a href="#technologies">Technologies Used</a></li>
         <li><a href="#rdf-based-knowledge-models">RDF-Based Knowledge Models</a></li>
         <li><a href="#external-data-sources">External Data Sources</a></li>
         <li><a href="#user-guide">User Guide</a></li>
@@ -41,6 +42,60 @@
 <section id="introduction">
     <h2>Introduction</h2>
     <p>The Traffic Sign Smart Detector is a web application designed to enhance road safety by providing real-time detection and recognition of traffic signs. Accurate traffic sign recognition is crucial for developing intelligent transportation systems, improving driver assistance technologies, and ensuring road safety. This report offers a detailed analysis of the technical aspects of the application, covering internal data structures, API implementation, RDF-based knowledge models, and the integration of external data sources. The project employs cutting-edge machine learning techniques to accurately identify traffic signs from images captured via a camera or uploaded by the user. By leveraging established vocabularies, taxonomies, and ontologies, the application ensures consistent and accurate representation of traffic sign information. Moreover, the integration of external data sources, such as Wikidata and DBpedia, enriches the application's knowledge base, providing additional context and detailed information about each traffic sign. This report serves as a comprehensive guide to understanding the architecture, implementation, and usage of the Traffic Sign Smart Detector, highlighting its potential to significantly contribute to road safety and intelligent transportation systems.</p>
+</section>
+
+<section>
+    <h2>Architecture of the Web Application</h2>
+    <p>The Traffic Sign Smart Detector web application is built on a robust architecture that combines machine learning models, REST APIs, and RDF-based knowledge models. This section provides an overview of the application's architecture, highlighting the key components and their interactions.</p>
+
+    <h3>Components of the Architecture</h3>
+    <p>The Traffic Sign Smart Detector architecture comprises the following key components:</p>
+
+    <ol>
+        <li><strong>Client Interface</strong>: The client interface allows users to interact with the application, upload images, and access traffic sign information. The interface is designed to be user-friendly and intuitive, providing a seamless experience for users.</li>
+
+        <li><strong>Server</strong>: The server component processes user requests, performs traffic sign recognition using machine learning models, and retrieves traffic sign information from the RDF-based knowledge model. The server communicates with the client interface via REST APIs, ensuring efficient data exchange.</li>
+
+        <li><strong>Machine Learning Model</strong>: The machine learning model is responsible for traffic sign recognition, analyzing images to identify and classify traffic signs accurately. The model is trained on a diverse dataset of traffic sign images, enabling it to recognize a wide range of sign types and variations.</li>
+
+        <li><strong>RDF-Based Knowledge Model</strong>: The RDF-based knowledge model stores structured traffic sign information, including sign categories, meanings, legal regulations, and relationships with other signs. The knowledge model ensures consistent representation of traffic sign data and facilitates efficient retrieval of sign information.</li>
+
+        <li><strong>External Data Sources</strong>: The application integrates external data sources, such as Wikidata and DBpedia, to enrich the knowledge base with additional information about traffic signs. By querying these sources using SPARQL, the application can access a wealth of contextual data to enhance the user experience.</li>
+    </ol>
+
+    <h3>Interaction Between Components</h3>
+    <div class="diagrams">
+        <figure>
+            <img src="{{ url_for('static', filename='assets/diagrams/svg/SystemContext.svg') }}" alt="System Context Diagram" style="width: 100%;">
+            <figcaption>Diagram 1: System Context Diagram</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ url_for('static', filename='assets/diagrams/svg/Container.svg') }}" alt="Container Diagram" style="width: 100%;">
+            <figcaption>Diagram 2: Container Diagram</figcaption>
+        </figure>
+    </div>
+
+    <figure>
+        <img src="{{ url_for('static', filename='assets/diagrams/svg/Components.svg') }}" alt="Components Diagram" style="width: 100%;">
+        <figcaption>Diagram 3: Components Diagram</figcaption>
+    </figure>
+
+    <h3>Flow of Data and Control</h3>
+    <p>The flow of data and control in the Traffic Sign Smart Detector application is as follows:</p>
+
+    <ol>
+        <li>The user interacts with the client interface to upload an image or enable real-time traffic sign recognition.</li>
+        <li>The client interface sends a request to the server via REST APIs, providing the image data or camera feed.</li>
+        <li>The server processes the image data using the machine learning model to recognize the traffic sign.</li>
+        <li>The server queries the RDF-based knowledge model to retrieve detailed information about the recognized traffic sign.</li>
+        <li>The server sends the recognized sign information back to the client interface for display to the user.</li>
+    </ol> 
+
+    <figure>
+        <img src="{{ url_for('static', filename='assets/diagrams/svg/DataFlow.svg') }}" alt="Data Flow Diagram" style="width: 100%;">
+        <figcaption>Diagram 4: Data Flow Diagram</figcaption>
+    </figure>
 </section>
 
 <section id="internal-data-structures">
@@ -66,9 +121,9 @@
     <h3>Endpoint Design</h3>
     <p>The API endpoints are designed to support various functionalities, including image upload, traffic sign recognition, and retrieval of traffic sign information. The endpoints follow standard RESTful principles, ensuring intuitive and consistent API design. Key endpoints include:</p>
 
-    <ul>
+    <ol>
 
-        <li><strong>POST /recognize</strong>: Allows users to upload images for traffic sign recognition. The endpoint accepts multipart/form-data, with the image file included in the request body. Upon successful upload, the server processes the image and returns the recognized traffic sign information.</li>
+        <li><strong>POST /recognize</strong>: Allows users to upload images for traffic sign recognition. The endpoint <u>accepts multipart/form-data, with the image file included in the request body</u>. Upon successful upload, the server processes the image and returns the recognized traffic sign information.</li>
 
         <li><strong>GET /live</strong>: Enables real-time traffic sign recognition using the device's camera. The endpoint streams video frames to the server, which processes each frame and returns the recognized traffic sign information.</li>
 
@@ -86,7 +141,6 @@
                     <li><strong>Remove restriction</strong>: The signs of which restrictions are removed by the current sign.</li>
                  </ul>
             </ul>
-
         </li>
         
         <li><strong>GET /info?sign={sign_name}</strong>: Similar to '/about' endpoint, but without the visual representation. It will return the following information as a json object, so it can be used by other applications.</li>
@@ -103,7 +157,12 @@
                     <li><strong>Remove restriction</strong>: The signs of which restrictions are removed by the current sign.</li>
                 </ul>
             </ul>
-    </ul>
+        </li>
+
+        <li><strong>GET /technical_guide</strong>: Returns the technical guide page.</li>
+
+        <li><strong>GET /user_guide</strong>: Returns the user guide page.</li>
+    </ol>
 
     <h3>Request and Response Formats</h3>
     <p>The APIs support JSON data format for both requests and responses, ensuring consistency and interoperability. The request payloads include attributes such as image file, user ID, and query parameters. The response payloads include detailed traffic sign information, user preferences, and interaction history. The JSON format ensures compatibility with various client applications and facilitates easy parsing and manipulation of data.</p>
@@ -111,9 +170,76 @@
     <h3>Error Handling</h3>
     <p>The APIs implement robust error handling mechanisms to provide informative and user-friendly error messages. Error responses include standard HTTP status codes (e.g., 400 Bad Request, 404 Not Found) along with detailed error descriptions. By following RESTful error handling best practices, the APIs ensure clear communication of errors to the client application, enabling effective troubleshooting and issue resolution.</p>
     <p>Custom error pages are also implemented for the following cases:</p>
-    <ul>
+    <ol>
         <li><strong>Unknown Page</strong>: When the user tries to access a page that does not exist, he will be redirected to a custom 404 page.</li>
         <li><strong>Unknown Sign</strong>: When the user tries to access information about a sign that does not exist, he will be redirected to a custom 404 page.</li>
+    </ol>
+
+</section>
+
+<section id="technologies">
+
+    <h2>Technologies Used</h2>
+
+    <p>In this section, we will explore the advantages and strategic implementation of Flask, Apache Jena Fuseki, and the traffic sign prediction model, each playing a pivotal role in the application's architecture. Additionally, we discuss the deployment on Google Cloud VM instances, highlighting the benefits of utilizing Google's robust cloud infrastructure and the rationale behind using two VM instances to host the Fuseki endpoint and the main server. This comprehensive analysis provides insight into the design choices and technological underpinnings that contribute to the effectiveness and reliability of the Traffic Sign Smart Detector, underscoring its potential impact on intelligent transportation systems and road safety.</p>
+
+    <h2>Flask</h2>
+
+    <p>Flask is a lightweight web framework that stands out for its flexibility and ease of use, making it an excellent choice for developing the Traffic Sign Smart Detector application. As a micro framework, Flask provides the essential tools and components needed to build web applications without the extensive overhead of larger frameworks, which is crucial for maintaining a lean and efficient application.</p>
+
+    <h3>Advantages of Flask</h3>
+
+    <ol>
+        <li><strong>Lightweight and Flexible</strong>: Flask's minimalistic design allows for easy integration with various components, ensuring that the application remains agile and efficient. </li>
+        <li><strong>Micro Framework</strong>: By providing only the essential components, Flask ensures that the application remains free of unnecessary bloat, enhancing performance and scalability. </li>
+        <li><strong>Easy to Use</strong>: lask's straightforward syntax and clear documentation make it accessible to developers, facilitating rapid development and deployment.</li>
+        <li><strong>Modular and Extensible</strong>: Flask's modular architecture allows developers to add or remove features as needed, ensuring that the application can easily adapt to new requirements and technologies. </li>
+    </ol>
+    
+    <p>Flask's robust support for building RESTful APIs is particularly beneficial for the Traffic Sign Smart Detector, as it allows for efficient handling of image uploads, traffic sign recognition, and data retrieval. The framework's scalability and performance capabilities ensure that the application can handle multiple requests simultaneously, which is essential for real-time traffic sign recognition. Furthermore, Flask's active community and extensive support resources accelerate development and troubleshooting, keeping the application up-to-date and secure.</p>
+    
+    <h2>Fuseki</h2>
+
+    <p>Apache Jena Fuseki is a powerful server that provides support for RDF (Resource Description Framework) data and SPARQL (SPARQL Protocol and RDF Query Language) queries, making it an ideal choice for managing the structured data associated with traffic signs. Fuseki's ability to handle large datasets efficiently and its support for standard RDF and SPARQL ensure interoperability with other semantic web technologies and external data sources.</p>
+    
+    <h3>Advantages of Fuseki</h3>
+
+    <ol>
+        <li><strong>RDF and SPARQL Support</strong>: useki's ability to store and query RDF data using SPARQL is essential for managing the complex relationships and metadata associated with traffic signs. </li> 
+        <li><strong>Scalability</strong>: Fuseki is designed to handle large datasets efficiently, ensuring that the application can manage and query vast amounts of traffic sign data without performance bottlenecks. </li>
+        <li><strong>Interoperability</strong>: Fuseki's support for standard RDF and SPARQL ensures compatibility with other semantic web technologies and external data sources, enriching the application's knowledge base. </li>
+        <li><strong>Security</strong>: Fuseki offers robust security features, including access control and authentication mechanisms, ensuring that only authorized users can access or modify the traffic sign data. </li>
+    </ol>
+
+    <p>Using Fuseki allows the Traffic Sign Smart Detector to represent traffic sign information in a structured, machine-readable format, ensuring consistency and accuracy. This structured representation is crucial for providing detailed and reliable traffic sign information to users. Fuseki's extensibility also allows for easy integration with other semantic web technologies and external data sources, ensuring that the application remains up-to-date and relevant.</p>
+    
+    <h2>Google Cloud VM</h2>
+
+    <h3>Google Cloud Overview</h3>
+    
+    <p>Google Cloud offers a suite of robust, scalable, and secure cloud computing services that can support various use cases, including web applications, data analytics, and machine learning. Its infrastructure is designed to scale effortlessly, ensuring that applications can handle varying levels of demand without performance degradation.</p>
+
+    <h4>Advantages of Google Cloud</h4>
+
+    <ol>
+        <li><strong>Scalability</strong>: Google Cloud's infrastructure scales effortlessly, allowing applications to handle varying levels of demand without performance degradation. </li>
+        <li><strong>Reliability</strong>: igh availability and reliability are ensured by Google Cloud's global network of data centers, minimizing downtime and ensuring a seamless user experience. </li>
+        <li><strong>Security</strong>: Stringent security measures, including encryption, access control, and threat detection, protect data and applications from threats. </li>
+        <li><strong>Integration with Other Services</strong>: Google Cloud provides a wide range of services that can be easily integrated with the Traffic Sign Smart Detector, enhancing its capabilities and providing additional features. </li>
+    </ol>
+
+    <p>Google Cloud's scalable infrastructure is crucial for supporting real-time traffic sign recognition and data processing, while its high availability ensures that the application remains accessible and performant. The robust security measures protect the application's data and infrastructure, maintaining user trust and compliance with data protection regulations. Additionally, the seamless integration with other Google Cloud services enhances the application's capabilities, ensuring flexibility and adaptability.</p>
+    
+    <h3>Advantages of Using Two VM Instances:</h3>
+
+    <ol>
+        <li><strong>Separation of Concerns</strong>: solating different components of the application on separate VM instances ensures that they do not interfere with each other, improving performance and manageability. </li>
+        <li><strong>Enhanced Performance</strong>: Dedicated resources for each VM instance reduce the risk of resource contention and performance bottlenecks. </li>
+        <li><strong>Redundancy and Reliability</strong>: Implementing redundancy and failover mechanisms ensures that the application remains available even if one instance experiences issues. </li>
+        <li><strong>Scalability</strong>: Independent scaling of each component based on specific needs ensures optimal performance and resource utilization. </li>
+    </ol>
+
+    <p>Using separate VM instances for the Fuseki endpoint and the main server allows for dedicated optimization and resource allocation, ensuring efficient data storage and querying. This setup enhances the real-time responsiveness of the application and provides redundancy, ensuring high availability and reliability. The ability to scale each component independently based on its specific needs ensures optimal performance and resource utilization, making the Traffic Sign Smart Detector a robust and efficient solution for traffic sign recognition and information.</p>
 
 </section>
 
@@ -130,13 +256,13 @@
 <section id="user-guide">
     <h2>User Guide</h2>
     <p>The user guide provides detailed instructions on how to use the Traffic Sign Smart Detector web application effectively. It covers the following key aspects:</p>
-    <ul>
+    <ol>
         <li><strong>Image Upload</strong>: Users can upload images containing traffic signs for recognition. The application processes the uploaded images and returns detailed information about the recognized traffic signs.</li>
 
         <li><strong>Live Camera Recognition</strong>: Users can enable real-time traffic sign recognition using their device's camera. The application streams video frames to the server, which processes each frame and returns the recognized traffic sign information.</li>
 
         <li><strong>Traffic Sign Information</strong>: Users can access detailed information about specific traffic signs, including category, type, meaning, legal regulations, color, shape, and relationships with other signs. The application provides visual representations and textual descriptions of each traffic sign.</li>
-    </ul>
+    </ol>
 </section>
 
 <section id="conclusion">

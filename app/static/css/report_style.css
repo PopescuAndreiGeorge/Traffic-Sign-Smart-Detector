@@ -66,3 +66,13 @@ ul {
     margin: 0;
     padding: 0 20px;
 }
+
+section ul li {
+    margin: 10px 0;
+}
+
+section .diagrams {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
