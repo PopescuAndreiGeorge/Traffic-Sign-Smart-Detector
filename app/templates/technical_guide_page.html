@@ -194,7 +194,7 @@
     <ol>
         <li><strong>Lightweight and Flexible</strong>: Flask's minimalistic design allows for easy integration with various components, ensuring that the application remains agile and efficient. </li>
         <li><strong>Micro Framework</strong>: By providing only the essential components, Flask ensures that the application remains free of unnecessary bloat, enhancing performance and scalability. </li>
-        <li><strong>Easy to Use</strong>: lask's straightforward syntax and clear documentation make it accessible to developers, facilitating rapid development and deployment.</li>
+        <li><strong>Easy to Use</strong>: Flask's straightforward syntax and clear documentation make it accessible to developers, facilitating rapid development and deployment.</li>
         <li><strong>Modular and Extensible</strong>: Flask's modular architecture allows developers to add or remove features as needed, ensuring that the application can easily adapt to new requirements and technologies. </li>
     </ol>
     
@@ -207,7 +207,7 @@
     <h3>Advantages of Fuseki</h3>
 
     <ol>
-        <li><strong>RDF and SPARQL Support</strong>: useki's ability to store and query RDF data using SPARQL is essential for managing the complex relationships and metadata associated with traffic signs. </li> 
+        <li><strong>RDF and SPARQL Support</strong>: Fuseki's ability to store and query RDF data using SPARQL is essential for managing the complex relationships and metadata associated with traffic signs. </li>
         <li><strong>Scalability</strong>: Fuseki is designed to handle large datasets efficiently, ensuring that the application can manage and query vast amounts of traffic sign data without performance bottlenecks. </li>
         <li><strong>Interoperability</strong>: Fuseki's support for standard RDF and SPARQL ensures compatibility with other semantic web technologies and external data sources, enriching the application's knowledge base. </li>
         <li><strong>Security</strong>: Fuseki offers robust security features, including access control and authentication mechanisms, ensuring that only authorized users can access or modify the traffic sign data. </li>
@@ -235,7 +235,7 @@
     <h3>Advantages of Using Two VM Instances:</h3>
 
     <ol>
-        <li><strong>Separation of Concerns</strong>: solating different components of the application on separate VM instances ensures that they do not interfere with each other, improving performance and manageability. </li>
+        <li><strong>Separation of Concerns</strong>: Isolating different components of the application on separate VM instances ensures that they do not interfere with each other, improving performance and manageability. </li>
         <li><strong>Enhanced Performance</strong>: Dedicated resources for each VM instance reduce the risk of resource contention and performance bottlenecks. </li>
         <li><strong>Redundancy and Reliability</strong>: Implementing redundancy and failover mechanisms ensures that the application remains available even if one instance experiences issues. </li>
         <li><strong>Scalability</strong>: Independent scaling of each component based on specific needs ensures optimal performance and resource utilization. </li>
@@ -247,7 +247,50 @@
 
 <section id="rdf-based-knowledge-models">
     <h2>RDF-Based Knowledge Models</h2>
-    <p>The Traffic Sign Smart Detector employs REST APIs to facilitate data exchange between the client and server. The APIs are designed to ensure scalability, reliability, and security, supporting seamless integration with the web application. Key technical aspects of the APIs include endpoint design, request and response formats, authentication mechanisms, and error handling.</p>
+
+    <p>This section focuses on the knowledge model built specifically to meet the information needs of the proposed system. Since our goal was to provide relevant information related to traffic signs, previously identified using a neural network, we used information from the legislation in force to present only valid legal regulations for each entity. Also, data in other existing knowledge models were used to facilitate the reduction of redundancy and the reuse of well-known and detailed concepts.</p>
+
+    <h3>The structure of the knowledge model</h3>
+
+    <p>Within the created ontology, a hierarchy of classes was used to define a general category into which different traffic signs fall. For this purpose, seven classes were created as follows:</p>
+
+    <ol>
+        <li><strong>De-restriction</strong>: This class represents all entities that cancel a restriction imposed by a previous traffic sign. </li>
+        <li><strong>Indication</strong>: This class represents all entities that provide an indication related to the facilities of the area or road on which they are located. </li>
+        <li><strong>Mandatory</strong>: This class represents all entities that oblige traffic participants to follow a series of rules imposed by each individual traffic sign. </li>
+        <li><strong>Priority</strong>: This class represents all entities that notify traffic participants of the presence or absence of priority they have and the rules that must be followed in situations where priority is lacking. </li>
+        <li><strong>Special Regulation</strong>: This class represents all entities that notify traffic participants of the presence of areas or situations where additional rules are imposed for the safety of people. These are usually pre-signaled a few dozen meters in advance by a different sign. </li>
+        <li><strong>Warning</strong>: This class represents all entities that warn drivers that they are approaching an area or situation where they must be extra careful and follow the rules imposed on the respective road sections. In most cases, additional signs that impose a traffic rule are to be seen a few meters ahead. </li>
+    </ol>
+
+    <h3>Properties used in the model</h3>
+
+    <p>The representation of various data of interest related to traffic signs consisted both in dividing them into disjoint classes, but also in creating/reusing properties that link the signs to each other or to other existing concepts.</p>
+    <p>The used object properties are the following:</p>
+
+    <ol>
+        <!-- <li><strong>P1419</strong>: A property from wikidata that represents the shape. </li> -->
+        <!-- <li><strong>P462</strong>: A property from wikidata that represents the color. </li> -->
+        <li><strong>isPrecededBy</strong>: A property created for the purpose of linking a traffic sign to another sign that may appear before it. The inverse of the "precedes" property.</li>
+        <li><strong>precedes</strong>: A property created for the purpose of linking a traffic sign to another sign whose appearance is possible in the near future. The inverse of the "isPrecededBy" property. </li>
+        <li><strong>removesRestriction Regulation</strong>: A property whose purpose is to create a link between the traffic signs that cancel a restriction and the sign that imposes this restriction. </li>
+    </ol>
+
+    <p>The data properties were created both for use with each entity, regardless of type, to present values that any traffic sign has, but also to present characteristics exclusive to a single type of sign.</p>
+
+    <ol>
+        <!-- <li><strong>abstract</strong>: A property from dbpedia that we can use to write some data and meanings about the traffic sign. </li> -->
+        <!-- <li><strong>label</strong>: A property from dbpedia that we can use to name a sign type. </li> -->
+        <li><strong>hasHeightLimit</strong>: A property, that takes values of type xsd:float, used to mark the maximum height of a vehicle inscribed on the sign.</li>
+        <li><strong>hasLengthLimit</strong>: A property, that takes values of type xsd:float, used to mark the maximum length of a vehicle inscribed on the sign. </li>
+        <li><strong>hasSpeedLimit</strong>: A property, that takes values of type xsd:unsignedInt, used to mark the maximum speed of a vehicle inscribed on the sign. </li>
+        <li><strong>hasWeightLimit</strong>: A property, that takes values of type xsd:float, used to mark the maximum weight of a vehicle inscribed on the sign. </li>
+        <li><strong>hasWidthLimit</strong>: A property, that takes values of type xsd:float, used to mark the maximum width of a vehicle inscribed on the sign. </li>
+        <li><strong>legalRegulation</strong>: A property, that takes values of type xsd:string, used to express a legal obligation that is conveyed by that traffic sign. </li>
+        <li><strong>removesSpeedLimit</strong>: A property, that takes values of type xsd:unsignedInt, used to express the speed limit that this sign overrides. </li>
+    </ol>
+
+    <p>This structuring of data into classes and the use of the properties mentioned above (as well as others taken from other knowledge models) offers expressiveness through the possibility of combining properties with clearly defined data types to fragment the legislative information about a traffic sign and provide a wide range of characterizations based on which connections and distinctions can be made between signs.</p>
 </section>
 
 <section id="external-data-sources">
