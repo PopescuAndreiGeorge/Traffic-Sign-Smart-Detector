@@ -39,23 +39,64 @@
     <p>The Traffic Sign Smart Detector boasts a range of powerful features designed to provide users with accurate and timely traffic sign information. These features are meticulously crafted to ensure a seamless user experience, making the application an invaluable tool for enhancing road safety and driver assistance.</p>
 
     <h3>Image Upload</h3>
-    <p>The application allows users to upload images for traffic sign recognition. Once an image is uploaded, the application processes it using machine learning algorithms to identify and recognize traffic signs. After recognition, the user is redirected to a page displaying the detected traffic sign along with relevant information.</p>
 
-    <p>Also, from this page the user can access the real-time detection feature by clicking on the "Camera" button. This feature enables users to detect traffic signs in real-time using their device's camera.</p>
+    <div class="image-container">
+        <figure>
+            <img src="{{ url_for('static', filename='assets/doc/screnshots/upload_page.jpg') }}" alt="Upload Page" style="width: 90%;">
+            <figcaption>Upload Page</figcaption>
+        </figure>
+        <div>
+            <p>The application allows users to upload images for traffic sign recognition. Once an image is uploaded, the application processes it using machine learning algorithms to identify and recognize traffic signs. After recognition, the user is redirected to a page displaying the detected traffic sign along with relevant information.</p>
 
-    <strong>Buttons</strong>:
-    <ul>
-        <li><strong>Choose on image</strong>: Allows users to select an image from their device for sign recognition. After selecting an image, a preview of the image is displayed on the screen.</li>
-        <li><strong>Upload</strong>: Initiates the image upload process and triggers the sign recognition algorithm.</li>
-        <li><strong>Camera</strong>: Enables users to switch to real-time detection mode using their device's camera.</li>
-    </ul>
+            <p>Also, from this page the user can access the real-time detection feature by clicking on the "Camera" button. This feature enables users to detect traffic signs in real-time using their device's camera.</p>
+
+            <strong>Buttons</strong>:
+            <ul>
+                <li><strong>Choose on image</strong>: Allows users to select an image from their device for sign recognition. After selecting an image, a preview of the image is displayed on the screen.</li>
+                <li><strong>Upload</strong>: Initiates the image upload process and triggers the sign recognition algorithm.</li>
+                <li><strong>Camera</strong>: Enables users to switch to real-time detection mode using their device's camera.</li>
+            </ul>
+        </div>
+    </div>
 
     <h3>Real-Time Detection</h3>
-    <p>The real-time detection feature allows users to detect traffic signs using their device's camera. By simply pointing the camera at a traffic sign, the application can identify and display information about the detected sign in real-time. This feature is particularly useful for drivers who need immediate information about traffic signs while on the road.</p>
-
+    <p>The real-time detection feature allows users to detect traffic signs using their device's camera. By simply pointing the camera at a traffic sign, the application can identify and display information about the detected sign in real-time. This feature is particularly useful for drivers who need immediate information about traffic signs while on the road. The user needs to grant permission to access the camera for this feature to work.</p>
     <p>When a traffic sign is detected in real-time, the application displays the sign's name, meaning, and relevant rules associated with the sign below the camera feed. Users can also access additional information about the sign by clicking on the "Show More" button.</p>
 
+    <div class="image-container">
+        <figure>
+            <img src="{{ url_for('static', filename='assets/doc/screnshots/grand_camera_permision.jpg') }}" alt="Grand Camera Permission" style="width: 80%;">
+            <figcaption>Grant Camera Permission</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ url_for('static', filename='assets/doc/screnshots/live_camera.jpg') }}" alt="Live camera page" style="width: 80%;">
+            <figcaption>Live camera page</figcaption>
+        </figure>
+    </div>
+
+
     <h3>Traffic Sign Information</h3>
-    <p>For each detected traffic sign, the application provides detailed information including the sign's name, meaning, rules associated, and releated signs in a dedicated page for each sign. 
+    <p>For each detected traffic sign, the application provides detailed information including the sign's name, meaning, rules associated, and releated signs in a dedicated page for each sign.  This information is essential for drivers to understand the significance of the sign and comply with the rules associated with it.</p>
+    <p> By clicking on a listed sign, the user is redirected to the information page of the selected sign.</p>
+    
+    <p> The information shown for each sign includes:</p>
+    <ol>
+        <li><strong>Sign Name</strong>: The name of the traffic sign.</li>
+        <li><strong>Sign Meaning</strong>: The meaning or purpose of the traffic sign.</li>
+        <li><strong>Rules</strong>: The rules or regulations associated with the traffic sign.</li>
+        <li><strong>Category</strong>: The category of the traffic sign (e.g., regulatory, warning, information).</li>
+        <li><strong>Type</strong>: The type of the traffic sign (e.g., speed limit, stop sign, yield sign).</li>
+        <li><strong>Precede By Signs</strong>: The signs that typically precede the detected sign.</li>
+        <li><strong>Followed By Signs</strong>: The signs that typically follow the detected sign.</li>
+        <li><strong>Remove restrictions</strong>: The signs that remove the restrictions imposed by the detected sign.</li>
+    </ol>
+
+    <figure>
+        <img src="{{ url_for('static', filename='assets/doc/screnshots/about_page.jpg') }}" alt="About Sign Page" style="width: 50%;">
+        <figcaption>About Sign Page</figcaption>
+    </figure>
+
+    
 </body>
 </html>
