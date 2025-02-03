@@ -295,7 +295,68 @@
 
 <section id="external-data-sources">
     <h2>External Data Sources</h2>
-    <p>The application integrates external data and knowledge sources, including Wikidata and DBpedia, through non-trivial SPARQL queries. This section explains how these sources are used pragmatically to enhance the application's functionality and how the solution conforms to linked data principles. Examples of SPARQL queries and their results are provided to illustrate the integration process.</p>
+
+    <p>In order to leverage the created knowledge model, different knowledge sources were used to provide already structured information that could be reused in the model used in our system. Properties and classes from Wikidata and DBpedia were used to build links between the knowledge provided in the ontology we created and concepts that were defined in other models, thus aiming to eliminate redundancy in data and facilitate their reuse.</p>
+
+    <p>Starting from the class level, to define the traffic sign categories we considered it appropriate to model them as subclasses of the "traffic sign" class (<strong>Q170285</strong>) from Wikidata. This approach was chosen in order to reuse some properties that have this class as their domain, such as:</p>
+    <ol>
+         <li><strong>P1419</strong>: A property that we can assign to a traffic sign to specify that it has a shape. </li>
+         <li><strong>P462</strong>: A property that we can assign to a traffic sign to specify that it has a color. </li>
+    </ol>
+
+    <p>To complete the RDF triple, entities were used that denote different colors and shapes needed for our dataset:</p>
+    <ol>
+        <li><strong>Q19821</strong>: An entity that defines a triangle. </li>
+        <li><strong>Q17278</strong>: An entity that defines a circle. </li>
+        <li><strong>Q164</strong>: An entity that defines a square. </li>
+        <li><strong>Q3142</strong>: An entity that defines the color red. </li>
+        <li><strong>Q943</strong>: An entity that defines the color yellow. </li>
+        <li><strong>Q1088</strong>: An entity that defines the color blue. </li>
+        <li><strong>Q23445</strong>: An entity that defines the color black. </li>
+    </ol>
+
+    <h3>Examples of SPARQL queries</h3>
+
+    <p>This query is used to obtain all information about a specific type of traffic sign, from which it filters those whose property takes a value of type NamedIndividual or Class.</p>
+
+    <pre><code>
+    SELECT ?property ?object
+    WHERE{
+    myowl:SpeedLimit100Sign ?property ?object .
+    FILTER (?object != owl:NamedIndividual).
+    FILTER (?object != owl:Class)
+    }
+    </code></pre>
+
+    <p>This query is used to obtain all traffic signs in the De-restriction category that form (P1419) a circle (Q17278) and have the property of removing a speed limit.</p>
+
+    <pre><code>
+    SELECT ?subject ?object
+    WHERE{
+    ?type rdfs:subClassOf myowl:De-restrictionSign .
+    ?subject rdf:type ?type.
+    ?subject wdt:P1419 wd:Q17278.
+    ?subject ?property ?object.
+    FILTER (?property = myowl:removesSpeedLimit)
+    }
+    </code></pre>
+
+    <p>This query is used to obtain all properties and objects that belong to a traffic sign of the prohibitory category and that have the color red or blue, ignoring objects of type NamedIndividual or Class.</p>
+
+    <pre><code>
+    SELECT ?property ?object2
+    WHERE{
+    ?subject rdfs:subClassOf myowl:ProhibitorySign .
+    ?subject wdt:P462 ?object .
+    FILTER (?object = wd:Q3142 || ?object = wd:Q1088).
+    ?subject ?property ?object2.
+    FILTER (?object2 != owl:NamedIndividual).
+    FILTER (?object2 != owl:Class)
+    }
+    </code></pre>
+
+    <p>Looking at the knowledge model from the perspective of compliance with linked data principles, we aimed to avoid redundancy in the created ontology by clearly specifying properties that do not overlap and entities that are disjoint from each other. Certain classes in our model are built as subclasses of existing classes in other knowledge models in order to strengthen the connection between the created objects and the existing ones whose information we wanted to enrich.</p>
+    <p>All elements used in our knowledge model that are taken from other ontologies are exposed together with the access link to the model from where they are taken, these links are present both in the ontology and directly in the html pages where we display information related to traffic signs.</p>
 </section>
 
 <!-- <section id="trained-model">
@@ -316,24 +377,24 @@
     </ol>
 </section>
 
-<section id="conclusion">
-    <h2>Conclusion</h2>
-    <p>The conclusion summarizes the key points discussed in the report, emphasizing the technical achievements and future directions for improvement. The developed web application demonstrates robust architecture, efficient data handling, and seamless integration of external knowledge sources.</p>
-</section>
+<!--<section id="conclusion">-->
+<!--    <h2>Conclusion</h2>-->
+<!--    <p>The conclusion summarizes the key points discussed in the report, emphasizing the technical achievements and future directions for improvement. The developed web application demonstrates robust architecture, efficient data handling, and seamless integration of external knowledge sources.</p>-->
+<!--</section>-->
 
 <section id="references">
     <h2>References</h2>
-    <p>This section lists all the sources cited in the report, following the required citation style (e.g., APA, MLA, Chicago).</p>
     <ul>
-        <li>Author, A. A. (Year). Title of the book. Publisher.</li>
-        <li>Author, B. B. (Year). Title of the article. Title of the Journal, volume number(issue number), pages.</li>
+        <li><a href="https://profs.info.uaic.ro/sabin.buraga/teach/courses/wade/web-film.html">Web Application Development Courses</a></li>
+        <li><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
+        <li><a href="https://www.dbpedia.org/about/">DBpedia</a></li>
     </ul>
 </section>
 
-<section id="acknowledgements">
-    <h2>Acknowledgements</h2>
-    <p>This section acknowledges the individuals and organizations that supported the research, including funding sources, mentors, and colleagues.</p>
-</section>
+<!--<section id="acknowledgements">-->
+<!--    <h2>Acknowledgements</h2>-->
+<!--    <p>This section acknowledges the individuals and organizations that supported the research, including funding sources, mentors, and colleagues.</p>-->
+<!--</section>-->
 
 </body>
 </html>
