@@ -7,24 +7,34 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 
+
+## Table of Contents
+1. [Description](#description)
+2. [Deliverables](#deliverables)
+3. [Requirements](#requirements)
+    - [Python](#python)
+    - [SSL Certificates](#ssl-certificates)
+    - [Configuration](#configuration)
+4. [Model Training](#model-training)
+    - [Libraries Used](#libraries-used)
+    - [Dataset](#dataset)
+    - [Methods](#methods)
+5. [How to Run](#how-to-run)
+6. [Pages](#pages)
+7. [API Documentation](#api-documentation)
+8. [Screenshots](#screenshots)
+
 ## Description
 
 Having several (snapshots of) video recordings – captured via a Webcam or uploaded by a user – regarding an urban route (frequently/randomly) followed by a person or a group of persons (*e.g.*, by using a bike/car/bus), develop a (micro-)service-based Web system able to detect road/traffic signs marking this route (road, highway). This detection process could be performed automatically by using specific public APIs and/or by using user-reported info. A OWL-based conceptual model specified will be created and/or adapted to specify things of interest (mainly, a classification of road/traffic signs and their meanings and legal interpretations). For each recognized (category of) road sign, a SPARQL endpoint will offer various knowledge: meaning, type, legal regulations, relationships to other traffic signs, practical advice, context of use, comparisons, plus suggestions regarding user (driver/pedestrian) behavior.
 
-## Table of Contents
-1. [Description](#description)
-2. [Requirements](#requirements)
-    - [Python](#python)
-    - [SSL Certificates](#ssl-certificates)
-    - [Configuration](#configuration)
-3. [Model Training](#model-training)
-    - [Libraries Used](#libraries-used)
-    - [Dataset](#dataset)
-    - [Methods](#methods)
-4. [How to Run](#how-to-run)
-5. [Pages](#pages)
-6. [API Documentation](#api-documentation)
-7. [Screenshots](#screenshots)
+## Deliverables
+
+1. [Application architecture](docs/diagrams)
+2. [OpenAPI Specification](docs/openapi.yaml)
+3. [Application Source Code](app)
+4. [Scholarly HTML](app/templates/technical_guide_page.html)
+5. [Traffic Sign Ontology](resources/OWL/TrafficSignOWL.rdf)
 
 ## Requirements
 
@@ -75,12 +85,6 @@ Key methods in the model training process included data loading and preprocessin
 2. Live camera page: `<local_ip>:5000/camera`
 3. About sign page: `<local_ip>:5000/about?sign=sign_name`
 
-## Deliverables
-
-[Application architecture](docs/diagrams) \
-[OpenAPI Specification](docs/openapi.yaml) \
-[Application Source Code](app) \
-[Scholarly HTML](app/templates/technical_guide_page.html)
 ## Screenshots
 
 Here is an example of the project in action:
