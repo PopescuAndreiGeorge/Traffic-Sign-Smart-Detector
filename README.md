@@ -75,10 +75,12 @@ Key methods in the model training process included data loading and preprocessin
 2. Live camera page: `<local_ip>:5000/camera`
 3. About sign page: `<local_ip>:5000/about?sign=sign_name`
 
-## API Documentation
+## Deliverables
 
-For detailed API documentation, please refer to the [OpenAPI Specification](docs/openapi.yaml).
-
+[Application architecture](docs/diagrams) \
+[OpenAPI Specification](docs/openapi.yaml) \
+[Application Source Code](app) \
+[Scholarly HTML](app/templates/technical_guide_page.html)
 ## Screenshots
 
 Here is an example of the project in action:
