@@ -2237,6 +2237,7 @@ The vehicle driver is obliged to give priority to crossing to the pedestrian cro
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#PriorityRoadSign"/>
+		<TrafficSign:precedes rdf:resource="http://www.semanticweb.org/nicol/ontologies/2025/0/TrafficSign#EndOfPriorityRoadSign"/>
         <TrafficSign:legalRegulation xml:lang="en">This indicator has the role of informing the driver that he has priority at the intersections he will enter.</TrafficSign:legalRegulation>
     </owl:NamedIndividual>
     
