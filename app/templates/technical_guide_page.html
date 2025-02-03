@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/report_style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/logo.png') }}">
     <title>Technical Report: TraS Application Architecture and Implementation</title>
 </head>
 <body vocab="https://schema.org/" typeof="ScholarlyArticle">
@@ -29,11 +30,8 @@
         <li><a href="#technologies">Technologies Used</a></li>
         <li><a href="#rdf-based-knowledge-models">RDF-Based Knowledge Models</a></li>
         <li><a href="#external-data-sources">External Data Sources</a></li>
-        <!-- <li><a href="#trained-model">Trained Model</a></li> -->
         <li><a href="#user-guide">User Guide</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
         <li><a href="#references">References</a></li>
-        <li><a href="#acknowledgements">Acknowledgements</a></li>
     </ul>
 </nav>
 
@@ -360,12 +358,6 @@
     <p>All elements used in our knowledge model that are taken from other ontologies are exposed together with the access link to the model from where they are taken, these links are present both in the ontology and directly in the html pages where we display information related to traffic signs.</p>
 </section>
 
-<!-- <section id="trained-model">
-
-    <h2>Trained Model</h2>
-
-</section> -->
-
 <section id="user-guide">
     <h2>User Guide</h2>
     <p>The user guide provides detailed instructions on how to use the Traffic Sign Smart Detector web application effectively. It covers the following key aspects:</p>
@@ -376,26 +368,22 @@
 
         <li><strong>Traffic Sign Information</strong>: Users can access detailed information about specific traffic signs, including category, type, meaning, legal regulations, color, shape, and relationships with other signs. The application provides visual representations and textual descriptions of each traffic sign.</li>
     </ol>
-</section>
 
-<!--<section id="conclusion">-->
-<!--    <h2>Conclusion</h2>-->
-<!--    <p>The conclusion summarizes the key points discussed in the report, emphasizing the technical achievements and future directions for improvement. The developed web application demonstrates robust architecture, efficient data handling, and seamless integration of external knowledge sources.</p>-->
-<!--</section>-->
+    <p>Detailed instructions on how to use each feature are provided in the user guide, ensuring that users can easily navigate the application and access the information they need. The user guide aims to enhance the user experience and facilitate effective interaction with the Traffic Sign Smart Detector, enabling users to leverage its capabilities for improved road safety and traffic sign recognition. The user guide is accessible directly from the '<a href="/user_guide">/user_guide</a>' endpoint of the application.
+
+</section>
 
 <section id="references">
     <h2>References</h2>
     <ul>
         <li><a href="https://profs.info.uaic.ro/sabin.buraga/teach/courses/wade/web-film.html">Web Application Development Courses</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Comparison_of_European_road_signs">Comparison of European road signs</a></li>
         <li><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
         <li><a href="https://www.dbpedia.org/about/">DBpedia</a></li>
+        <li><a href="https://github.com/OAI/OpenAPI-Specification#readme">OpenAPI</a></li>
+        <li><a href="https://w3c.github.io/scholarly-html/">Scholarly HTML</a></li>
     </ul>
 </section>
-
-<!--<section id="acknowledgements">-->
-<!--    <h2>Acknowledgements</h2>-->
-<!--    <p>This section acknowledges the individuals and organizations that supported the research, including funding sources, mentors, and colleagues.</p>-->
-<!--</section>-->
 
 </body>
 </html>
