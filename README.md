@@ -33,7 +33,7 @@ Having several (snapshots of) video recordings – captured via a Webcam or uplo
 1. [Application architecture](docs/diagrams)
 2. [OpenAPI Specification](docs/openapi.yaml)
 3. [Application Source Code](app)
-4. [Scholarly HTML](app/templates/technical_guide_page.html)
+4. [Scholarly HTML](app/templates/technical_guide_page.html) available [here](https://popescuandreigeorge.github.io/Scholarly/)
 5. [Traffic Sign Ontology](resources/OWL/TrafficSignOWL.rdf)
 6. [Demo Video](https://www.youtube.com/shorts/ImiapOFTKxw)
 
